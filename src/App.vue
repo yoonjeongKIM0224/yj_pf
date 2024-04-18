@@ -1,26 +1,25 @@
 <template>
   <TheHeader />
-  <TheAside />
-  <TheTab :tabs="tabs">
-    <template v-slot:temp1>
-      <ul>
-        <li v-for="(info, idx) in projects" :key="idx">
-          {{ info.title }}
-          <img :src="info.image" />
-          {{ info.content }}
-
-          <span v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
-        </li>
-      </ul>
-    </template>
-    <template v-slot:temp2>tab contents2</template>
-  </TheTab>
+  <TheAside @asideSelected="asideSelected = $event" />
+  <section class="section">
+    <TheTab :tabs="tabs" @tabSelected="tabSelected = $event">
+      <template v-slot:temp1>
+        탭1
+        <TheList01 :list="projects" />
+      </template>
+      <template v-slot:temp2>
+        탭2
+        <TheList01 :list="projects" />
+      </template>
+    </TheTab>
+  </section>
 </template>
 
 <script>
 import TheHeader from './components/TheHeader.vue';
 import TheAside from './components/TheAside.vue';
 import TheTab from './components/TheTab.vue';
+import TheList01 from './components/TheList01.vue';
 import projects from './assets/projects';
 
 export default {
@@ -40,16 +39,20 @@ export default {
         }
       ],
       projectsOri: projects,
-      projects: [...projects]
+      projects: [...projects],
+      asideSelected: 0,
+      tabSelected: 0,
     }
   },
   components: {
     TheHeader,
     TheAside,
     TheTab,
+    TheList01,
   }
 }
 </script>
 
 <style>
+  @import '~@/assets/style/import.css';
 </style>

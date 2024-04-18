@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    word-break: break-all;
+    color: #222;
+    list-style: none;
+    text-decoration: none;
+    font-style: normal;
+    font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+    border: 0;
+    background-color: transparent;
+}
+
+button {
+    cursor: pointer;
+}

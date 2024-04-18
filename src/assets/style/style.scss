@@ -1,0 +1,195 @@
+.wrapper {
+    width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 40px 0;
+
+    .logo {
+        .logo_cont {
+            font-size: 40px;
+            font-weight: 800;
+        }
+    }
+
+    .menu_list {
+        display: flex;
+        align-items: center;
+
+        > .item {
+            .item_cont {
+                font-size: 16px;
+            }
+
+            + .item {
+                margin-left: 16px;
+            }
+        }
+    }
+}
+
+.aside {
+    width: 200px;
+    margin-right: 40px;
+
+    .menu_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > .item {
+            display: flex;
+            width: 100%;
+
+            .item_cont {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                min-height: 70px;
+                font-size: 18px;
+                border-radius: 18px;
+                background-color: #FAF9FE;
+                padding: 8px 20px;
+                font-weight: 700;
+
+                span {
+                    color: inherit;
+
+                    + span {
+                        margin-left: 4px;
+                    }
+                }
+            }
+
+            &.active {
+                .item_cont {
+                    background-color: #FF8E8B;
+                    color: #F4F4F4;
+                }
+            }
+
+            + .item {
+                margin-top: 18px;
+            }
+        }
+    }
+}
+
+.section {
+    width: calc(100% - 240px);
+}
+
+.tab_list {
+    display: flex;
+
+    > .item {
+        .item_cont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 20px;
+            border-bottom: 1px solid #D9D9D9;
+            font-size: 16px;
+            min-width: 110px;
+            height: 54px;
+            color: #D9D9D9;
+            font-weight: 700;
+            position: relative;
+        }
+
+        &.active {
+            .item_cont {
+                color: #FF8E8B;
+
+                &::after {
+                    content: '';
+                    background-color: #FF8E8B;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 100px;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.tab_content {
+    width: 100%;
+}
+
+.list_type01 {
+    display: flex;
+
+    > .item {
+        width: calc((100% - 80px) / 3);
+        .item_cont {
+            display: flex;
+            flex-direction: column;
+
+            > * {
+                + * {
+                    margin-top: 10px;
+                }
+            }
+
+            .visual {
+                display: block;
+                width: 360px;
+                height: 220px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+
+                .img {
+                    display: block;
+                    height: 30px;
+                }
+
+                + * {
+                    margin-top: 14px;
+                }
+            }
+
+            .tag_list {
+                display: flex;
+
+                > .item {
+                    padding: 6px 10px;
+                    border-radius: 100px;
+                    font-size: 12px;
+                    border: 1px solid #FF8E8B;
+                    color: #FF8E8B;
+                    line-height: 1;
+                }
+            }
+
+            .title {
+                margin-top: 10px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            .text {
+                font-size: 14px;
+                color: #6C6C6C;
+                margin-top: 10px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        + .item {
+            margin-left: 40px;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <h1 class="logo">
-            <router-link to="/">김윤정</router-link>
+            <router-link to="/" class="logo_cont">김윤정</router-link>
         </h1>
         <ul class="menu_list">
             <li :class="['item', item.itemClass]" v-for="(item, idx) in menu" :key="idx">

@@ -1,8 +1,11 @@
 <template>
     <aside class="aside">
         <ul class="menu_list">
-            <li :class="['item', item.itemClass]" v-for="(item, idx) in menu" :key="idx">
-                <router-link :to="item.link" class="item_cont">{{ item.text }}</router-link>
+            <li :class="['item', item.itemClass, asideSelected === idx ? 'active' : '']" v-for="(item, idx) in menu" :key="idx" @click="$emit('asideSelected', asideSelected), asideSelected = idx">
+                <router-link :to="item.link" class="item_cont">
+                    <span>{{ item.text }}</span>
+                    <span>{{ item.icon }}</span>
+                </router-link>
             </li>
         </ul>
     </aside>
@@ -16,35 +19,36 @@ export default {
             menu: [
                 {
                     text: 'About Me',
+                    icon: '💕',
                     link: '/',
-                    itemClass: ''
+                    itemClass: '',
                 },
                 {
                     text: 'Projects',
+                    icon: '🤞',
                     link: '/',
-                    itemClass: ''
+                    itemClass: '',
                 },
                 {
                     text: 'Components',
+                    icon: '🙌   ',
                     link: '/',
-                    itemClass: ''
+                    itemClass: '',
                 },
                 {
                     text: 'Design',
+                    icon: '🌹',
                     link: '/',
-                    itemClass: ''
-                },
-                {
-                    text: 'dddd',
-                    link: '/',
-                    itemClass: ''
+                    itemClass: '',
                 },
                 {
                     text: 'Contact Me',
+                    icon: '👀',
                     link: '/',
-                    itemClass: ''
+                    itemClass: '',
                 },
-            ]
+            ],
+            asideSelected: 0,
         }
     },
     components: {
