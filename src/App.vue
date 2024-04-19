@@ -1,18 +1,20 @@
 <template>
   <TheHeader />
-  <TheAside @asideSelected="asideSelected = $event" />
-  <section class="section">
-    <TheTab :tabs="tabs" @tabSelected="tabSelected = $event">
-      <template v-slot:temp1>
-        탭1
-        <TheList01 :list="projects" />
-      </template>
-      <template v-slot:temp2>
-        탭2
-        <TheList01 :list="projects" />
-      </template>
-    </TheTab>
-  </section>
+  <div class="wrap">
+    <TheAside @asideSelected="asideSelected = $event" />
+    <section class="section">
+      <TheTab :tabs="tabs" @tabSelected="tabSelected = $event">
+        <template v-slot:temp1>
+          탭1
+          <TheList01 :list="projects" />
+        </template>
+        <template v-slot:temp2>
+          탭2
+          <TheList01 :list="projects" />
+        </template>
+      </TheTab>
+    </section>
+  </div>
 </template>
 
 <script>
