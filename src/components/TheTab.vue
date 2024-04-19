@@ -13,7 +13,7 @@
   
 <script>
 export default {
-    name: 'TheHeader',
+    name: 'TheTab',
     data(){
         return {
             tabSelected: 0,

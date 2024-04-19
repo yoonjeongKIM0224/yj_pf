@@ -1,6 +1,6 @@
 export default [
     {
-        link: '/',
+        link: '',
         title: "신세계사이먼 샵프리미엄아울렛 모바일샵",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
         alt: '알트값',
@@ -47,7 +47,7 @@ export default [
         ]
     },
     {
-        link: '/',
+        link: '',
         title: "신세계사이먼 샵프리미엄아울렛 모바일샵",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
         alt: '알트값',
@@ -94,7 +94,7 @@ export default [
         ]
     },
     {
-        link: '/',
+        link: '',
         title: "신세계사이먼 샵프리미엄아울렛 모바일샵",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
         alt: '알트값',

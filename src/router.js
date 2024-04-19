@@ -1,12 +1,39 @@
 import { createWebHistory, createRouter } from 'vue-router';
 
-//component import 
+// component import
+import TheAboutMe from '@/pages/TheAboutMe.vue'
+import TheProjects from '@/pages/TheProjects.vue'
+import TheComponents from '@/pages/TheComponents.vue'
+import TheDesign from '@/pages/TheDesign.vue'
+import TheContactMe from '@/pages/TheContactMe.vue'
+import TheListDetail from '@/components/TheListDetail.vue'
 
 const routes = [
   {
-    // path: '/경로', //해당 경로 접속할 경우
-    // component: import 해온 컴포넌트, //해당 컴포넌트 보여줌
-  }
+    path: '/about_me', //해당 경로 접속할 경우
+    component: TheAboutMe, //해당 컴포넌트 보여줌
+  },
+  {
+    path: '/projects',
+    component: TheProjects,
+  },
+  {
+    path: '/components',
+    component: TheComponents,
+  },
+  {
+    path: '/design',
+    component: TheDesign,
+  },
+  {
+    path: '/contact_me',
+    component: TheContactMe,
+  },
+  {
+    path: '/projects/detail/:itemIdx',
+    component: TheListDetail,
+    props: true
+  },
 ];
 
 const router = createRouter({

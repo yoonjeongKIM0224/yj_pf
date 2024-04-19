@@ -1,57 +1,62 @@
 <template>
   <TheHeader />
   <div class="wrap">
-    <TheAside @asideSelected="asideSelected = $event" />
+    <TheAside :list="menu" />
     <section class="section">
-      <TheTab :tabs="tabs" @tabSelected="tabSelected = $event">
-        <template v-slot:temp1>
-          탭1
-          <TheList01 :list="projects" />
-        </template>
-        <template v-slot:temp2>
-          탭2
-          <TheList01 :list="projects" />
-        </template>
-      </TheTab>
+      <router-view :list="projects"></router-view>
     </section>
   </div>
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue';
-import TheAside from './components/TheAside.vue';
-import TheTab from './components/TheTab.vue';
-import TheList01 from './components/TheList01.vue';
-import projects from './assets/projects';
+import TheHeader from '@/components/TheHeader.vue';
+import TheAside from '@/components/TheAside.vue';
+import projects from '@/assets/projects';
 
 export default {
   name: 'App',
   data(){
     return {
-      tabs: [
+      menu: [
         {
-          text: '실무',
+          text: 'About Me',
+          icon: '💕',
+          link: '/about_me',
           itemClass: '',
-          disabled: false,
         },
         {
-          text: '개인',
+          text: 'Projects',
+          icon: '🤞',
+          link: '/projects',
           itemClass: '',
-          disabled: false,
-        }
+        },
+        {
+          text: 'Components',
+          icon: '🙌   ',
+          link: '/components',
+          itemClass: '',
+        },
+        {
+          text: 'Design',
+          icon: '🌹',
+          link: '/design',
+          itemClass: '',
+        },
+        {
+          text: 'Contact Me',
+          icon: '👀',
+          link: '/contact_me',
+          itemClass: '',
+        },
       ],
       projectsOri: projects,
       projects: [...projects],
-      asideSelected: 0,
-      tabSelected: 0,
     }
   },
   components: {
     TheHeader,
     TheAside,
-    TheTab,
-    TheList01,
-  }
+  },
 }
 </script>
 
