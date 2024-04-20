@@ -11,11 +11,16 @@
     font-family: "Noto Sans KR", sans-serif;
     box-sizing: border-box;
     letter-spacing: -0.6px;
-    line-height: 1.2;
+    line-height: 1.4;
     border: 0;
     background-color: transparent;
 }
 
 button {
     cursor: pointer;
+}
+
+img {
+    display: block;
+    width: 100%;
 }
