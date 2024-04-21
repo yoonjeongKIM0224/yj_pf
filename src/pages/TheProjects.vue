@@ -1,10 +1,10 @@
 <template>
     <TheTab :tabs="tabs" @tabSelected="tabSelected = $event">
-        <template v-slot:temp1>
+        <template v-slot:tabPanel1>
           <TheList type="1" :list="list.projectWork.use" url="/projects/detail" />
         </template>
-        <template v-slot:temp2>
-          탭2
+        <template v-slot:tabPanel2>
+            <TheList type="1" :list="list.projectIndiv.use" url="/projects/detail" />
         </template>
     </TheTab>
 </template>

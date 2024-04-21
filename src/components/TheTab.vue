@@ -6,7 +6,7 @@
     </ul>
     <div class="tab_content">
         <div v-for="(item, idx) in tabs" :key="idx" class="container">
-            <slot :name="`temp${idx + 1}`" v-if="tabSelected === idx"></slot>
+            <slot :name="`tabPanel${idx + 1}`" v-if="tabSelected === idx"></slot>
         </div>
     </div>
 </template>

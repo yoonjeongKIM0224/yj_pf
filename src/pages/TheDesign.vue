@@ -1,17 +1,21 @@
 <template>
-    디자인
+    <TheList type="1" :list="list.design.use" url="/projects/detail" />
 </template>
   
 <script>
+import TheList from '@/components/TheList.vue';
+
 export default {
-    name: 'TheList',
+    name: 'TheDesign',
     data(){
         return {
         }
     },
     props: {
+        list: Object
     },
     components: {
+        TheList
     }
 }
 </script>

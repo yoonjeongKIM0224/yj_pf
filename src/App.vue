@@ -1,9 +1,7 @@
 <template>
   <TheHeader />
   <swiper
-    :pagination="{
-      type: 'fraction',
-    }"
+    :pagination="{type: 'fraction'}"
     :navigation="true"
     :modules="modules"
     class="mySwiper main_swiper">
@@ -28,8 +26,9 @@
 import TheHeader from '@/components/TheHeader.vue';
 import TheAside from '@/components/TheAside.vue';
 import TheFooter from '@/components/TheFooter.vue';
-import projectWork from '@/assets/projects_work';
-import projectIndiv from '@/assets/projects_indiv';
+import projectWork from '@/assets/data/projects_work';
+import projectIndiv from '@/assets/data/projects_indiv';
+import design from '@/assets/data/design';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -80,6 +79,10 @@ export default {
         projectIndiv: {
           ori: projectIndiv,
           use: [...projectIndiv]
+        },
+        design: {
+          ori: design,
+          use: [...design]
         },
       },
       asideSelected: 0, //고치기
