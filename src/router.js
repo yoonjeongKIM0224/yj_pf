@@ -30,7 +30,7 @@ const routes = [
     component: TheContactMe,
   },
   {
-    path: '/projects/detail/:itemIdx',
+    path: '/:category/detail/:itemIdx',
     component: TheListDetail,
     props: true
   },

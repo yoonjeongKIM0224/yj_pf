@@ -1,10 +1,10 @@
 <template>
     <TheTab :tabs="tabs" @tabSelected="tabSelected = $event">
         <template v-slot:tabPanel1>
-          <TheList type="1" :list="list.projectWork.use" url="/projects/detail" />
+          <TheList type="1" :list="workList" url="/projects/detail" />
         </template>
         <template v-slot:tabPanel2>
-            <TheList type="1" :list="list.projectIndiv.use" url="/projects/detail" />
+            <TheList type="1" :list="indivList" url="/projects/detail" />
         </template>
     </TheTab>
 </template>
@@ -30,6 +30,8 @@ export default {
                     disabled: false,
                 }
             ],
+            workList: this.list.projects.use.filter((item) => item.tabType !== '개인'),
+            indivList: this.list.projects.use.filter((item) => item.tabType === '개인'),
         }
     },
     props: {
@@ -37,8 +39,8 @@ export default {
     },
     components: {
         TheTab,
-        TheList,
-    }
+        TheList
+    },
 }
 </script>
 

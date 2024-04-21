@@ -26,8 +26,7 @@
 import TheHeader from '@/components/TheHeader.vue';
 import TheAside from '@/components/TheAside.vue';
 import TheFooter from '@/components/TheFooter.vue';
-import projectWork from '@/assets/data/projects_work';
-import projectIndiv from '@/assets/data/projects_indiv';
+import projects from '@/assets/data/projects';
 import design from '@/assets/data/design';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from 'swiper/modules';
@@ -72,13 +71,9 @@ export default {
         },
       ],
       allList: {
-        projectWork: {
-          ori: projectWork,
-          use: [...projectWork]
-        },
-        projectIndiv: {
-          ori: projectIndiv,
-          use: [...projectIndiv]
+        projects: {
+          ori: projects,
+          use: [...projects]
         },
         design: {
           ori: design,

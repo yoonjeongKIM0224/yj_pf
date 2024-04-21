@@ -40,12 +40,13 @@ export default {
     name: 'TheListDetail',
     data(){
         return {
-            info: this.list[this.itemIdx]
+            info: this.list.projects.use[this.itemIdx]
         }
     },
     props: {
         list: Object,
-        itemIdx: String
+        itemIdx: String,
+        category: String
     },
     components: {
     },
