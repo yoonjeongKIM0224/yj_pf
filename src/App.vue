@@ -18,7 +18,7 @@
     <TheAside :list="menu" @asideSelected="asideSelected = $event" />
     <section class="section">
       <h2 class="section_title">{{ menu[asideSelected].text }}</h2>
-      <router-view :list="projects"></router-view>
+      <router-view :list="allList"></router-view>
       <TheFooter />
     </section>
   </div>
@@ -28,12 +28,13 @@
 import TheHeader from '@/components/TheHeader.vue';
 import TheAside from '@/components/TheAside.vue';
 import TheFooter from '@/components/TheFooter.vue';
-import projects from '@/assets/projects';
+import projectWork from '@/assets/projects_work';
+import projectIndiv from '@/assets/projects_indiv';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
 
 export default {
   name: 'App',
@@ -71,9 +72,17 @@ export default {
           itemClass: '',
         },
       ],
+      allList: {
+        projectWork: {
+          ori: projectWork,
+          use: [...projectWork]
+        },
+        projectIndiv: {
+          ori: projectIndiv,
+          use: [...projectIndiv]
+        },
+      },
       asideSelected: 0, //고치기
-      projectsOri: projects,
-      projects: [...projects],
       modules: [Pagination, Navigation],
     }
   },

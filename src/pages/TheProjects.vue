@@ -1,7 +1,7 @@
 <template>
     <TheTab :tabs="tabs" @tabSelected="tabSelected = $event">
         <template v-slot:temp1>
-          <TheList type="1" :list="list" url="/projects/detail" />
+          <TheList type="1" :list="list.projectWork.use" url="/projects/detail" />
         </template>
         <template v-slot:temp2>
           탭2
