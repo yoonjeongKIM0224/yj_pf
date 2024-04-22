@@ -40,7 +40,7 @@ export default {
     name: 'TheListDetail',
     data(){
         return {
-            info: this.list.projects.use[this.itemIdx]
+            info: this.list[this.category].use[this.itemIdx]
         }
     },
     props: {
