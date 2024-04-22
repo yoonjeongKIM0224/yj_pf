@@ -1,7 +1,7 @@
 <template>
     <ul class="list_type01" v-if="type === '1'">
         <li class="item" v-for="(info, idx) in list" :key="idx">
-            <router-link :to="info.link ? info.link : `${url}/${idx}`" class="item_cont">
+            <router-link :to="info.link ? info.link : `${url}/${tabText ? idx + '_' + tabText : idx}`" class="item_cont">
                 <div class="visual" :style="{ backgroundColor: `${info.color}` }">
                     <img :src="info.image" :alt="info.alt" class="img">
                 </div>
@@ -25,7 +25,8 @@ export default {
     props: {
         list: Object,
         type: String,
-        url: String
+        url: String,
+        tabText: String
     },
     components: {
     }

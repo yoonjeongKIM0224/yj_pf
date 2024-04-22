@@ -32,6 +32,7 @@
                 <p v-html="item.text" class="text"></p>
             </article>
         </section>
+        {{ itemIdxInfo }}
     </div>
 </template>
   
@@ -40,7 +41,8 @@ export default {
     name: 'TheListDetail',
     data(){
         return {
-            info: this.list[this.category].use[this.itemIdx]
+            itemIdxInfo: this.itemIdx.split('_')[0],
+            info: this.list[this.category].use[this.itemIdxInfo]
         }
     },
     props: {
