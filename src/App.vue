@@ -26,8 +26,8 @@
 import TheHeader from '@/components/TheHeader.vue';
 import TheAside from '@/components/TheAside.vue';
 import TheFooter from '@/components/TheFooter.vue';
-import projects from '@/assets/data/projects';
-import design from '@/assets/data/design';
+import projects from '@/assets/data/projects.js';
+import design from '@/assets/data/design.js';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';

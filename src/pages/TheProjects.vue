@@ -30,8 +30,8 @@ export default {
                     disabled: false,
                 }
             ],
-            workList: this.list.projects.use.filter((item) => item.tabType !== '개인'),
-            indivList: this.list.projects.use.filter((item) => item.tabType === '개인'),
+            workList: this.list.projects.use.filter((item) => item.tabCategory === 'work'),
+            indivList: this.list.projects.use.filter((item) => item.tabCategory === 'indiv'),
         }
     },
     props: {

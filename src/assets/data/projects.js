@@ -1,5 +1,6 @@
 export default [
     {
+        tabCategory: 'work', 
         link: '',
         title: "메리츠화재 공식 보험상품몰",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
@@ -47,6 +48,7 @@ export default [
         ]
     },
     {
+        tabCategory: 'work', 
         link: '',
         title: "고용24",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
@@ -94,6 +96,7 @@ export default [
         ]
     },
     {
+        tabCategory: 'work', 
         link: '',
         title: "신세계사이먼 샵프리미엄아울렛 모바일샵",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
@@ -141,6 +144,7 @@ export default [
         ]
     },
     {
+        tabCategory: 'work', 
         link: '',
         boxClass: 'black',
         title: "IBK 온라인 입점 소상공인부 대출",
@@ -189,6 +193,7 @@ export default [
         ]
     },
     {
+        tabCategory: 'work', 
         link: '',
         boxClass: 'black',
         title: "아모레퍼시픽 SCM방문등록시스템",
@@ -237,6 +242,7 @@ export default [
         ]
     },
     {
+        tabCategory: 'work', 
         link: '',
         title: "HIS STaaS 관리자 페이지",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
@@ -284,6 +290,7 @@ export default [
         ]
     },
     {
+        tabCategory: 'work', 
         link: '',
         title: "신한은행 SOL(앱)",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
@@ -331,6 +338,7 @@ export default [
         ]
     },
     {
+        tabCategory: 'work', 
         link: '',
         title: "프로토랩",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
@@ -378,6 +386,7 @@ export default [
         ]
     },
     {
+        tabCategory: 'work', 
         link: '',
         title: "한국과학우주청소년단",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
@@ -425,6 +434,7 @@ export default [
         ]
     },
     {
+        tabCategory: 'work', 
         link: '',
         title: "골든블루",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
@@ -472,6 +482,7 @@ export default [
         ]
     },
     {
+        tabCategory: 'work', 
         link: '',
         title: "비상교육 학습코칭 관리자 페이지",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
@@ -519,7 +530,7 @@ export default [
         ]
     },
     {
-        tabType: '개인',
+        tabCategory: 'indiv', 
         link: '',
         title: "메리츠화재 공식 보험상품몰",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
