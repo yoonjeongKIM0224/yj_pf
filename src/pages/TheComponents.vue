@@ -1,17 +1,21 @@
 <template>
-    컴포넌트
+    <TheList type="1" :list="list.components.use" url="/components/detail" />
 </template>
   
 <script>
+import TheList from '@/components/TheList.vue';
+
 export default {
-    name: 'TheList',
+    name: 'TheComponents',
     data(){
         return {
         }
     },
     props: {
+        list: Object
     },
     components: {
+        TheList
     }
 }
 </script>

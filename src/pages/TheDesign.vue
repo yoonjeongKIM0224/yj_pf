@@ -1,5 +1,5 @@
 <template>
-    <TheList type="1" :list="list.design.use" url="/projects/detail" />
+    <TheList type="1" :list="list.design.use" url="/design/detail" />
 </template>
   
 <script>

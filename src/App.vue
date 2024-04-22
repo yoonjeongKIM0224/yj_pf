@@ -27,6 +27,7 @@ import TheHeader from '@/components/TheHeader.vue';
 import TheAside from '@/components/TheAside.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import projects from '@/assets/data/projects.js';
+import components from '@/assets/data/components.js';
 import design from '@/assets/data/design.js';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from 'swiper/modules';
@@ -78,6 +79,10 @@ export default {
         design: {
           ori: design,
           use: [...design]
+        },
+        components: {
+          ori: components,
+          use: [...components]
         },
       },
       asideSelected: 0, //고치기
