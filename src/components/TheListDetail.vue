@@ -22,7 +22,7 @@
         <section class="text_wrap">
             <article v-for="(item, idx) in info.content" :key="idx" class="article">
                 <div class="img_list">
-                    <div v-for="(img, idx) in item.imgae" :key="idx" class="item">
+                    <div v-for="(img, idx) in item.image" :key="idx" class="item">
                         <div class="item_cont">
                             <img :src="img" alt="" class="img">
                         </div>
@@ -40,12 +40,12 @@ export default {
     name: 'TheListDetail',
     data(){
         return {
-            info: this.list[this.category].use[this.itemIdx.split('_')[0]]
+            info: this.list.filter((item) => item.id == this.itemId)[0]
         }
     },
     props: {
         list: Object,
-        itemIdx: String,
+        itemId: String,
         category: String
     },
     components: {

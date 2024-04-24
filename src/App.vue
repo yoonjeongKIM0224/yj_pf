@@ -1,10 +1,15 @@
 <template>
   <TheHeader />
   <swiper
+    :slidesPerView="3"
+    :spaceBetween="20"
     :pagination="{type: 'fraction'}"
     :navigation="true"
     :modules="modules"
     class="mySwiper main_swiper">
+    <swiper-slide>
+      <img src="./assets/images/banner.png" alt="">
+    </swiper-slide>
     <swiper-slide>
       <img src="./assets/images/banner.png" alt="">
     </swiper-slide>
@@ -16,7 +21,7 @@
     <TheAside :list="menu" @asideSelected="asideSelected = $event" />
     <section class="section">
       <h2 class="section_title">{{ menu[asideSelected].text }}</h2>
-      <router-view :list="allList"></router-view>
+      <router-view :list="detailInfo"></router-view>
       <TheFooter />
     </section>
   </div>
@@ -26,9 +31,7 @@
 import TheHeader from '@/components/TheHeader.vue';
 import TheAside from '@/components/TheAside.vue';
 import TheFooter from '@/components/TheFooter.vue';
-import projects from '@/assets/data/projects.js';
-import components from '@/assets/data/components.js';
-import design from '@/assets/data/design.js';
+import detailInfo from '@/assets/data/detail_info.js';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -71,20 +74,7 @@ export default {
           itemClass: '',
         },
       ],
-      allList: {
-        projects: {
-          ori: projects,
-          use: [...projects]
-        },
-        design: {
-          ori: design,
-          use: [...design]
-        },
-        components: {
-          ori: components,
-          use: [...components]
-        },
-      },
+      detailInfo,
       asideSelected: 0, //고치기
       modules: [Pagination, Navigation],
     }

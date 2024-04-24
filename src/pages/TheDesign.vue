@@ -1,5 +1,5 @@
 <template>
-    <TheList type="1" :list="list.design.use" url="/design/detail" />
+    <TheList type="1" :list="detailList" />
 </template>
   
 <script>
@@ -9,6 +9,7 @@ export default {
     name: 'TheDesign',
     data(){
         return {
+            detailList: this.list.filter((item) => item.category === 'design'),
         }
     },
     props: {
