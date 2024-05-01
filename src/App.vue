@@ -3,20 +3,23 @@
   <swiper
     :slidesPerView="3"
     :spaceBetween="20"
-    :pagination="{type: 'fraction'}"
+    :autoplay="{
+      delay: 2500,
+      disableOnInteraction: false,
+    }"
+    :loop="true"
+    :pagination="{
+      type: 'fraction'
+    }"
     :navigation="true"
     :modules="modules"
-    class="mySwiper main_swiper">
-    <swiper-slide>
-      <img src="./assets/images/banner.png" alt="">
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./assets/images/banner.png" alt="">
-    </swiper-slide>
-    <swiper-slide>
-      <img src="./assets/images/banner.png" alt="">
-    </swiper-slide>
-  </swiper>
+    class="mySwiper main_swiper"
+    >
+      <swiper-slide style="background-color: #ddd; height: 500px;">Slide 1</swiper-slide>
+      <swiper-slide style="background-color: #ddd; height: 500px;">Slide 2</swiper-slide>
+      <swiper-slide style="background-color: #ddd; height: 500px;">Slide 3</swiper-slide>
+      <swiper-slide style="background-color: #ddd; height: 500px;">Slide 4</swiper-slide>
+    </swiper>
   <div class="wrap">
     <TheAside :list="menu" @asideSelected="asideSelected = $event" />
     <section class="section">
@@ -91,4 +94,19 @@ export default {
 
 <style>
   @import '~@/assets/style/import.css';
+
+  .swiper-slide-active {
+    width: 80%!important;
+    background: yellow!important;
+  }
+
+  .swiper-slide-next {
+    width: calc((20% - 40px) / 2)!important;
+    background: red!important;
+  }
+
+  .swiper-slide-next + * {
+    width: calc((20% - 40px) / 2)!important;
+    background: pink!important;
+  }
 </style>
