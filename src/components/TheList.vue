@@ -2,7 +2,7 @@
     <!-- 리스트 정렬 -->
     <div class="setting_area" v-if="listUse.length > 1">
         <div class="select_type01">
-            <select name="document_select01" id="document_select01" class="select" @change="selectSort($event.target.value)">
+            <select name="document_select01" id="document_select01" class="select" @change="$emit('selectChange', $event.target.value)">
                 <option value="latest" class="option">최신순</option>
                 <option value="recommend" class="option">추천순</option>
             </select>
@@ -39,7 +39,7 @@ export default {
     name: 'TheList',
     data(){
         return {
-            listUse: [...this.list]
+            listUse: [...this.list],
         }
     },
     props: {

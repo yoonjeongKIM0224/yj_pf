@@ -499,3 +499,42 @@
         }
     }
 }
+
+.detail_move {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 1px solid #D9D9D9;
+
+    > .item {
+        .title {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            padding: 0 4px;
+        }
+
+        .info_cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 70px;
+            padding: 12px 30px;
+            border-radius: 16px;
+            background-color: #4D65E1;
+            
+            .info01 {
+                color: #fff;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .info02 {
+                margin-left: 12px;
+            }
+        }
+
+        + .item {
+            margin-top: 30px;
+        }
+    }
+}

@@ -33,6 +33,24 @@
             </article>
         </section>
     </div>
+
+    <div class="detail_move">
+        <div class="item">
+            <span class="title">다음 글 →</span>
+            <router-link to="/" class="info_cont">
+                <span class="info01">고용24</span>
+                <span class="info02">LOGO</span>
+            </router-link>
+        </div>
+        <div class="item">
+            <span class="title">이전 글 ←</span>
+            <router-link to="/" class="info_cont">
+                <span class="info01">고용24</span>
+                <span class="info02">LOGO</span>
+            </router-link>
+        </div>
+    </div>
+    {{ list }}
 </template>
   
 <script>
@@ -40,7 +58,7 @@ export default {
     name: 'TheListDetail',
     data(){
         return {
-            info: this.list.filter((item) => item.id == this.itemId)[0]
+            info: this.list.filter((item) => item.id == this.itemId)[0],
         }
     },
     props: {

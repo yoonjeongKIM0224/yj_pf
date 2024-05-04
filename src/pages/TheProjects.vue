@@ -1,7 +1,7 @@
 <template>
     <TheTab :tabs="tabs" @tabSelected="tabSelected = $event">
         <template v-slot:tabPanel1>
-          <TheList type="1" :list="workList" />
+          <TheList type="1" :list="workList" @selectChange="console.log($event)" />
         </template>
         <template v-slot:tabPanel2>
             <TheList type="1" :list="indivList" />
