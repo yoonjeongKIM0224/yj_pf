@@ -1,14 +1,18 @@
 <template>
-    <div class="setting_area">
+    <!-- 리스트 정렬 -->
+    <div class="setting_area" v-if="listUse.length > 1">
         <div class="select_type01">
-            <select name="document_select01" id="document_select01" class="select">
-                <option value="#" class="option">최신순</option>
-                <option value="#" class="option">추천순</option>
+            <select name="document_select01" id="document_select01" class="select" @change="selectSort($event.target.value)">
+                <option value="latest" class="option">최신순</option>
+                <option value="recommend" class="option">추천순</option>
             </select>
         </div>
     </div>
-    <ul class="list_type01" v-if="type === '1'">
-        <li class="item" v-for="(info, idx) in list" :key="idx">
+    <!--// 리스트 정렬 -->
+
+    <!-- 디자인 TYPE 01 -->
+    <ul class="list_type01" v-if="listUse.length !== 0 && type === '1'">
+        <li class="item" v-for="(info, idx) in listUse" :key="idx">
             <router-link :to="`/detail/${info.id}`" class="item_cont">
                 <div class="visual" :style="{ backgroundColor: `${info.color}` }">
                     <img :src="info.image" :alt="info.alt" class="img">
@@ -21,6 +25,13 @@
             </router-link>
         </li>
     </ul>
+    <!--// 디자인 TYPE 01 -->
+    
+    <!-- NO DATA -->
+    <div v-if="listUse.length == 0">
+        없음
+    </div>
+    <!--// NO DATA -->
 </template>
   
 <script>
@@ -28,6 +39,7 @@ export default {
     name: 'TheList',
     data(){
         return {
+            listUse: [...this.list]
         }
     },
     props: {
@@ -37,6 +49,19 @@ export default {
         tabText: String
     },
     components: {
+    },
+    methods: {
+        selectSort(selectValue){
+            if(selectValue === 'latest') {
+                this.listUse = [...this.list];
+            } else {
+                this.listUse.sort(function(a, b){
+                    if(selectValue === 'recommend') {
+                        return a.recommend === b.recommend ? 0 : a.recommend ? -1 : 1;
+                    }
+                })
+            }
+        }
     }
 }
 </script>
