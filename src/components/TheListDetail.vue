@@ -50,7 +50,6 @@
             </router-link>
         </div>
     </div>
-    {{ list }}
 </template>
   
 <script>

@@ -153,7 +153,7 @@ export default [
         category: 'projects',
         tab: '실무',
         id: 4,
-        recommend: false,
+        recommend: true,
         boxClass: 'black',
         title: "IBK 온라인 입점 소상공인부 대출",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
@@ -653,7 +653,7 @@ export default [
     {
         category: 'design',
         id: 14,
-        recommend: false,
+        recommend: true,
         title: "design",
         image: "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
         alt: '알트값',

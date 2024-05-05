@@ -2,7 +2,7 @@
     <!-- 리스트 정렬 -->
     <div class="setting_area" v-if="listUse.length > 1">
         <div class="select_type01">
-            <select name="document_select01" id="document_select01" class="select" @change="$emit('selectChange', $event.target.value)">
+            <select name="document_select01" id="document_select01" class="select" @change="selectSort($event.target.value)">
                 <option value="latest" class="option">최신순</option>
                 <option value="recommend" class="option">추천순</option>
             </select>
@@ -20,12 +20,13 @@
                 <span class="tag_list01">
                     <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
                 </span>
-                <span class="title">{{ info.title }}</span>
+                <span class="title">{{ info.title }}{{ info.recommend ? '(추천)' : '' }}</span>
                 <p class="text">{{ info.text }}</p>
             </router-link>
         </li>
     </ul>
     <!--// 디자인 TYPE 01 -->
+    {{ listUse }}
     
     <!-- NO DATA -->
     <div v-if="listUse.length == 0">
@@ -33,7 +34,7 @@
     </div>
     <!--// NO DATA -->
 </template>
-  
+
 <script>
 export default {
     name: 'TheList',
