@@ -4,7 +4,7 @@ import { createWebHistory, createRouter } from 'vue-router';
 import TheAboutMe from '@/pages/TheAboutMe.vue'
 import TheProjects from '@/pages/TheProjects.vue'
 import TheComponents from '@/pages/TheComponents.vue'
-import TheDesign from '@/pages/TheDesign.vue'
+import TheHobby from '@/pages/TheHobby.vue'
 import TheContactMe from '@/pages/TheContactMe.vue'
 import TheListDetail from '@/components/TheListDetail.vue'
 
@@ -22,8 +22,8 @@ const routes = [
     component: TheComponents,
   },
   {
-    path: '/design',
-    component: TheDesign,
+    path: '/hobby',
+    component: TheHobby,
   },
   {
     path: '/contact_me',

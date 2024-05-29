@@ -34,21 +34,8 @@
         </section>
     </div>
 
-    <div class="detail_move">
-        <div class="item">
-            <span class="title">다음 글 →</span>
-            <router-link to="/" class="info_cont">
-                <span class="info01">고용24</span>
-                <span class="info02">LOGO</span>
-            </router-link>
-        </div>
-        <div class="item">
-            <span class="title">이전 글 ←</span>
-            <router-link to="/" class="info_cont">
-                <span class="info01">고용24</span>
-                <span class="info02">LOGO</span>
-            </router-link>
-        </div>
+    <div style="display: flex; justify-content: center; margin-top: 80px;">
+        <router-link :to="`/${info.category}`" class="item_cont" style="background-color: #FF8E8B; padding: 16px; border-radius: 100px; color: #fff; width: 140px; font-size: 18px; text-align: center;">목록 보기</router-link>
     </div>
 </template>
   

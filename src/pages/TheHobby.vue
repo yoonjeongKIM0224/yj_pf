@@ -6,10 +6,10 @@
 import TheList from '@/components/TheList.vue';
 
 export default {
-    name: 'TheDesign',
+    name: 'TheHobby',
     data(){
         return {
-            detailList: this.list.filter((item) => item.category === 'design'),
+            detailList: this.list.filter((item) => item.category === 'hobby'),
         }
     },
     props: {

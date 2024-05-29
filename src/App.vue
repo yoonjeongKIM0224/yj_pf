@@ -40,6 +40,11 @@
       <TheFooter />
     </section>
   </div>
+  <a href="https://www.kakaocorp.com/page/" target="_blank" class="chat_btn">
+    <span class="container">
+      오픈채팅
+    </span>
+  </a>
 </template>
 
 <script>
@@ -75,17 +80,17 @@ export default {
           itemClass: '',
         },
         {
-          text: 'Design',
+          text: 'Hobby',
           icon: '🌹',
-          link: '/design',
+          link: '/hobby',
           itemClass: '',
         },
-        {
-          text: 'Contact Me',
-          icon: '👀',
-          link: '/contact_me',
-          itemClass: '',
-        },
+        // {
+        //   text: 'Contact Me',
+        //   icon: '👀',
+        //   link: '/contact_me',
+        //   itemClass: '',
+        // },
       ],
       detailInfo,
       asideSelected: 0, //고치기

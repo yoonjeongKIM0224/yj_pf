@@ -651,7 +651,7 @@ export default [
         ]
     },
     {
-        category: 'design',
+        category: 'hobby',
         id: 14,
         recommend: true,
         title: "design",
@@ -700,7 +700,7 @@ export default [
         ]
     },
     {
-        category: 'design',
+        category: 'hobby',
         id: 14,
         recommend: false,
         title: "design",
