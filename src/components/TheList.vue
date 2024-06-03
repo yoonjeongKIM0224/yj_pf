@@ -16,11 +16,12 @@
             <router-link :to="`/detail/${info.id}`" class="item_cont">
                 <div class="visual" :style="{ backgroundColor: `${info.color}` }">
                     <img :src="info.image" :alt="info.alt" class="img">
+                    <span class="recommend" v-if="info.recommend" aria-label="추천"></span>
                 </div>
                 <span class="tag_list01">
                     <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
                 </span>
-                <span class="title">{{ info.title }}{{ info.recommend ? '(추천)' : '' }}</span>
+                <span class="title">{{ info.title }}</span>
                 <p class="text">{{ info.text }}</p>
             </router-link>
         </li>

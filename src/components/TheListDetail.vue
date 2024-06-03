@@ -37,6 +37,8 @@
     <div style="display: flex; justify-content: center; margin-top: 80px;">
         <router-link :to="`/${info.category}`" class="item_cont" style="background-color: #FF8E8B; padding: 16px; border-radius: 100px; color: #fff; width: 140px; font-size: 18px; text-align: center;">목록 보기</router-link>
     </div>
+
+    {{ list }}
 </template>
   
 <script>
@@ -45,12 +47,12 @@ export default {
     data(){
         return {
             info: this.list.filter((item) => item.id == this.itemId)[0],
+            // info2: this.list.filter((item) => item.id == this.info.category),
         }
     },
     props: {
         list: Object,
         itemId: String,
-        category: String
     },
     components: {
     },
