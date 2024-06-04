@@ -1,5 +1,5 @@
 <template>
-    <TheTab type="2" :tabs="tabs" @tabSelected="tabSelected = $event">
+    <TheTab type="2" :tabs="tabs" :handler="true" @tabSelected="tabSelected = $event">
         <template v-slot:tabPanel1>
             탭1
         </template>
@@ -27,7 +27,57 @@ export default {
                     text: 'radio',
                     itemClass: '',
                     disabled: false,
-                }
+                },
+                {
+                    text: 'checkbox',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
+                    text: 'radio',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
+                    text: 'checkbox',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
+                    text: 'radio',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
+                    text: 'checkbox',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
+                    text: 'radio',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
+                    text: 'checkbox',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
+                    text: 'radio',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
+                    text: 'checkbox',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
+                    text: 'radio',
+                    itemClass: '',
+                    disabled: false,
+                },
             ],
         }
     },

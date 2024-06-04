@@ -18,7 +18,7 @@
     >
       <swiper-slide v-for="(info, idx) in mainSwiper" :key="idx">
         <div class="container">
-          <div class="tag_list01">
+          <div class="tag_list1">
             <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
           </div>
           <span class="title" v-html="info.title"></span>

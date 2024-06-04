@@ -1,8 +1,8 @@
 <template>
     <!-- 리스트 정렬 -->
     <div class="setting_area" v-if="listUse.length > 1 && setting">
-        <div class="select_type01">
-            <select name="document_select01" id="document_select01" class="select" @change="selectSort($event.target.value)">
+        <div class="select_type1">
+            <select name="document_select1" id="document_select1" class="select" @change="selectSort($event.target.value)">
                 <option value="latest" class="option">최신순</option>
                 <option value="recommend" class="option">추천순</option>
             </select>
@@ -11,15 +11,15 @@
     <!--// 리스트 정렬 -->
 
     <div v-if="listUse.length !== 0">
-        <!-- 디자인 TYPE 01 -->
-        <ul class="list_type01" v-if="type === '1'">
+        <!-- 디자인 TYPE 1 -->
+        <ul :class="`list_type1`" v-if="type === '1'">
             <li class="item" v-for="(info, idx) in listUse" :key="idx">
                 <router-link :to="`/detail/${info.id}`" class="item_cont">
                     <div class="visual" :style="{ backgroundColor: `${info.color}` }">
                         <img :src="info.image" :alt="info.alt" class="img">
                         <span class="recommend" v-if="info.recommend" aria-label="추천"></span>
                     </div>
-                    <span class="tag_list01">
+                    <span class="tag_list1">
                         <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
                     </span>
                     <span class="title">{{ info.title }}</span>
@@ -27,7 +27,7 @@
                 </router-link>
             </li>
         </ul>
-        <!--// 디자인 TYPE 01 -->
+        <!--// 디자인 TYPE 1 -->
     </div>
     <!-- {{ listUse }} -->
     
@@ -51,10 +51,7 @@ export default {
         type: String,
         url: String,
         tabText: String,
-        setting: {
-            type: Boolean,
-            default: true
-        }
+        setting: Boolean
     },
     components: {
     },
