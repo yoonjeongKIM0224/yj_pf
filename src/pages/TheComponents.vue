@@ -1,5 +1,5 @@
 <template>
-    <TheList type="1" :list="detailList" />
+    <TheList type="2" :list="detailList" :setting="false" />
 </template>
   
 <script>

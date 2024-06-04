@@ -38,16 +38,21 @@
         <router-link :to="`/${info.category}`" class="item_cont" style="background-color: #FF8E8B; padding: 16px; border-radius: 100px; color: #fff; width: 140px; font-size: 18px; text-align: center;">목록 보기</router-link>
     </div>
 
-    {{ list }}
+    <h1 style="margin-bottom: 20px; margin-top: 40px;">추천글</h1>
+    <TheList type="1" :list="recommend" :setting="false" />
 </template>
-  
+
 <script>
+import TheList from '@/components/TheList.vue';
+
 export default {
     name: 'TheListDetail',
     data(){
+        let beforeInfo = this.list.filter((item) => item.id == this.itemId)[0];
+
         return {
-            info: this.list.filter((item) => item.id == this.itemId)[0],
-            // info2: this.list.filter((item) => item.id == this.info.category),
+            info: beforeInfo,
+            recommend: this.list.filter((item) => item.category == beforeInfo.category && item.recommend == true),
         }
     },
     props: {
@@ -55,6 +60,7 @@ export default {
         itemId: String,
     },
     components: {
+        TheList
     },
 }
 </script>

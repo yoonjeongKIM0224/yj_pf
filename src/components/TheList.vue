@@ -1,6 +1,6 @@
 <template>
     <!-- 리스트 정렬 -->
-    <div class="setting_area" v-if="listUse.length > 1">
+    <div class="setting_area" v-if="listUse.length > 1 && setting">
         <div class="select_type01">
             <select name="document_select01" id="document_select01" class="select" @change="selectSort($event.target.value)">
                 <option value="latest" class="option">최신순</option>
@@ -10,24 +10,43 @@
     </div>
     <!--// 리스트 정렬 -->
 
-    <!-- 디자인 TYPE 01 -->
-    <ul class="list_type01" v-if="listUse.length !== 0 && type === '1'">
-        <li class="item" v-for="(info, idx) in listUse" :key="idx">
-            <router-link :to="`/detail/${info.id}`" class="item_cont">
-                <div class="visual" :style="{ backgroundColor: `${info.color}` }">
-                    <img :src="info.image" :alt="info.alt" class="img">
-                    <span class="recommend" v-if="info.recommend" aria-label="추천"></span>
+    <div v-if="listUse.length !== 0">
+        <!-- 디자인 TYPE 01 -->
+        <ul class="list_type01" v-if="type === '1'">
+            <li class="item" v-for="(info, idx) in listUse" :key="idx">
+                <router-link :to="`/detail/${info.id}`" class="item_cont">
+                    <div class="visual" :style="{ backgroundColor: `${info.color}` }">
+                        <img :src="info.image" :alt="info.alt" class="img">
+                        <span class="recommend" v-if="info.recommend" aria-label="추천"></span>
+                    </div>
+                    <span class="tag_list01">
+                        <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
+                    </span>
+                    <span class="title">{{ info.title }}</span>
+                    <p class="text">{{ info.text }}</p>
+                </router-link>
+            </li>
+        </ul>
+        <!--// 디자인 TYPE 01 -->
+
+        <!-- 디자인 TYPE 02 -->
+        <ul class="list_type02" v-if="type === '2'">
+            <li class="item" v-for="(info, idx) in listUse" :key="idx">
+                <div class="item_cont">
+                    <button type="button" class="info">
+                        <span class="title" v-html="info.title"></span>
+                        <span class="">접힘</span>
+                    </button>
+                    <div class="cont">
+                        <div v-html="info.code"></div>
+                        <pre>{{ info.code }}</pre>
+                    </div>
                 </div>
-                <span class="tag_list01">
-                    <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
-                </span>
-                <span class="title">{{ info.title }}</span>
-                <p class="text">{{ info.text }}</p>
-            </router-link>
-        </li>
-    </ul>
-    <!--// 디자인 TYPE 01 -->
-    {{ listUse }}
+            </li>
+        </ul>
+        <!--// 디자인 TYPE 02 -->
+    </div>
+    <!-- {{ listUse }} -->
     
     <!-- NO DATA -->
     <div v-if="listUse.length == 0">
@@ -48,7 +67,11 @@ export default {
         list: Object,
         type: String,
         url: String,
-        tabText: String
+        tabText: String,
+        setting: {
+            type: Boolean,
+            default: true
+        }
     },
     components: {
     },

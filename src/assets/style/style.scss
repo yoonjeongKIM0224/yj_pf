@@ -372,6 +372,29 @@
     }
 }
 
+.list_type02 {
+    > .item {
+        border: 1px solid #FF8E8B;
+        border-radius: 18px;
+
+        > .item_cont {
+            .info {
+                padding: 20px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            .cont {
+                padding: 20px;
+            }
+        }
+
+        + .item {
+            margin-top: 20px;
+        }
+    }
+}
+
 .tag_list01 {
     display: flex;
     flex-wrap: wrap;
