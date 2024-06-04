@@ -35,7 +35,8 @@
   <div class="wrap">
     <TheAside :list="menu" @asideSelected="asideSelected = $event" />
     <section class="section">
-      <h2 class="section_title">{{ menu[asideSelected].text }}</h2>
+      <h2 class="section_title">{{ menu[asideSelected].title + menu[asideSelected].icon }}</h2>
+      <p class="section_text">{{ menu[asideSelected].text }}</p>
       <router-view :list="detailInfo"></router-view>
       <TheFooter />
     </section>
@@ -62,25 +63,29 @@ export default {
     return {
       menu: [
         {
-          text: 'About Me',
+          title: 'About Me',
+          text: '소개하는 페이지입니다.',
           icon: '💕',
           link: '/about_me',
           itemClass: '',
         },
         {
-          text: 'Projects',
+          title: 'Projects',
+          text: '프로젝트 페이지입니다.',
           icon: '🤞',
           link: '/projects',
           itemClass: '',
         },
         {
-          text: 'Components',
-          icon: '🙌   ',
+          title: 'Components',
+          text: '컴포넌트 페이지입니다.',
+          icon: '💥',
           link: '/components',
           itemClass: '',
         },
         {
-          text: 'Hobby',
+          title: 'Hobby',
+          text: '취미 페이지입니다.',
           icon: '🌹',
           link: '/hobby',
           itemClass: '',

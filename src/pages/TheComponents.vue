@@ -1,22 +1,41 @@
 <template>
-    <TheList type="2" :list="detailList" :setting="false" />
+    <TheTab type="2" :tabs="tabs" @tabSelected="tabSelected = $event">
+        <template v-slot:tabPanel1>
+            탭1
+        </template>
+        <template v-slot:tabPanel2>
+            탭2
+        </template>
+    </TheTab>
 </template>
   
 <script>
-import TheList from '@/components/TheList.vue';
+import TheTab from '@/components/TheTab.vue';
 
 export default {
     name: 'TheComponents',
     data(){
         return {
-            detailList: this.list.filter((item) => item.category === 'components'),
+            tabSelected: 0,
+            tabs: [
+                {
+                    text: 'checkbox',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
+                    text: 'radio',
+                    itemClass: '',
+                    disabled: false,
+                }
+            ],
         }
     },
     props: {
         list: Object
     },
     components: {
-        TheList
+        TheTab
     }
 }
 </script>

@@ -6,7 +6,7 @@
                 v-for="(item, idx) in list" :key="idx"
                 @click="$emit('asideSelected', asideSelected = idx)">
                 <router-link :to="item.link" class="item_cont">
-                    <span>{{ item.text }}</span>
+                    <span>{{ item.title }}</span>
                     <span>{{ item.icon }}</span>
                 </router-link>
             </li>

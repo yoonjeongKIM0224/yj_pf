@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <p>©2024 kimyoonjeong. All rights reserved.</p>
+        <p class="text">©KIMYOONJEONG.</p>
     </footer>
 </template>
   

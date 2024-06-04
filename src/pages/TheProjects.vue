@@ -1,5 +1,5 @@
 <template>
-    <TheTab :tabs="tabs" @tabSelected="tabSelected = $event">
+    <TheTab type="1" :tabs="tabs" @tabSelected="tabSelected = $event">
         <template v-slot:tabPanel1>
             <TheList type="1" :list="workList" />
         </template>

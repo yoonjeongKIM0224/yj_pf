@@ -28,23 +28,6 @@
             </li>
         </ul>
         <!--// 디자인 TYPE 01 -->
-
-        <!-- 디자인 TYPE 02 -->
-        <ul class="list_type02" v-if="type === '2'">
-            <li class="item" v-for="(info, idx) in listUse" :key="idx">
-                <div class="item_cont">
-                    <button type="button" class="info">
-                        <span class="title" v-html="info.title"></span>
-                        <span class="">접힘</span>
-                    </button>
-                    <div class="cont">
-                        <div v-html="info.code"></div>
-                        <pre>{{ info.code }}</pre>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <!--// 디자인 TYPE 02 -->
     </div>
     <!-- {{ listUse }} -->
     

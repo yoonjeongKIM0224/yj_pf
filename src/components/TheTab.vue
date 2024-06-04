@@ -1,5 +1,5 @@
 <template>
-    <ul class="tab_list">
+    <ul :class="`tab_list${type}`">
         <li :class="['item', item.itemClass, tabSelected === idx ? 'active' : '']" v-for="(item, idx) in tabs" :key="idx" @click="$emit('tabSelected', tabSelected), tabSelected = idx">
             <button type="button" class="item_cont" :disabled="item.disabled">{{ item.text }}</button>
         </li>
@@ -20,7 +20,8 @@ export default {
         }
     },
     props: {
-        tabs: Object
+        tabs: Object,
+        type: String
     },
     components: {
     }
