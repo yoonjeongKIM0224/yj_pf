@@ -5,7 +5,7 @@
                 <button type="button" class="item_cont" :disabled="item.disabled">{{ item.text }}</button>
             </li>
         </ul>
-        <button type="button" class="handler_btn" v-if="handler" @click="handlerActive = !handlerActive">버튼입니당</button>
+        <TheButton v-if="handler" @click="handlerActive = !handlerActive" class="handler_button" aria-label="확대"></TheButton>
     </div>
     <div class="tab_content">
         <div v-for="(item, idx) in tabs" :key="idx" class="container">
@@ -15,6 +15,8 @@
 </template>
   
 <script>
+import TheButton from '@/components/TheButton.vue';
+
 export default {
     name: 'TheTab',
     data(){
@@ -29,6 +31,7 @@ export default {
         handler: Boolean
     },
     components: {
+        TheButton
     }
 }
 </script>
