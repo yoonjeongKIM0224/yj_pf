@@ -17,7 +17,12 @@
                 <router-link :to="`/detail/${info.id}`" class="item_cont">
                     <div class="visual" :style="{ backgroundColor: `${info.color}` }">
                         <img :src="info.image" :alt="info.alt" class="img">
-                        <span class="recommend" v-if="info.recommend" aria-label="추천"></span>
+                        <TheIcon
+                            v-if="info.recommend"
+                            aria-label="추천글"
+                            class="recommend"
+                            size="sm"
+                            icon="star01" />
                     </div>
                     <span class="tag_list1">
                         <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
@@ -39,6 +44,8 @@
 </template>
 
 <script>
+import TheIcon from '@/components/TheIcon.vue';
+
 export default {
     name: 'TheList',
     data(){
@@ -54,6 +61,7 @@ export default {
         setting: Boolean
     },
     components: {
+        TheIcon
     },
     methods: {
         selectSort(selectValue){

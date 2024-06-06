@@ -226,6 +226,13 @@
         background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.29414 12.7066C7.68477 13.0973 8.31914 13.0973 8.70977 12.7066L14.7098 6.70664C15.1004 6.31602 15.1004 5.68164 14.7098 5.29102C14.3191 4.90039 13.6848 4.90039 13.2941 5.29102L8.00039 10.5848L2.70664 5.29414C2.31602 4.90352 1.68164 4.90352 1.29102 5.29414C0.900391 5.68477 0.900391 6.31914 1.29102 6.70977L7.29102 12.7098L7.29414 12.7066Z' fill='%23DDDDDD'/%3E%3C/svg%3E%0A");
         background-size: cover;
         background-repeat: no-repeat;
+        transition: 0.6s;
+    }
+    
+    .active {
+        + .handler_button {
+            transform: rotate(180deg);
+        }
     }
 }
 
@@ -397,16 +404,9 @@
             }
 
             .recommend {
-                background-color: #FF8E8B;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
                 position: absolute;
                 right: 14px;
                 top: 14px;
-                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.0489 3.92705C11.3483 3.00574 12.6517 3.00574 12.9511 3.92705L14.2451 7.90983C14.379 8.32185 14.763 8.60081 15.1962 8.60081H19.3839C20.3527 8.60081 20.7554 9.84043 19.9717 10.4098L16.5838 12.8713C16.2333 13.126 16.0866 13.5773 16.2205 13.9894L17.5146 17.9721C17.8139 18.8934 16.7595 19.6596 15.9757 19.0902L12.5878 16.6287C12.2373 16.374 11.7627 16.374 11.4122 16.6287L8.02426 19.0902C7.24054 19.6596 6.18607 18.8934 6.48542 17.9721L7.7795 13.9894C7.91338 13.5773 7.76672 13.126 7.41623 12.8713L4.02827 10.4098C3.24456 9.84043 3.64734 8.60081 4.61606 8.60081H8.8038C9.23703 8.60081 9.62099 8.32185 9.75486 7.90983L11.0489 3.92705Z' fill='%23fff'/%3E%3C/svg%3E%0A");
-                background-size: 24px 24px;
-                background-position: center;
             }
 
             .title {
@@ -448,6 +448,10 @@
 }
 
 .detail_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     &.black {
         .visual_wrap {
            * {
@@ -468,6 +472,7 @@
         width: 100%;
         padding: 30px;
         border-radius: 20px;
+        position: relative;
 
         * {
             color: #fff;
@@ -480,6 +485,12 @@
                 width: auto;
                 height: 100%;
             }
+        }
+
+        .recommend {
+            position: absolute;
+            right: 30px;
+            top: 30px;
         }
 
         .visual_title {
@@ -571,35 +582,55 @@
             line-height: 1.6;
         }
     }
+
+    > .button {
+        margin-top: 80px;
+    }
 }
 
-.chat_btn {
+.button_chat {
     position: fixed;
     right: 40px;
     bottom: 40px;
     z-index: 1;
-    
-    .container {
-        background-color: #FF8E8B;
-        display: block;
-        padding: 18px 20px;
-        padding-right: calc(8px + 32px + 20px);
-        font-size: 18px;
-        color: #fff;
-        border-radius: 100px;
-        font-weight: 600;
-        line-height: 1;
+}
 
-        &::after {
-            content: '';
-            background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='15.6528' cy='15.6528' rx='12.6528' ry='12.6528' fill='white'/%3E%3Cpath d='M28.9177 26.386L22.9252 25.3139L26.8499 20.6603L28.9177 26.386Z' fill='white'/%3E%3Ccircle cx='10.027' cy='15.6529' r='1.40587' fill='%23FF8E8B'/%3E%3Ccircle cx='15.652' cy='15.6529' r='1.40587' fill='%23FF8E8B'/%3E%3Ccircle cx='21.2731' cy='15.6529' r='1.40587' fill='%23FF8E8B'/%3E%3C/svg%3E%0A");
-            width: 32px;
-            height: 32px;
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            background-size: cover;
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+
+    * {
+        color: inherit;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+
+        > * + * {
+            margin-left: 8px;
         }
+    }
+
+    &.primary {
+        background-color: #FF8E8B;
+        color: #fff;
+    }
+
+    &.xs {
+    }
+
+    &.sm {
+    }
+
+    &.lg {
+        min-width: 140px;
+        font-size: 18px;
+    }
+
+    &.round {
+        border-radius: 100px;
     }
 }

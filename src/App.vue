@@ -41,17 +41,28 @@
       <TheFooter />
     </section>
   </div>
-  <a href="https://www.kakaocorp.com/page/" target="_blank" class="chat_btn">
-    <span class="container">
-      오픈채팅
-    </span>
-  </a>
+  <TheButton
+      type="a"
+      :to="`https://www.kakaocorp.com/page`"
+      class="button_chat"
+      color="primary"
+      size="lg"
+      :round="true">
+      카카오톡
+      <template v-slot:after>
+        <TheIcon
+          size="sm"
+          icon="msg01" />
+      </template>
+    </TheButton>
 </template>
 
 <script>
 import TheHeader from '@/components/TheHeader.vue';
 import TheAside from '@/components/TheAside.vue';
 import TheFooter from '@/components/TheFooter.vue';
+import TheButton from '@/components/TheButton.vue';
+import TheIcon from '@/components/TheIcon.vue';
 import detailInfo from '@/assets/data/detail_info.js';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from 'swiper/modules';
@@ -130,6 +141,8 @@ export default {
     TheFooter,
     Swiper,
     SwiperSlide,
+    TheButton,
+    TheIcon
   },
 }
 </script>

@@ -5,7 +5,11 @@
                 <button type="button" class="item_cont" :disabled="item.disabled">{{ item.text }}</button>
             </li>
         </ul>
-        <TheButton v-if="handler" @click="handlerActive = !handlerActive" class="handler_button" aria-label="확대"></TheButton>
+        <TheButton
+            v-if="handler"
+            @click="handlerActive = !handlerActive"
+            class="handler_button"
+            aria-label="확대" />
     </div>
     <div class="tab_content">
         <div v-for="(item, idx) in tabs" :key="idx" class="container">

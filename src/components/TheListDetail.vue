@@ -1,6 +1,13 @@
 <template>
     <div :class="['detail_wrap', info.boxClass]">
         <section class="visual_wrap" :style="{ backgroundColor: `${info.color}` }">
+            <TheIcon
+                v-if="info.recommend"
+                aria-label="추천글"
+                class="recommend"
+                size="sm"
+                icon="star01" />
+
             <div class="logo">
                 <img :src="info.image" :alt="info.alt" class="img">
             </div>
@@ -32,10 +39,14 @@
                 <p v-html="item.text" class="text"></p>
             </article>
         </section>
-    </div>
 
-    <div style="display: flex; justify-content: center; margin-top: 80px;">
-        <router-link :to="`/${info.category}`" class="item_cont" style="background-color: #FF8E8B; padding: 16px; border-radius: 100px; color: #fff; width: 140px; font-size: 18px; text-align: center;">목록 보기</router-link>
+        <TheButton
+            :to="`/${info.category}`"
+            color="primary"
+            size="lg"
+            :round="true">
+            목록 보기
+        </TheButton>
     </div>
 
     <h1 style="margin-bottom: 20px; margin-top: 40px;">추천글</h1>
@@ -44,6 +55,8 @@
 
 <script>
 import TheList from '@/components/TheList.vue';
+import TheButton from '@/components/TheButton.vue';
+import TheIcon from '@/components/TheIcon.vue';
 
 export default {
     name: 'TheListDetail',
@@ -60,7 +73,9 @@ export default {
         itemId: String,
     },
     components: {
-        TheList
+        TheList,
+        TheButton,
+        TheIcon
     },
 }
 </script>
