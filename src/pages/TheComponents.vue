@@ -28,56 +28,6 @@ export default {
                     itemClass: '',
                     disabled: false,
                 },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
             ],
         }
     },

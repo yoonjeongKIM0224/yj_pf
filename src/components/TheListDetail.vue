@@ -49,6 +49,8 @@
         </TheButton>
     </div>
 
+    {{ info.category }}
+
     <h1 style="margin-bottom: 20px; margin-top: 40px;">추천글</h1>
     <TheList type="1" :list="recommend" :setting="false" />
 </template>

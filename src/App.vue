@@ -148,6 +148,11 @@ export default {
     TheButton,
     TheIcon
   },
+  watch: {
+    asideSelected(){
+      console.log('변경')
+    }
+  }
 }
 </script>
 
