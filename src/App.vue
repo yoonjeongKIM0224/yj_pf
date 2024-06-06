@@ -27,9 +27,13 @@
       </swiper-slide>
 
       <div class="swiper_info_wrap">
-        <div class="swiper-button-prev" solt="button-prev"></div>
+        <div class="swiper-button-prev" solt="button-prev">
+          <TheIcon size="xs" icon="arrow2" rotate="90" />
+        </div>
         <div class="swiper-pagination" solt="pagination"></div>
-        <div class="swiper-button-next" solt="button-next"></div>
+        <div class="swiper-button-next" solt="button-next">
+          <TheIcon size="xs" icon="arrow2" rotate="270" />
+        </div>
       </div>
     </swiper>
   <div class="wrap">
@@ -52,7 +56,7 @@
       <template v-slot:after>
         <TheIcon
           size="sm"
-          icon="msg01" />
+          icon="msg1" />
       </template>
     </TheButton>
 </template>

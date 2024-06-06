@@ -6,7 +6,7 @@
                 aria-label="추천글"
                 class="recommend"
                 size="sm"
-                icon="star01" />
+                icon="star1" />
 
             <div class="logo">
                 <img :src="info.image" :alt="info.alt" class="img">

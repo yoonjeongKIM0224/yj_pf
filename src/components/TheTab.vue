@@ -9,7 +9,11 @@
             v-if="handler"
             @click="handlerActive = !handlerActive"
             class="handler_button"
-            aria-label="확대" />
+            :aria-label="handlerActive ? '확대' : '축소'">
+            <TheIcon
+                size="sm"
+                icon="arrow1" />
+        </TheButton>
     </div>
     <div class="tab_content">
         <div v-for="(item, idx) in tabs" :key="idx" class="container">
@@ -20,6 +24,7 @@
   
 <script>
 import TheButton from '@/components/TheButton.vue';
+import TheIcon from '@/components/TheIcon.vue';
 
 export default {
     name: 'TheTab',
@@ -35,7 +40,8 @@ export default {
         handler: Boolean
     },
     components: {
-        TheButton
+        TheButton,
+        TheIcon
     }
 }
 </script>

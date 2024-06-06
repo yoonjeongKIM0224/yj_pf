@@ -22,7 +22,7 @@
                             aria-label="추천글"
                             class="recommend"
                             size="sm"
-                            icon="star01" />
+                            icon="star1" />
                     </div>
                     <span class="tag_list1">
                         <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
