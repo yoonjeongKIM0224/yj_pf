@@ -1,5 +1,7 @@
 <template>
   <TheHeader />
+  <!-- {{ asideSelected }} -->
+  {{ $router.options.routes[0].name.title }}
   <swiper
     :slidesPerView="'auto'"
     :spaceBetween="20"
@@ -37,11 +39,13 @@
       </div>
     </swiper>
   <div class="wrap">
-    <TheAside :list="menu" @asideSelected="asideSelected = $event" />
+    <TheAside :list="menu" @click="menuSelect" />
     <section class="section">
-      <h2 class="section_title">{{ menu[asideSelected].title + menu[asideSelected].icon }}</h2>
-      <p class="section_text">{{ menu[asideSelected].text }}</p>
-      <router-view :list="detailInfo"></router-view>
+      <h2 class="section_title">
+        {{ $route.name.title + $route.name.icon }}
+      </h2>
+      <p class="section_text">{{ $route.name.text }}</p>
+      <router-view :key="$route.fullPath" :list="detailInfo"></router-view>
       <TheFooter />
     </section>
   </div>
@@ -79,38 +83,24 @@ export default {
       menu: [
         {
           title: 'About Me',
-          text: '소개하는 페이지입니다.',
-          icon: '💥',
           link: '/about_me',
           itemClass: '',
         },
         {
           title: 'Projects',
-          text: '프로젝트 페이지입니다.',
-          icon: '🌹',
           link: '/projects',
           itemClass: '',
         },
         {
           title: 'Components',
-          text: '컴포넌트 페이지입니다.',
-          icon: '🎨',
           link: '/components',
           itemClass: '',
         },
         {
           title: 'Hobby',
-          text: '취미 페이지입니다.',
-          icon: '🧬',
           link: '/hobby',
           itemClass: '',
         },
-        // {
-        //   text: 'Contact Me',
-        //   icon: '👀',
-        //   link: '/contact_me',
-        //   itemClass: '',
-        // },
       ],
       detailInfo,
       asideSelected: 0, //고치기
@@ -131,12 +121,8 @@ export default {
           title: '이것은<br />타이틀입니다.3',
           desc: '이것은 텍스트입니다.'
         },
-        {
-          tags: ['Component'],
-          title: '이것은<br />타이틀입니다.4',
-          desc: '이것은 텍스트입니다.'
-        }
-      ]
+      ],
+      temp: this.$router.options.routes[0].name.title
     }
   },
   components: {
@@ -148,10 +134,8 @@ export default {
     TheButton,
     TheIcon
   },
-  watch: {
-    asideSelected(){
-      console.log('변경')
-    }
+  mounted(){
+    console.log(this.$router)
   }
 }
 </script>
