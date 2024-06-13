@@ -1,7 +1,8 @@
 <template>
   <TheHeader />
   <!-- {{ asideSelected }} -->
-  {{ $router.options.routes[0].name.title }}
+  <!-- {{ menu }} -->
+  {{ $router }}
   <swiper
     :slidesPerView="'auto'"
     :spaceBetween="20"
@@ -39,12 +40,12 @@
       </div>
     </swiper>
   <div class="wrap">
-    <TheAside :list="menu" @click="menuSelect" />
+    <TheAside :list="menu" />
     <section class="section">
       <h2 class="section_title">
-        {{ $route.name.title + $route.name.icon }}
+        {{ $route.meta.title + $route.meta.icon }}
       </h2>
-      <p class="section_text">{{ $route.name.text }}</p>
+      <p class="section_text">{{ $route.meta.text }}</p>
       <router-view :key="$route.fullPath" :list="detailInfo"></router-view>
       <TheFooter />
     </section>
@@ -80,28 +81,6 @@ export default {
   name: 'App',
   data(){
     return {
-      menu: [
-        {
-          title: 'About Me',
-          link: '/about_me',
-          itemClass: '',
-        },
-        {
-          title: 'Projects',
-          link: '/projects',
-          itemClass: '',
-        },
-        {
-          title: 'Components',
-          link: '/components',
-          itemClass: '',
-        },
-        {
-          title: 'Hobby',
-          link: '/hobby',
-          itemClass: '',
-        },
-      ],
       detailInfo,
       asideSelected: 0, //고치기
       modules: [Pagination, Navigation],
@@ -122,7 +101,7 @@ export default {
           desc: '이것은 텍스트입니다.'
         },
       ],
-      temp: this.$router.options.routes[0].name.title
+      menu: this.$router.options.routes
     }
   },
   components: {
@@ -134,9 +113,6 @@ export default {
     TheButton,
     TheIcon
   },
-  mounted(){
-    console.log(this.$router)
-  }
 }
 </script>
 
