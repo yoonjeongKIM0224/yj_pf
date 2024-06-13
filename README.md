@@ -1,23 +1,14 @@
-# yj_pf
+# yj_pf(프론트엔드 포트폴리오)
 
 ## Project setup
-```
-yarn install
-```
-
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+npm run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
+npm run build
 ```
 
 ### Customize configuration
