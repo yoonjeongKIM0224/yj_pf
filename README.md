@@ -1,4 +1,4 @@
-# yj_pf
+# yj_pf(프론트엔드 포트폴리오)
 
 ## Project setup
 ### Compiles and hot-reloads for development
