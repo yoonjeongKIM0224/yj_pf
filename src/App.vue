@@ -1,8 +1,12 @@
 <template>
   <TheHeader />
-  <!-- {{ asideSelected }} -->
   <!-- {{ menu }} -->
-  {{ $router }}
+  <!-- {{ $router }} -->
+    
+  <!-- :autoplay="{
+      delay: 1000,
+      disableOnInteraction: true,
+    }" -->
   <swiper
     :slidesPerView="'auto'"
     :spaceBetween="20"
@@ -73,8 +77,9 @@ import TheFooter from '@/components/TheFooter.vue';
 import TheButton from '@/components/TheButton.vue';
 import TheIcon from '@/components/TheIcon.vue';
 import detailInfo from '@/assets/data/detail_info.js';
+import menu from '@/menu.js';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 
 export default {
@@ -82,8 +87,7 @@ export default {
   data(){
     return {
       detailInfo,
-      asideSelected: 0, //고치기
-      modules: [Pagination, Navigation],
+      modules: [Autoplay, Pagination, Navigation],
       mainSwiper: [
         {
           tags: ['Components'],
@@ -101,7 +105,7 @@ export default {
           desc: '이것은 텍스트입니다.'
         },
       ],
-      menu: this.$router.options.routes
+      menu,
     }
   },
   components: {
