@@ -1,7 +1,11 @@
 <template>
   <TheHeader />
+  {{ detailSelectedInfo }}
   <!-- {{ menu }} -->
-  <!-- {{ $router }} -->
+  <!-- {{ $router.currentRoute.value.params.itemId }} -->
+  <!-- {{ $router.currentRoute.value.params.itemId }} -->
+  <br>
+  <!-- {{ detailInfo[0].id }} -->
     
   <!-- :autoplay="{
       delay: 1000,
@@ -47,7 +51,7 @@
     <TheAside :list="menu" />
     <section class="section">
       <h2 class="section_title">
-        {{ $route.meta.title + $route.meta.icon }}
+        <!-- {{ $route.meta.title ? $route.meta.title + $route.meta.icon : detailSelectedInfo.meta.title }} -->
       </h2>
       <p class="section_text">{{ $route.meta.text }}</p>
       <router-view :key="$route.fullPath" :list="detailInfo"></router-view>
@@ -106,6 +110,7 @@ export default {
         },
       ],
       menu,
+      detailSelectedInfo: null
     }
   },
   components: {
@@ -117,6 +122,22 @@ export default {
     TheButton,
     TheIcon
   },
+  beforeUpdate(){
+    for(let i = 0; i < detailInfo.length; i++){
+      if(detailInfo[i].id == this.$router.currentRoute.value.params.itemId){
+        let category = detailInfo[i].category
+        
+        for(let j = 0; j < this.$router.options.routes.length; j++){
+          if(category == this.$router.options.routes[j].path.split('/')[1]) {
+            this.detailSelectedInfo = this.$router.options.routes[j]
+            console.log(this.detailSelectedInfo.meta)
+          }
+        }
+
+        return
+      }
+    }
+  }
 }
 </script>
 

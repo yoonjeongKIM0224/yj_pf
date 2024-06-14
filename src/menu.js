@@ -1,6 +1,6 @@
 const menu = [
   {
-    path: '/about_me', //해당 경로 접속할 경우
+    path: '/aboutMe', //해당 경로 접속할 경우
     meta: {
       title: 'About Me',
       text: 'About Me 소개하는 페이지입니다.',
