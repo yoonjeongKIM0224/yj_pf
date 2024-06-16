@@ -51,7 +51,7 @@ export default [
     },
     {
         category: 'projects',
-        tab: '실무',
+        tab: '개인',
         id: 2,
         recommend: true,
         title: "고용24",

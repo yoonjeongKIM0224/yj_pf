@@ -1,12 +1,5 @@
 <template>
   <TheHeader />
-  {{ detailSelectedInfo }}
-  <!-- {{ menu }} -->
-  <!-- {{ $router.currentRoute.value.params.itemId }} -->
-  <!-- {{ $router.currentRoute.value.params.itemId }} -->
-  <br>
-  <!-- {{ detailInfo[0].id }} -->
-    
   <!-- :autoplay="{
       delay: 1000,
       disableOnInteraction: true,
@@ -27,33 +20,33 @@
     :modules="modules"
     class="main_swiper"
     >
-      <swiper-slide v-for="(info, idx) in mainSwiper" :key="idx">
-        <div class="container">
-          <div class="tag_list1">
-            <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
-          </div>
-          <span class="title" v-html="info.title"></span>
-          <p class="desc" v-html="info.desc"></p>
+    <swiper-slide v-for="(info, idx) in mainSwiper" :key="idx">
+      <div class="container">
+        <div class="tag_list1">
+          <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
         </div>
-      </swiper-slide>
-
-      <div class="swiper_info_wrap">
-        <div class="swiper-button-prev" solt="button-prev">
-          <TheIcon size="xs" icon="arrow2" rotate="90" />
-        </div>
-        <div class="swiper-pagination" solt="pagination"></div>
-        <div class="swiper-button-next" solt="button-next">
-          <TheIcon size="xs" icon="arrow2" rotate="270" />
-        </div>
+        <span class="title" v-html="info.title"></span>
+        <p class="desc" v-html="info.desc"></p>
       </div>
-    </swiper>
+    </swiper-slide>
+
+    <div class="swiper_info_wrap">
+      <div class="swiper-button-prev" solt="button-prev">
+        <TheIcon size="xs" icon="arrow2" rotate="90" />
+      </div>
+      <div class="swiper-pagination" solt="pagination"></div>
+      <div class="swiper-button-next" solt="button-next">
+        <TheIcon size="xs" icon="arrow2" rotate="270" />
+      </div>
+    </div>
+  </swiper>
   <div class="wrap">
     <TheAside :list="menu" />
     <section class="section">
       <h2 class="section_title">
-        <!-- {{ $route.meta.title ? $route.meta.title + $route.meta.icon : detailSelectedInfo.meta.title }} -->
+        {{ $route.meta.title ? $route.meta.title + $route.meta.icon : detailSelectedInfo.meta.title + detailSelectedInfo.meta.icon }}
       </h2>
-      <p class="section_text">{{ $route.meta.text }}</p>
+      <p class="section_text">{{ $route.meta.text ? $route.meta.text : detailSelectedInfo }}</p>
       <router-view :key="$route.fullPath" :list="detailInfo"></router-view>
       <TheFooter />
     </section>
@@ -110,7 +103,6 @@ export default {
         },
       ],
       menu,
-      detailSelectedInfo: null
     }
   },
   components: {
@@ -122,22 +114,30 @@ export default {
     TheButton,
     TheIcon
   },
-  beforeUpdate(){
-    for(let i = 0; i < detailInfo.length; i++){
-      if(detailInfo[i].id == this.$router.currentRoute.value.params.itemId){
-        let category = detailInfo[i].category
-        
-        for(let j = 0; j < this.$router.options.routes.length; j++){
-          if(category == this.$router.options.routes[j].path.split('/')[1]) {
-            this.detailSelectedInfo = this.$router.options.routes[j]
-            console.log(this.detailSelectedInfo.meta)
-          }
-        }
+  computed: {
+  },
+  watch: {
+    $route(){
+      console.log('$route 변경')
 
-        return
+      for(let i = 0; i < detailInfo.length; i++){
+        if(detailInfo[i].id == this.$router.currentRoute.value.params.itemId){
+          let category = detailInfo[i].category
+          
+          for(let j = 0; j < this.$router.options.routes.length; j++){
+            if(category == this.$router.options.routes[j].path.split('/')[1]) {
+              console.log(this.$router.options.routes[j])
+              this.detailSelectedInfo = this.$router.options.routes[j]
+
+              break
+            }
+          }
+
+          break
+        } 
       }
     }
-  }
+  },
 }
 </script>
 
