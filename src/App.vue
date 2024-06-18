@@ -1,5 +1,9 @@
 <template>
   <TheHeader />
+  <!-- {{ this.$route }} -->
+  <br><br><br><br>
+  <!-- {{ sectionInfo }} -->
+  <!-- {{ Object.keys(sectionInfo.meta).length }} -->
   <!-- :autoplay="{
       delay: 1000,
       disableOnInteraction: true,
@@ -44,9 +48,9 @@
     <TheAside :list="menu" />
     <section class="section">
       <h2 class="section_title">
-        {{ $route.meta.title ? $route.meta.title + $route.meta.icon : detailSelectedInfo.meta.title + detailSelectedInfo.meta.icon }}
+        {{ sectionInfo.title + sectionInfo.icon }}
       </h2>
-      <p class="section_text">{{ $route.meta.text ? $route.meta.text : detailSelectedInfo }}</p>
+      <p class="section_text">{{ sectionInfo.text }}</p>
       <router-view :key="$route.fullPath" :list="detailInfo"></router-view>
       <TheFooter />
     </section>
@@ -103,6 +107,7 @@ export default {
         },
       ],
       menu,
+      sectionInfo: '값없음'
     }
   },
   components: {
@@ -114,28 +119,27 @@ export default {
     TheButton,
     TheIcon
   },
-  computed: {
-  },
   watch: {
     $route(){
-      console.log('$route 변경')
+      let val;
 
-      for(let i = 0; i < detailInfo.length; i++){
-        if(detailInfo[i].id == this.$router.currentRoute.value.params.itemId){
-          let category = detailInfo[i].category
-          
-          for(let j = 0; j < this.$router.options.routes.length; j++){
-            if(category == this.$router.options.routes[j].path.split('/')[1]) {
-              console.log(this.$router.options.routes[j])
-              this.detailSelectedInfo = this.$router.options.routes[j]
+      if(Object.keys(this.$route.meta).length == 0){
+        for(let i = 0; i < detailInfo.length; i++){
+          if(detailInfo[i].id == this.$router.currentRoute.value.params.itemId){
+            let category = detailInfo[i].category
 
-              break
+            for(let j = 0; j < this.$router.options.routes.length; j++){
+              if(category == this.$router.options.routes[j].path.split('/')[1]) {
+                val = this.$router.options.routes[j].meta
+              }
             }
           }
-
-          break
         } 
+      } else {
+        val = this.$route.meta
       }
+
+      this.sectionInfo = val
     }
   },
 }
