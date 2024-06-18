@@ -2,7 +2,7 @@
     <aside class="aside">
         <ul class="menu_list">
             <li
-            :class="['item', $route.fullPath === item.path ? 'active' : '']"
+            :class="['item', $route.fullPath && sectionInfo.path === item.path ? 'active' : '']"
             v-for="(item, idx) in list" :key="idx">
             <router-link :to="item.path" class="item_cont">
                     <span>{{ item.meta.title }}</span>
@@ -22,6 +22,7 @@ export default {
     },
     props: {
         list: Object,
+        sectionInfo: Object
     },
     components: {
     },

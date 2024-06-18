@@ -41,12 +41,12 @@
     </div>
   </swiper>
   <div class="wrap">
-    <TheAside :list="menu" />
+    <TheAside :list="menu" :sectionInfo="sectionInfo" />
     <section class="section">
       <h2 class="section_title">
-        {{ sectionInfo.title + sectionInfo.icon }}
+        {{ sectionInfo.meta.title + sectionInfo.meta.icon }}
       </h2>
-      <p class="section_text">{{ sectionInfo.text }}</p>
+      <p class="section_text">{{ sectionInfo.meta.text }}</p>
       <router-view :key="$route.fullPath" :list="detailInfo"></router-view>
       <TheFooter />
     </section>
@@ -103,7 +103,6 @@ export default {
         },
       ],
       menu,
-      sectionInfo: '값없음'
     }
   },
   components: {
@@ -115,9 +114,21 @@ export default {
     TheButton,
     TheIcon
   },
+  computed: {
+    sectionInfo: function(){
+      let val = this.sectionInfoHandelr()
+      return val
+    }
+  },
   watch: {
     $route(){
-      let val;
+      let val = this.sectionInfoHandelr()
+      this.sectionInfo = val
+    }
+  },
+  methods: {
+    sectionInfoHandelr(){
+      let val = this.$route
 
       if(Object.keys(this.$route.meta).length == 0){
         for(let i = 0; i < detailInfo.length; i++){
@@ -126,18 +137,16 @@ export default {
 
             for(let j = 0; j < this.$router.options.routes.length; j++){
               if(category == this.$router.options.routes[j].path.split('/')[1]) {
-                val = this.$router.options.routes[j].meta
+                val = this.$router.options.routes[j]
               }
             }
           }
-        } 
-      } else {
-        val = this.$route.meta
+        }
       }
 
-      this.sectionInfo = val
+      return val
     }
-  },
+  }
 }
 </script>
 
