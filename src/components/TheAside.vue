@@ -5,9 +5,9 @@
             :class="['item', $route.fullPath && sectionInfo.path === item.path ? 'active' : '']"
             v-for="(item, idx) in list" :key="idx">
             <router-link :to="item.path" class="item_cont">
-                    <span>{{ item.meta.title }}</span>
-                    <span>{{ item.meta.icon }}</span>
-                </router-link>
+                <span>{{ item.meta.title }}</span>
+                <span>{{ item.meta.icon }}</span>
+            </router-link>
             </li>
         </ul>
     </aside>

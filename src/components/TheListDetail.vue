@@ -65,7 +65,7 @@ export default {
 
         return {
             info: beforeInfo,
-            recommend: this.list.filter((item) => item.category == beforeInfo.category && item.recommend == true),
+            recommend: this.list.filter((item) => item.category == beforeInfo.category && item.recommend == true && beforeInfo.id !== item.id),
         }
     },
     props: {

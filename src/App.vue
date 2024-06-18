@@ -27,6 +27,7 @@
         </div>
         <span class="title" v-html="info.title"></span>
         <p class="desc" v-html="info.desc"></p>
+        <router-link :to="info.link" class="container_cont" aria-label="보러가기" />
       </div>
     </swiper-slide>
 
@@ -87,19 +88,22 @@ export default {
       modules: [Autoplay, Pagination, Navigation],
       mainSwiper: [
         {
-          tags: ['Components'],
-          title: '이것은<br />타이틀입니다.1',
-          desc: '이것은 텍스트입니다.'
+          tags: ['Projects'],
+          title: '포트폴리오 사이트<br>Review 보러가기 🏃‍♀️',
+          desc: '주니어의 삽질... 한 번 보실라유?!',
+          link: '/detail/1'
         },
         {
-          tags: ['Projects'],
-          title: '이것은<br />타이틀입니다.2',
-          desc: '이것은 텍스트입니다.'
+          tags: ['Component'],
+          title: '컴포넌트',
+          desc: '이것은 텍스트입니다.',
+          link: '/projects'
         },
         {
           tags: ['Component'],
           title: '이것은<br />타이틀입니다.3',
-          desc: '이것은 텍스트입니다.'
+          desc: '이것은 텍스트입니다.',
+          link: '/projects'
         },
       ],
       menu,
