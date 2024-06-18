@@ -1,9 +1,5 @@
 <template>
   <TheHeader />
-  <!-- {{ this.$route }} -->
-  <br><br><br><br>
-  <!-- {{ sectionInfo }} -->
-  <!-- {{ Object.keys(sectionInfo.meta).length }} -->
   <!-- :autoplay="{
       delay: 1000,
       disableOnInteraction: true,
