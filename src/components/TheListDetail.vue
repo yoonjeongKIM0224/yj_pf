@@ -28,7 +28,7 @@
 
         <section class="text_wrap">
             <article v-for="(item, idx) in info.content" :key="idx" class="article">
-                <div class="img_list">
+                <div class="img_list" v-if="item.image">
                     <div v-for="(img, idx) in item.image" :key="idx" class="item">
                         <div class="item_cont">
                             <img :src="img" alt="" class="img">
@@ -49,7 +49,7 @@
         </TheButton>
     </div>
 
-    <h1 style="margin-bottom: 20px; margin-top: 40px;">추천글</h1>
+    <h1 class="recommend_title">추천글</h1>
     <TheList type="1" :list="recommend" :setting="false" />
 </template>
 

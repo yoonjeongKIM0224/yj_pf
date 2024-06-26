@@ -9,6 +9,13 @@
     align-items: flex-start;
 }
 
+.recommend_title {
+    font-size: 32px;
+    padding-top: 40px;
+    margin: 80px 0 20px 0;
+    border-top: 1px solid #ddd;
+}
+
 .section_title {
     font-size: 40px;
     font-weight: 800;
@@ -357,7 +364,6 @@
 .list_type1 {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -40px;
 
     > .item {
         width: calc((100% - 80px) / 3);

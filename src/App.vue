@@ -15,7 +15,7 @@
     }"
     :navigation="{ 
       nextEl: '.swiper-button-next', 
-      prevEl: '.swiper-button-prev' 
+      prevEl: '.swiper-button-prev'
     }"
     :modules="modules"
     class="main_swiper"
@@ -74,7 +74,7 @@ import TheAside from '@/components/TheAside.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import TheButton from '@/components/TheButton.vue';
 import TheIcon from '@/components/TheIcon.vue';
-import detailInfo from '@/assets/data/detail_info.js';
+import detailInfo from '@/assets/data/detail_info.json';
 import menu from '@/menu.js';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
