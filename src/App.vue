@@ -1,11 +1,11 @@
 <template>
-  <div class="wrapper" :class="detailPage ? '' : 'scroll_down'">
+  <div class="wrapper" :class="detailPage ? 'scroll_down' : ''">
     <TheHeader :list="menu" :sectionInfo="sectionInfo" />
     <!-- :autoplay="{
         delay: 1000,
         disableOnInteraction: true,
       }" -->
-    <div :class="['wrap', detailPage ? '' : 'detail_page']">
+    <div :class="['wrap', detailPage ? 'detail_page' : '']">
       <swiper
       v-if="$route.fullPath == '/'"
       :slidesPerView="'auto'"
@@ -45,10 +45,10 @@
       </div>
       </swiper>
       <section class="section">
-        <h2 class="section_title" v-if="sectionInfo.meta.title && detailPage">
+        <h2 class="section_title" v-if="sectionInfo.meta.title && !detailPage">
           {{ sectionInfo.meta.title + sectionInfo.meta.icon }}
         </h2>
-        <p class="section_text" v-if="detailPage">{{ sectionInfo.meta.text }}</p>
+        <p class="section_text" v-if="!detailPage">{{ sectionInfo.meta.text }}</p>
         <router-view :key="$route.fullPath" :list="detailInfo" :sectionInfo="sectionInfo"></router-view>
       </section>
     </div>
@@ -124,7 +124,7 @@ export default {
       return val
     },
     detailPage: function(){
-      return this.$route.fullPath.indexOf('detail') <= -1
+      return this.$route.fullPath.indexOf('detail') > -1
     }
   },
   watch: {
@@ -184,8 +184,10 @@ export default {
 
       clearTimeout(scrolling);
       scrolling = setTimeout(() => {
-        wrapper.classList.add('scroll_down')
-        wrapper.classList.remove('scroll_up')
+        if(wrapper.classList.contains('scroll_up')) {
+          wrapper.classList.add('scroll_down')
+          wrapper.classList.remove('scroll_up')
+        }
         
         scrolling = undefined;
       }, 2000);

@@ -47,7 +47,7 @@
                         <h4 class="title">{{ item.title }}</h4>
                         <p v-html="item.text" class="text"></p>
 
-                        <iframe v-if="info.iframe" height="500" style="width: 100%;" scrolling="no" :title="info.iframe.title" :src="info.iframe.src" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        <iframe class="iframe" v-if="info.iframe" height="500" style="width: 100%;" scrolling="no" :title="info.iframe.title" :src="info.iframe.src" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                         See the Pen <a :href="info.iframe.href">
                         rabbit</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
                         on <a href="https://codepen.io">CodePen</a>.
