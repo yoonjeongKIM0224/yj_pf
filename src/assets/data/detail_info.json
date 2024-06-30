@@ -121,14 +121,104 @@
         "tags": ["HTML", "CSS"],
         "content": [
             {
-                "title": "나의 첫 구축 프로젝트 😎",
-                "text": "처음인 만큼 모든 게 어려웠고 실수를 하게 될까 봐 무서웠지만, 함께 작업한 사원들끼리 서로 도와주며 협업했습니다.<br>상사에게 질문하는 것조차 조마조마했던 기억도 있습니다. (질문 전 구글 검색 OK, 예의 준비 OK)"
+                "title": "제목",
+                "text": "내용"
             }
         ],
         "iframe": {
             "title": "rabbit",
             "src": "https://codepen.io/yoonjeongkim0224/embed/PoJZgpE?default-tab=html%2Cresult",
             "href": "https://codepen.io/yoonjeongkim0224/pen/PoJZgpE"
+        }
+    },
+    {
+        "category": "hobby",
+        "id": 4,
+        "title": "Skull",
+        "color": "#E4691C",
+        "tags": ["HTML", "CSS"],
+        "content": [
+            {
+                "title": "제목",
+                "text": "내용"
+            }
+        ],
+        "iframe": {
+            "title": "Skull",
+            "src": "https://codepen.io/yoonjeongkim0224/embed/VwMedvx?default-tab=html%2Cresult",
+            "href": "https://codepen.io/yoonjeongkim0224/pen/VwMedvx"
+        }
+    },
+    {
+        "category": "hobby",
+        "id": 5,
+        "title": "Building",
+        "color": "#0B2C49",
+        "tags": ["HTML", "CSS"],
+        "content": [
+            {
+                "title": "제목",
+                "text": "내용"
+            }
+        ],
+        "iframe": {
+            "title": "Building",
+            "src": "https://codepen.io/yoonjeongkim0224/embed/mdBeozW?default-tab=html%2Cresult",
+            "href": "https://codepen.io/yoonjeongkim0224/pen/mdBeozW"
+        }
+    },
+    {
+        "category": "hobby",
+        "id": 6,
+        "title": "Duck",
+        "color": "#1C27B5",
+        "tags": ["HTML", "CSS"],
+        "content": [
+            {
+                "title": "제목",
+                "text": "내용"
+            }
+        ],
+        "iframe": {
+            "title": "Duck",
+            "src": "https://codepen.io/yoonjeongkim0224/embed/rNzEXaK?default-tab=html%2Cresult",
+            "href": "https://codepen.io/yoonjeongkim0224/pen/rNzEXaK"
+        }
+    },
+    {
+        "category": "hobby",
+        "id": 7,
+        "title": "Cat Work",
+        "color": "#4DB6AC",
+        "tags": ["HTML", "CSS"],
+        "content": [
+            {
+                "title": "제목",
+                "text": "내용"
+            }
+        ],
+        "iframe": {
+            "title": "Cat Work",
+            "src": "https://codepen.io/yoonjeongkim0224/embed/LYzpMve?default-tab=html%2Cresult",
+            "href": "https://codepen.io/yoonjeongkim0224/pen/LYzpMve"
+        }
+    },
+    {
+        "category": "hobby",
+        "id": 7,
+        "title": "Cat",
+        "color": "#FFCFBF",
+        "tags": ["HTML", "CSS"],
+        "content": [
+            {
+                "title": "제목",
+                "text": "내용"
+            }
+        ],
+        "iframe": {
+            "title": "Cat",
+            "src": "https://codepen.io/yoonjeongkim0224/embed/vYJqxVx?default-tab=html%2Cresult",
+            "href": "https://codepen.io/yoonjeongkim0224/pen/vYJqxVx"
         }
     }
 ]
