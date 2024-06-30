@@ -1,6 +1,8 @@
 <template>
     <footer class="footer">
-        <p class="text">©KIMYOONJEONG.</p>
+        <div class="container">
+            <p class="text">©KIMYOONJEONG.</p>
+        </div>
     </footer>
 </template>
   

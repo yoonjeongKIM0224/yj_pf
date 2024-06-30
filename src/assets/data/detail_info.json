@@ -55,5 +55,80 @@
                 "text": "이미지나 아이콘의 경우 img 태그를 사용할 수 있지만 굳이 읽혀야 하는 이미지가 아"
             }
         ]
+    },
+    {
+        "category": "projects",
+        "tab": "개인",
+        "id": 2,
+        "recommend": true,
+        "title": "한국과학우주청소년단",
+        "image": "https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png",
+        "alt": "알트값",
+        "color": "#232D64",
+        "text": "한국과학우주청소년단 홍보 및 행사를 안내하는 오피셜사이트 개편프로젝트",
+        "tags": ["구축 퍼블리싱", "2023년"],
+        "infoList": [
+            {
+                "title": "Client",
+                "text": "한국과학우주청소년단"
+            },
+            {
+                "title": "Category",
+                "text": "적응형 WEB"
+            },
+            {
+                "title": "Date",
+                "text": "2022.02 ~ 2022.03"
+            },
+            {
+                "title": "Role",
+                "text": "구축 퍼블리셔"
+            },
+            {
+                "title": "Use",
+                "text": "HTML, CSS, VS Code, Zeplin"
+            }
+        ],
+        "content": [
+            {
+                "title": "나의 첫 구축 프로젝트 😎",
+                "text": "처음인 만큼 모든 게 어려웠고 실수를 하게 될까 봐 무서웠지만, 함께 작업한 사원들끼리 서로 도와주며 협업했습니다.<br>상사에게 질문하는 것조차 조마조마했던 기억도 있습니다. (질문 전 구글 검색 OK, 예의 준비 OK)"
+            },
+            {
+                "image": [
+                    "https://codingapple1.github.io/vue/room0.jpg",
+                    "https://codingapple1.github.io/vue/room0.jpg"
+                ],
+                "title": "시뮬레이션 가동은 필수 🔎",
+                "text": "처음으로 작업하게 된 페이지는 [공지사항 상세] 입니다.<br><br>첨부파일 영역에는 100개 이상의 첨부파일명이 들어갈 수도 있는 상황을 생각해야 합니다.<br>CSS의 + 선택자를 사용하지 않고 파일명마다 <b>margin-right</b>로 간격을 줘서 첨부파일 영역이 2줄 이상이 되어도 어색하지 않도록 스타일링 했습니다.<br><br>이전글, 다음글 영역 또한 제목이 두 줄 이상이 되지 않도록 <b>overflow: hidden, white-space: nowrap, text-overflow: ellipsis</b>을 사용하여 1줄 말줄임으로 작업했습니다.<br><br>지금은 당연한 거지만 초초초 신입이었던 당시에는 여러가지 방법을 탐색하다 발견했습니다.<br>해당 작업들을 통해 항상 아이템이 수백개일 때를 고려해야 하는 것을 깨달았습니다."
+            },
+            {
+                "image": [
+                    "https://codingapple1.github.io/vue/room0.jpg",
+                    "https://codingapple1.github.io/vue/room0.jpg",
+                    "https://codingapple1.github.io/vue/room0.jpg"
+                ],
+                "title": "가상요소 활용 👌",
+                "text": "이미지나 아이콘의 경우 img 태그를 사용할 수 있지만 굳이 읽혀야 하는 이미지가 아"
+            }
+        ]
+    },
+    {
+        "category": "hobby",
+        "id": 3,
+        "title": "Rabbit 🐰",
+        "color": "#8E1D76",
+        "tags": ["HTML", "CSS"],
+        "content": [
+            {
+                "title": "나의 첫 구축 프로젝트 😎",
+                "text": "처음인 만큼 모든 게 어려웠고 실수를 하게 될까 봐 무서웠지만, 함께 작업한 사원들끼리 서로 도와주며 협업했습니다.<br>상사에게 질문하는 것조차 조마조마했던 기억도 있습니다. (질문 전 구글 검색 OK, 예의 준비 OK)"
+            }
+        ],
+        "iframe": {
+            "title": "rabbit",
+            "src": "https://codepen.io/yoonjeongkim0224/embed/PoJZgpE?default-tab=html%2Cresult",
+            "href": "https://codepen.io/yoonjeongkim0224/pen/PoJZgpE"
+        }
     }
 ]

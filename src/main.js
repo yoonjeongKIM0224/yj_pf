@@ -7,4 +7,4 @@ import router from './router.js'
 // let app = createApp(App);
 // app.config.globalProperties.emitter = emitter;
 
-createApp(App).use(router).mount('#app .wrapper')
+createApp(App).use(router).mount('#app')

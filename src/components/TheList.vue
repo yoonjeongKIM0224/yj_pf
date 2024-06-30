@@ -15,20 +15,27 @@
         <ul :class="`list_type1`" v-if="type === '1'">
             <li class="item" v-for="(info, idx) in listUse" :key="idx">
                 <router-link :to="`/detail/${info.id}`" class="item_cont">
-                    <div class="visual" :style="{ backgroundColor: `${info.color}` }">
-                        <img :src="info.image" :alt="info.alt" class="img">
-                        <TheIcon
+                    <div class="info_container">
+                        <div class="container">
+                            <span class="tag_list1" v-if="info.tab">
+                                <span class="item">{{ info.tab }}</span>
+                            </span>
+                            <TheIcon
                             v-if="info.recommend"
-                            aria-label="추천글"
+                            aria-label="추천"
                             class="recommend"
                             size="sm"
                             icon="star1" />
+                        </div>
+                        <span class="title">{{ info.title }}</span>
+                        <p class="text" v-if="info.text">{{ info.text }}</p>
+                        <span class="tag_list2">
+                            <span class="item" v-for="(item, idx) in info.tags" :key="idx"># {{ item }}</span>
+                        </span>
                     </div>
-                    <span class="tag_list1">
-                        <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
-                    </span>
-                    <span class="title">{{ info.title }}</span>
-                    <p class="text">{{ info.text }}</p>
+                    <div class="visual" :style="{ backgroundColor: `${info.color}` }">
+                        <img :src="info.image" :alt="info.alt" class="img">
+                    </div>
                 </router-link>
             </li>
         </ul>

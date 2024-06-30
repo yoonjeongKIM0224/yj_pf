@@ -1,10 +1,13 @@
 <template>
-    <TheTab type="1" :tabs="tabs" @tabSelected="tabSelected = $event">
+    <TheTab type="2" :tabs="tabs" @tabSelected="tabSelected = $event">
         <template v-slot:tabPanel1>
-            <TheList type="1" :list="workList" :setting="true" />
+            <TheList type="1" :list="detailList" :setting="true" />
         </template>
         <template v-slot:tabPanel2>
-            <TheList type="1" :list="indivList" />
+            <TheList type="1" :list="workList" :setting="true" />
+        </template>
+        <template v-slot:tabPanel3>
+            <TheList type="1" :list="indivList" :setting="true" />
         </template>
     </TheTab>
 </template>
@@ -20,6 +23,11 @@ export default {
             tabSelected: 0,
             tabs: [
                 {
+                    text: '전체',
+                    itemClass: '',
+                    disabled: false,
+                },
+                {
                     text: '실무',
                     itemClass: '',
                     disabled: false,
@@ -30,6 +38,7 @@ export default {
                     disabled: false,
                 }
             ],
+            detailList: this.list.filter((item) => item.category === 'projects'),
             workList: this.list.filter((item) => item.category === 'projects' && item.tab === '실무'),
             indivList: this.list.filter((item) => item.category === 'projects' && item.tab === '개인'),
         }

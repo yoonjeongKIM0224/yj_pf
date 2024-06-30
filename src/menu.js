@@ -3,7 +3,7 @@ const menu = [
     path: '/aboutMe', //해당 경로 접속할 경우
     meta: {
       title: 'About Me',
-      text: 'About Me 소개하는 페이지입니다.',
+      text: '소개하는 페이지입니다.',
       icon: '💥',
     },
     component: () => import('@/pages/TheAboutMe.vue')
@@ -12,7 +12,7 @@ const menu = [
     path: '/projects',
     meta: {
       title: 'Projects',
-      text: 'Projects 소개하는 페이지입니다.',
+      text: '소개하는 페이지입니다.',
       icon: '🌹',
     },
     component: () => import('@/pages/TheProjects.vue')
@@ -21,7 +21,7 @@ const menu = [
     path: '/components',
     meta: {
       title: 'Components',
-      text: 'Components 소개하는 페이지입니다.',
+      text: '소개하는 페이지입니다.',
       icon: '🎨',
     },
     component: () => import('@/pages/TheComponents.vue')
@@ -30,11 +30,20 @@ const menu = [
     path: '/hobby',
     meta: {
       title: 'Hobby',
-      text: 'Hobby 소개하는 페이지입니다.',
+      text: '소개하는 페이지입니다.',
       icon: '🧬',
     },
     component: () => import('@/pages/TheHobby.vue')
   },
+  // {
+  //   path: '/modify',
+  //   meta: {
+  //     title: 'modify',
+  //     text: 'modify 소개하는 페이지입니다.',
+  //     icon: '❗',
+  //   },
+  //   component: () => import('@/pages/TheModify.vue')
+  // },
 ];
 
 export default menu;
