@@ -52,25 +52,37 @@
                     </svg>
                 </router-link>
             </h1>
-            <ul class="menu_list">
-                <li
-                :class="['item', $route.fullPath && sectionInfo.path === item.path ? 'active' : '']"
-                v-for="(item, idx) in list" :key="idx">
-                <router-link :to="item.path" class="item_cont">
-                    {{ item.meta.title }}
-                </router-link>
-            </li>
-            </ul>
-            <ul class="menu_list util">
-                <li :class="['item', item.itemClass]" v-for="(item, idx) in menu" :key="idx">
-                    <a :href="item.link" class="item_cont" target="_blank">{{ item.text }}</a>
-                </li>
-            </ul>
+            <div class="menu_container">
+                <!-- <button type="button">메뉴 열기</button> -->
+                <ul class="menu_list gnb">
+                    <li
+                    :class="['item', $route.fullPath && sectionInfo.path === item.path ? 'active' : '']"
+                    v-for="(item, idx) in list" :key="idx">
+                        <router-link :to="item.path" class="item_cont">
+                            {{ item.meta.title }}
+                        </router-link>
+                    </li>
+                </ul>
+                <!-- <button type="button">메뉴 닫기</button> -->
+                <ul class="menu_list util">
+                    <li :class="['item', item.itemClass]" v-for="(item, idx) in menu" :key="idx">
+                        <a
+                        :href="item.link"
+                        class="item_cont"
+                        target="_blank"
+                        :title="item.text">
+                            <TheIcon size="sm" :icon="item.icon" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 </template>
 
 <script>
+import TheIcon from '@/components/TheIcon.vue';
+
 export default {
     name: 'TheHeader',
     data(){
@@ -79,12 +91,14 @@ export default {
                 {
                     text: 'velog',
                     link: 'https://velog.io/@gnoejnooy/posts',
-                    itemClass: ''
+                    itemClass: '',
+                    icon: 'velog'
                 },
                 {
                     text: 'github',
                     link: 'https://github.com/yoonjeongKIM0224',
-                    itemClass: ''
+                    itemClass: '',
+                    icon: 'github'
                 },
             ]
         }
@@ -94,6 +108,7 @@ export default {
         sectionInfo: Object
     },
     components: {
+        TheIcon
     },
     mounted(){
         const bgGroup = document.querySelector('.svg-bg')

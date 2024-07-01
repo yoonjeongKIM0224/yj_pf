@@ -53,6 +53,7 @@
       </section>
     </div>
     <TheButton
+    v-if="false"
     type="a"
     :to="`https://www.kakaocorp.com/page`"
     class="button_chat"
