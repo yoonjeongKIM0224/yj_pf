@@ -616,9 +616,10 @@
 
                 &::before {
                     content: '';
-                    width: 4px;
+                    width: 3px;
                     height: calc(100% - 14px - 4px - 4px);
                     background-color: var(--main-color);
+                    opacity: 0.5;
                     position: absolute;
                     left: 5px;
                     top: calc(16px + 14px + 4px);
@@ -663,21 +664,19 @@
                                     color: #767676;
                                     margin-top: 12px;
                                 }
+                            }
 
-                                .img {
-                                    position: absolute;
-                                    height: 300px;
-                                    width: 300px;
-                                    right: 0;
-                                    top: 50%;
-                                    transform: translateY(-50%);
-                                    visibility: hidden;
-                                    cursor: pointer;
-                                }
+                            .img_wrap {
+                                position: absolute;
+                                width: 300px;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                visibility: hidden;
                             }
 
                             &:hover {
-                                .img {
+                                .img_wrap {
                                     visibility: visible;
                                 }   
                             }
@@ -1220,10 +1219,28 @@
                                         font-size: 14px;
                                     }
                                 }
-    
+
+                                .img_wrap {
+                                    position: static;
+                                    width: auto;
+                                    transform: none;
+                                    visibility: visible;
+                                    max-height: 0;
+                                    overflow: hidden;
+                                }
+                                
+                                &.active {
+                                    .img_wrap {
+                                        max-height: none;
+                                        overflow: visible;
+                                        margin-top: 20px;
+                                    }
+                                }
+
                                 + .item {
                                     margin-top: 20px;
                                 }
+
                             }
                         }
                     }
