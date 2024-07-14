@@ -53,7 +53,7 @@
                 </router-link>
             </h1>
             <div class="menu_container">
-                <!-- <button type="button">메뉴 열기</button> -->
+                <button type="button" v-if="width <= 1000">메뉴 열기</button>
                 <ul class="menu_list gnb">
                     <li
                     :class="['item', $route.fullPath && sectionInfo.path === item.path ? 'active' : '']"
@@ -63,7 +63,7 @@
                         </router-link>
                     </li>
                 </ul>
-                <!-- <button type="button">메뉴 닫기</button> -->
+                <button type="button" v-if="width <= 1000">메뉴 닫기</button>
                 <ul class="menu_list util">
                     <li :class="['item', item.itemClass]" v-for="(item, idx) in menu" :key="idx">
                         <a
@@ -100,12 +100,13 @@ export default {
                     itemClass: '',
                     icon: 'github'
                 },
-            ]
+            ],
         }
     },
     props: {
         list: Object,
-        sectionInfo: Object
+        sectionInfo: Object,
+        width: Number
     },
     components: {
         TheIcon
@@ -130,7 +131,7 @@ export default {
             path.style.setProperty('--duration', length * 20 + 'ms')
             path.style.setProperty('--delay', i * 200 + 'ms')
         })
-    }
+    },
 }
 </script>
 

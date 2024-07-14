@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper" :class="detailPage ? 'scroll_down' : ''">
-    <TheHeader :list="menu" :sectionInfo="sectionInfo" />
+    <TheHeader :list="menu" :sectionInfo="sectionInfo" :width="width" />
     <!-- :autoplay="{
         delay: 1000,
         disableOnInteraction: true,
@@ -109,6 +109,8 @@ export default {
         },
       ],
       menu,
+      width: window.innerWidth,
+      scroll: window.scrollY,
     }
   },
   components: {
@@ -154,45 +156,20 @@ export default {
 
       return val
     },
+    handleResize() {
+      this.width = window.innerWidth;
+    },
+    handleScroll() {
+      this.scroll = window.scrollY;
+    }
   },
   mounted() {
-    let wrapper = document.querySelector('.wrapper')
-    let lastScroll = document.documentElement.scrollTop || 0
-
-    addEventListener('scroll', function(){
-      let scrollTop = document.documentElement.scrollTop
-
-      if(scrollTop > lastScroll) {
-        wrapper.classList.remove('scroll_up')
-        wrapper.classList.add('scroll_down')
-      } else if(scrollTop == 0) {
-        wrapper.classList.remove('scroll_down')
-        wrapper.classList.remove('scroll_up')
-      } else {
-        wrapper.classList.remove('scroll_down')
-        wrapper.classList.add('scroll_up')
-      }
-
-      lastScroll = scrollTop
-    })
-
-    let scrolling;
-
-    window.addEventListener('scroll', () => {
-      if (!scrolling) {
-        // console.log('start scrolling!');
-      }
-
-      clearTimeout(scrolling);
-      scrolling = setTimeout(() => {
-        if(wrapper.classList.contains('scroll_up')) {
-          wrapper.classList.add('scroll_down')
-          wrapper.classList.remove('scroll_up')
-        }
-        
-        scrolling = undefined;
-      }, 2000);
-    })
+    window.addEventListener('resize', this.handleResize);
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  BeforeUnmount() {
+    window.addEventListener('resize', this.handleResize);
+    window.addEventListener('scroll', this.handleScroll);
   },
 }
 </script>
