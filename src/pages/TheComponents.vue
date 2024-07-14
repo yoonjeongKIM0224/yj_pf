@@ -14,62 +14,6 @@
             on <a href="https://codepen.io">CodePen</a>.
             </iframe>
         </template>
-        <template v-slot:tabPanel3>
-            <iframe height="600" style="width: 100%;" scrolling="no" title="cat" src="https://codepen.io/yoonjeongkim0224/embed/vYJqxVx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/vYJqxVx">
-            cat</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
-            on <a href="https://codepen.io">CodePen</a>.
-            </iframe>
-        </template>
-        <template v-slot:tabPanel4>
-            <iframe height="600" style="width: 100%;" scrolling="no" title="skull" src="https://codepen.io/yoonjeongkim0224/embed/VwMedvx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/VwMedvx">
-            skull</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
-            on <a href="https://codepen.io">CodePen</a>.
-            </iframe>
-        </template>
-        <template v-slot:tabPanel5>
-            <iframe height="600" style="width: 100%;" scrolling="no" title="cat" src="https://codepen.io/yoonjeongkim0224/embed/vYJqxVx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/vYJqxVx">
-            cat</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
-            on <a href="https://codepen.io">CodePen</a>.
-            </iframe>
-        </template>
-        <template v-slot:tabPanel6>
-            <iframe height="600" style="width: 100%;" scrolling="no" title="skull" src="https://codepen.io/yoonjeongkim0224/embed/VwMedvx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/VwMedvx">
-            skull</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
-            on <a href="https://codepen.io">CodePen</a>.
-            </iframe>
-        </template>
-        <template v-slot:tabPanel7>
-            <iframe height="600" style="width: 100%;" scrolling="no" title="cat" src="https://codepen.io/yoonjeongkim0224/embed/vYJqxVx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/vYJqxVx">
-            cat</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
-            on <a href="https://codepen.io">CodePen</a>.
-            </iframe>
-        </template>
-        <template v-slot:tabPanel8>
-            <iframe height="600" style="width: 100%;" scrolling="no" title="skull" src="https://codepen.io/yoonjeongkim0224/embed/VwMedvx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/VwMedvx">
-            skull</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
-            on <a href="https://codepen.io">CodePen</a>.
-            </iframe>
-        </template>
-        <template v-slot:tabPanel9>
-            <iframe height="600" style="width: 100%;" scrolling="no" title="cat" src="https://codepen.io/yoonjeongkim0224/embed/vYJqxVx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/vYJqxVx">
-            cat</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
-            on <a href="https://codepen.io">CodePen</a>.
-            </iframe>
-        </template>
-        <template v-slot:tabPanel10>
-            <iframe height="600" style="width: 100%;" scrolling="no" title="skull" src="https://codepen.io/yoonjeongkim0224/embed/VwMedvx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/VwMedvx">
-            skull</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
-            on <a href="https://codepen.io">CodePen</a>.
-            </iframe>
-        </template>
     </TheTab>
 </template>
   
@@ -92,121 +36,6 @@ export default {
                     itemClass: '',
                     disabled: false,
                 },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'checkbox',
-                    itemClass: '',
-                    disabled: false,
-                },
-                {
-                    text: 'radio',
-                    itemClass: '',
-                    disabled: false,
-                },
             ],
         }
     },
@@ -215,7 +44,7 @@ export default {
     },
     components: {
         TheTab
-    }
+    },
 }
 </script>
 

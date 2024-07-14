@@ -1,9 +1,9 @@
 <template>
-    <header class="header">
+    <header :class="['header']">
         <div class="container">
             <h1 class="logo">
                 <router-link to="/" class="logo_cont">
-                    <svg viewBox="0 0 106 38" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="header_logo" viewBox="0 0 106 38" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <clipPath id="01">
                                 <path d="M14.5208 2.64002H20.1208C20.1208 12.48 13.8408 19.16 2.80078 22L0.800781 17.84C9.88078 15.56 14.5208 10.84 14.5208 5.28002V2.64002ZM2.92078 2.64002H17.9608V6.80002H2.92078V2.64002ZM26.0408 0.52002H31.4008V21.16H26.0408V0.52002ZM6.88078 22.72H31.4008V37.16H6.88078V22.72ZM26.1608 26.92H12.1208V32.96H26.1608V26.92Z" fill="black"/>
@@ -52,8 +52,10 @@
                     </svg>
                 </router-link>
             </h1>
-            <div class="menu_container">
-                <button type="button" v-if="width <= 1000">메뉴 열기</button>
+            <button type="button" title="메뉴 열기" v-if="width <= 1000" @click="menuActive = true">
+                <TheIcon size="lg" icon="burger1" />
+            </button>
+            <div class="menu_container" v-if="width <= 1000 ? menuActive : true">
                 <ul class="menu_list gnb">
                     <li
                     :class="['item', $route.fullPath && sectionInfo.path === item.path ? 'active' : '']"
@@ -63,7 +65,6 @@
                         </router-link>
                     </li>
                 </ul>
-                <button type="button" v-if="width <= 1000">메뉴 닫기</button>
                 <ul class="menu_list util">
                     <li :class="['item', item.itemClass]" v-for="(item, idx) in menu" :key="idx">
                         <a
@@ -75,6 +76,9 @@
                         </a>
                     </li>
                 </ul>
+                <button type="button" class="close_btn" title="메뉴 닫기" v-if="width <= 1000" @click="menuActive = false">
+                    <TheIcon size="sm" icon="close1" />
+                </button>
             </div>
         </div>
     </header>
@@ -92,15 +96,16 @@ export default {
                     text: 'velog',
                     link: 'https://velog.io/@gnoejnooy/posts',
                     itemClass: '',
-                    icon: 'velog'
+                    icon: 'velog1'
                 },
                 {
                     text: 'github',
                     link: 'https://github.com/yoonjeongKIM0224',
                     itemClass: '',
-                    icon: 'github'
+                    icon: 'github1'
                 },
             ],
+            menuActive: false
         }
     },
     props: {
@@ -136,31 +141,4 @@ export default {
 </script>
 
 <style>
-svg {
-    fill: none;
-    width: 100px;
-    stroke-width: 10px;
-}
-
-path {
-  stroke-dasharray: var(--length);
-  stroke-dashoffset: var(--length);
-}
-
-.svg-bg > path {
-  stroke: #FF8E8B;
-  animation: path var(--duration) ease forwards;
-  animation-delay: var(--delay);
-}
-
-.svg-main > path {
-  stroke: #000;
-  animation: path var(--duration) ease-in forwards;
-  animation-delay: var(--delay);
-}
-
-@keyframes path {
-    0% { stroke-dashoffset: var(--length); }
-    100% { stroke-dashoffset: 0; }
-}
 </style>

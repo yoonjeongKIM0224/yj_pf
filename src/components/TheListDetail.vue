@@ -100,13 +100,13 @@ export default {
         scrollDown(){
             window.scrollTo(
                 {
-                    left:0,
-                    top:window.innerHeight,
+                    left: 0,
+                    top: window.innerHeight,
                     behavior: 'smooth'
                 }
             )
-        }
-    }
+        },
+    },
 }
 </script>
 

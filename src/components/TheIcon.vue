@@ -1,5 +1,5 @@
 <template>
-    <i :class="[`icon_${icon}`, size, `rotate${rotate}`]"></i>
+    <i :class="[`icon_${icon}`, size, rotate ? `rotate${rotate}` : '']"></i>
 </template>
   
 <script>

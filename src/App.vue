@@ -1,5 +1,6 @@
 <template>
-  <div class="wrapper" :class="detailPage ? 'scroll_down' : ''">
+  <div class="wrapper" :class="[]">
+    <!-- (detailPage && scroll == 0) || scroll !== 0 ? 'scroll_down' : '' -->
     <TheHeader :list="menu" :sectionInfo="sectionInfo" :width="width" />
     <!-- :autoplay="{
         delay: 1000,
@@ -9,7 +10,7 @@
       <swiper
       v-if="$route.fullPath == '/'"
       :slidesPerView="'auto'"
-      :spaceBetween="20"
+      :spaceBetween="width <= 600 ? 10 : 20"
       :loop="true"
       :speed="800"
       :pagination="{ 
@@ -161,7 +162,7 @@ export default {
     },
     handleScroll() {
       this.scroll = window.scrollY;
-    }
+    },
   },
   mounted() {
     window.addEventListener('resize', this.handleResize);
