@@ -34,7 +34,7 @@
                         </span>
                     </div>
                     <div class="visual" :style="{ backgroundColor: `${info.color}` }">
-                        <img :src="info.image" :alt="info.alt" class="img">
+                        <img :src="info.image" alt="" class="img">
                     </div>
                 </router-link>
             </li>
