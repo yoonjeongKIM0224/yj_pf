@@ -60,7 +60,7 @@
                     <li
                     :class="['item', $route.fullPath && sectionInfo.path === item.path ? 'active' : '']"
                     v-for="(item, idx) in list" :key="idx">
-                        <router-link :to="item.path" class="item_cont">
+                        <router-link :to="item.path" class="item_cont" @click="menuActive = false">
                             {{ item.meta.title }}
                         </router-link>
                     </li>
