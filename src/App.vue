@@ -78,7 +78,7 @@ import TheHeader from '@/components/TheHeader.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import TheButton from '@/components/TheButton.vue';
 import TheIcon from '@/components/TheIcon.vue';
-import detailInfo from '@/assets/data/detail_info.json';
+import detailInfo from '@/assets/data/detail_info.js';
 import menu from '@/menu.js';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
