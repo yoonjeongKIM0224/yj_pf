@@ -10,9 +10,9 @@
     </div>
     <!--// 리스트 정렬 -->
 
-    <div v-if="listUse.length !== 0">
+    <div class="list_type1" v-if="listUse.length !== 0 && type === '1'">
         <!-- 디자인 TYPE 1 -->
-        <ul :class="`list_type1`" v-if="type === '1'">
+        <ul class="list">
             <li class="item" v-for="(info, idx) in listUse" :key="idx">
                 <router-link :to="`/detail/${info.id}`" class="item_cont">
                     <div class="info_container">

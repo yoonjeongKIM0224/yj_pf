@@ -1,6 +1,8 @@
 <template>
     <div :class="['detail_wrap', info.boxClass]">
         <section class="visual_wrap" :style="{ backgroundColor: `${info.color}` }">
+            <img :src="info.bannerImage" alt="배경" class="bg_img">
+
             <div class="container">
                 <TheIcon
                     v-if="info.recommend"
@@ -32,7 +34,7 @@
                 <TheIcon size="xs" icon="arrow3" />
             </TheButton>
         </section>
-
+        
         <div class="info_wrap">
             <div class="container">
                 <section class="text_wrap">
@@ -90,6 +92,7 @@ export default {
     props: {
         list: Object,
         itemId: String,
+        sectioninfo: Object
     },
     components: {
         TheList,
