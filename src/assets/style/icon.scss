@@ -1,6 +1,8 @@
 [class*="icon_"] {
-    display: block;
+    display: inline-block;
     background-size: cover;
+    flex-shrink: 0;
+    vertical-align: middle;
 
     &.xs {
         width: 16px;

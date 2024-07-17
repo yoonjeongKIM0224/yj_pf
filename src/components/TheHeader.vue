@@ -55,31 +55,33 @@
             <button type="button" title="메뉴 열기" v-if="width <= 1000" @click="menuActive = true">
                 <TheIcon size="md" icon="burger1" />
             </button>
-            <div class="menu_container" v-if="width <= 1000 ? menuActive : true">
-                <ul class="menu_list gnb">
-                    <li
-                    :class="['item', $route.fullPath && sectionInfo.path === item.path ? 'active' : '']"
-                    v-for="(item, idx) in list" :key="idx">
-                        <router-link :to="item.path" class="item_cont" @click="menuActive = false">
-                            {{ item.meta.title }}
-                        </router-link>
-                    </li>
-                </ul>
-                <ul class="menu_list util">
-                    <li :class="['item', item.itemClass]" v-for="(item, idx) in menu" :key="idx">
-                        <a
-                        :href="item.link"
-                        class="item_cont"
-                        target="_blank"
-                        :title="item.text">
-                            <TheIcon size="sm" :icon="item.icon" />
-                        </a>
-                    </li>
-                </ul>
-                <button type="button" class="close_btn" title="메뉴 닫기" v-if="width <= 1000" @click="menuActive = false">
-                    <TheIcon size="sm" icon="close1" />
-                </button>
-            </div>
+            <Transition name="header_menu_container" :duration="800">
+                <div class="menu_container" v-if="width <= 1000 ? menuActive : true">
+                    <ul class="menu_list gnb">
+                        <li
+                        :class="['item', $route.fullPath && sectionInfo.path === item.path ? 'active' : '']"
+                        v-for="(item, idx) in list" :key="idx">
+                            <router-link :to="item.path" class="item_cont" @click="menuActive = false">
+                                {{ item.meta.title }}
+                            </router-link>
+                        </li>
+                    </ul>
+                    <ul class="menu_list util">
+                        <li :class="['item', item.itemClass]" v-for="(item, idx) in menu" :key="idx">
+                            <a
+                            :href="item.link"
+                            class="item_cont"
+                            target="_blank"
+                            :title="item.text">
+                                <TheIcon size="sm" :icon="item.icon" />
+                            </a>
+                        </li>
+                    </ul>
+                    <button type="button" class="close_btn" title="메뉴 닫기" v-if="width <= 1000" @click="menuActive = false">
+                        <TheIcon size="sm" icon="close1" />
+                    </button>
+                </div>
+            </Transition>
         </div>
     </header>
 </template>
