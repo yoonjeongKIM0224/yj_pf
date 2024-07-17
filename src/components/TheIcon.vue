@@ -1,5 +1,5 @@
 <template>
-    <i :class="[`icon_${icon}`, size, rotate ? `rotate${rotate}` : '']"></i>
+    <i :class="[`icon_${icon}`, size, rotate ? `rotate${rotate}` : '', margin ? `margin_${margin}` : '']"></i>
 </template>
   
 <script>
@@ -12,7 +12,8 @@ export default {
     props: {
         icon: String,
         size: String,
-        rotate: String
+        rotate: String,
+        margin: String,
     },
     components: {
     }

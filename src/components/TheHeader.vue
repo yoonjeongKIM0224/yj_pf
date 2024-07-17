@@ -53,7 +53,7 @@
                 </router-link>
             </h1>
             <button type="button" title="메뉴 열기" v-if="width <= 1000" @click="menuActive = true">
-                <TheIcon size="lg" icon="burger1" />
+                <TheIcon size="md" icon="burger1" />
             </button>
             <div class="menu_container" v-if="width <= 1000 ? menuActive : true">
                 <ul class="menu_list gnb">

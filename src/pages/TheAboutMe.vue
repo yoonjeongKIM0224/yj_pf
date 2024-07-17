@@ -1,33 +1,58 @@
 <template>
-    <div class="list_type2">
-        <ul class="list">
-            <li v-for="(info, idx) in history" class="item" :key="idx">
-                <div class="item_cont">
-                    <span class="title" v-html="info.year + '년'"></span>
-                    <div class="list_container">
-                        <ul class="list">
-                            <li v-for="(month, idx) in info.months" :key="idx" :class="['item', month.active ? 'active' : '']" @click="month.active = !month.active">
-                                <div class="item_cont">
-                                    <span class="info1" v-html="month.date + '월'"></span>
-                                    <div class="container">
-                                        <span class="title" v-html="month.title"></span>
-                                        <span class="text" v-if="month.text" v-html="month.text"></span>
+    <article class="article">
+        <h3 class="article_title">연혁</h3>
+        <div class="list_type2">
+            <ul class="list">
+                <li v-for="(info, idx) in history" class="item" :key="idx">
+                    <div class="item_cont">
+                        <span class="title" v-html="info.year + '년'"></span>
+                        <div class="list_container">
+                            <ul class="list">
+                                <li v-for="(month, idx) in info.months" :key="idx" :class="['item', month.active ? 'active' : '']" @click="month.active = !month.active">
+                                    <div class="item_cont">
+                                        <span class="info1" v-html="month.date + '월'"></span>
+                                        <div class="container">
+                                            <span class="title" v-html="month.title"></span>
+                                            <span class="text" v-if="month.text" v-html="month.text"></span>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="img_wrap" v-if="month.img">
-                                    <img :src="month.img" :alt="month.alt" class="img">
-                                </div>
-                            </li>
-                        </ul>
+                                    <div class="img_wrap" v-if="month.img">
+                                        <img :src="month.img" :alt="month.alt" class="img">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
-    </div>
+                </li>
+            </ul>
+        </div>
+    </article>
+
+    <article class="article">
+        <h3 class="article_title">작업 업체</h3>
+        <p class="article_text">
+            <TheIcon size="md" icon="user_pen1" />
+            의 표시가 있는 것들은 프로젝트 소개 페이지로 이동할 수 있습니다.
+        </p>
+        <div class="list_type3">
+            <ul class="list">
+                <li v-for="(item, idx) in company" :key="idx" class="item">
+                    <div class="item_cont">
+                        <img :src="item.image" :alt="item.name" class="img">
+                        <router-link v-if="item.page" to="/" class="container">
+                            <TheIcon size="md" icon="user_pen1" />
+                        </router-link>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </article>
 </template>
   
 <script>
+import TheIcon from '@/components/TheIcon.vue';
+
 export default {
     name: 'TheList',
     data(){
@@ -122,6 +147,33 @@ export default {
                     ]
                 },
             ],
+            company: [
+                {
+                    name: '신한은행',
+                    image: require('../assets/images/main_banner01.png'),
+                    page: true,
+                },
+                {
+                    name: '신한은행',
+                    image: require('../assets/images/main_banner01.png'),
+                    page: true,
+                },
+                {
+                    name: '신한은행',
+                    image: require('../assets/images/main_banner01.png'),
+                    page: true,
+                },
+                {
+                    name: '신한은행',
+                    image: require('../assets/images/main_banner01.png'),
+                    page: true,
+                },
+                {
+                    name: '신한은행',
+                    image: require('../assets/images/main_banner01.png'),
+                    page: true,
+                }
+            ],
         }
     },
     props: {
@@ -129,6 +181,7 @@ export default {
         sectionInfo: Object,
     },
     components: {
+        TheIcon
     }
 }
 </script>

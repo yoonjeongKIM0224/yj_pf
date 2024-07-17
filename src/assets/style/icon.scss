@@ -12,9 +12,24 @@
         height: 24px;
     }
 
-    &.lg {
+    &.md {
         width: 32px;
         height: 32px;
+    }
+
+    &.lg {
+        width: 40px;
+        height: 40px;
+    }
+
+    &.xl {
+        width: 48px;
+        height: 48px;
+    }
+
+    &.xxl {
+        width: 56px;
+        height: 56px;
     }
 
     &.rotate45 {
@@ -31,6 +46,22 @@
 
     &.rotate270 {
         transform: rotate(270deg);
+    }
+
+    &.margin_right {
+        margin-right: 8px;
+    }
+
+    &.margin_left {
+        margin-left: 8px;
+    }
+
+    &.margin_top {
+        margin-top: 8px;
+    }
+
+    &.margin_bottom {
+        margin-bottom: 8px;
     }
 }
 
@@ -68,4 +99,24 @@
 
 .icon_close1 {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.41406' y='23.1172' width='2' height='29.2783' rx='1' transform='rotate(-135 2.41406 23.1172)' fill='black'/%3E%3Crect x='1' y='2.41431' width='2' height='29.2783' rx='1' transform='rotate(-45 1 2.41431)' fill='black'/%3E%3C/svg%3E%0A");
+}
+
+.icon_clover1 {
+    background-image: url("../images/clover1.gif");
+}
+
+.icon_tv1 {
+    background-image: url("../images/tv1.gif");
+}
+
+.icon_pencil1 {
+    background-image: url("../images/pencil1.gif");
+}
+
+.icon_sawtooth1 {
+    background-image: url("../images/sawtooth1.gif");
+}
+
+.icon_user_pen1 {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1501_5)'%3E%3Cpath d='M15 4C13.0094 4 10 5 10 5V9C11.5 9 12.375 9.5 13.25 10C14.125 10.5 15 11 16.5 11C18.2625 11 22 10.5 22 8C22 5.5 18 4 15 4ZM6 7C6 8.10312 6.89688 9 8 9H9V5H8C6.89688 5 6 5.89688 6 7ZM11 20C14 20 18 18.5 18 16C18 13.5 14.2625 13 12.5 13C11 13 10.125 13.5 9.25 14C8.375 14.5 7.5 15 6 15V19C6 19 9.00937 20 11 20ZM2 17C2 18.1031 2.89688 19 4 19H5V15H4C2.89688 15 2 15.8969 2 17Z' fill='%23FF8E8B'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1501_5'%3E%3Crect width='20' height='16' fill='white' transform='translate(2 4)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }

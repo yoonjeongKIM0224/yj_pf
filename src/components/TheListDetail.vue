@@ -38,7 +38,7 @@
         <div class="info_wrap">
             <div class="container">
                 <section class="text_wrap">
-                    <article v-for="(item, idx) in info.content" :key="idx" class="article">
+                    <article v-for="(item, idx) in info.content" :key="idx" class="info_article">
                         <div class="img_list" v-if="item.image">
                             <div v-for="(img, idx) in item.image" :key="idx" class="item">
                                 <div class="item_cont">
@@ -60,7 +60,7 @@
                 <TheButton
                     :to="`/${info.category}`"
                     color="primary"
-                    size="lg"
+                    size="md"
                     :round="true">
                     목록 보기
                 </TheButton>
