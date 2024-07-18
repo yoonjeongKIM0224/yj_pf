@@ -1,6 +1,251 @@
 export default [
     {
         category: 'projects',
+        tab: '개인',
+        id: 1,
+        recommend: true,
+        title: '캔디 도매 사이트',
+        image: require('/src/assets/images/work24.svg'),
+        bannerImage: require('/src/assets/images/work24_img1.png'),
+        alt: '알트값',
+        color: '#4D65E1',
+        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
+        tags: ['구축 퍼블리싱', '2023년'],
+        infoList: [
+            {
+                title: 'Client',
+                text: '신세계사이먼'
+            },
+            {
+                title: 'Category',
+                text: 'WEB / MOBILE / APP'
+            },
+            {
+                title: 'Date',
+                text: '2024.01 ~ 2024.02'
+            },
+            {
+                title: 'Service',
+                text: 'HTML, CSS, JS, 웹접근성, Figma'
+            }
+        ],
+        content: [
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            },
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            }
+        ]
+    },
+    {
+        category: 'projects',
+        tab: '개인',
+        id: 788,
+        recommend: true,
+        title: '영화 20개 추천 사이트',
+        image: require('/src/assets/images/work24.svg'),
+        bannerImage: require('/src/assets/images/work24_img1.png'),
+        alt: '알트값',
+        color: '#4D65E1',
+        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
+        tags: ['구축 퍼블리싱', '2023년'],
+        infoList: [
+            {
+                title: 'Client',
+                text: '신세계사이먼'
+            },
+            {
+                title: 'Category',
+                text: 'WEB / MOBILE / APP'
+            },
+            {
+                title: 'Date',
+                text: '2024.01 ~ 2024.02'
+            },
+            {
+                title: 'Service',
+                text: 'HTML, CSS, JS, 웹접근성, Figma'
+            }
+        ],
+        content: [
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            },
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            }
+        ]
+    },
+    {
+        category: 'projects',
+        tab: '개인',
+        id: 888,
+        recommend: true,
+        title: '블로그',
+        image: require('/src/assets/images/work24.svg'),
+        bannerImage: require('/src/assets/images/work24_img1.png'),
+        alt: '알트값',
+        color: '#4D65E1',
+        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
+        tags: ['구축 퍼블리싱', '2023년'],
+        infoList: [
+            {
+                title: 'Client',
+                text: '신세계사이먼'
+            },
+            {
+                title: 'Category',
+                text: 'WEB / MOBILE / APP'
+            },
+            {
+                title: 'Date',
+                text: '2024.01 ~ 2024.02'
+            },
+            {
+                title: 'Service',
+                text: 'HTML, CSS, JS, 웹접근성, Figma'
+            }
+        ],
+        content: [
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            },
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            }
+        ]
+    },
+    {
+        category: 'projects',
+        tab: '개인',
+        id: 111,
+        recommend: true,
+        title: '영단어 스터디 사이트',
+        image: require('/src/assets/images/work24.svg'),
+        bannerImage: require('/src/assets/images/work24_img1.png'),
+        alt: '알트값',
+        color: '#4D65E1',
+        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
+        tags: ['구축 퍼블리싱', '2023년'],
+        infoList: [
+            {
+                title: 'Client',
+                text: '신세계사이먼'
+            },
+            {
+                title: 'Category',
+                text: 'WEB / MOBILE / APP'
+            },
+            {
+                title: 'Date',
+                text: '2024.01 ~ 2024.02'
+            },
+            {
+                title: 'Service',
+                text: 'HTML, CSS, JS, 웹접근성, Figma'
+            }
+        ],
+        content: [
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            },
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            }
+        ]
+    },
+    {
+        category: 'projects',
+        tab: '개인',
+        id: 123123,
+        recommend: true,
+        title: '모멘텀',
+        image: require('/src/assets/images/work24.svg'),
+        bannerImage: require('/src/assets/images/work24_img1.png'),
+        alt: '알트값',
+        color: '#4D65E1',
+        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
+        tags: ['구축 퍼블리싱', '2023년'],
+        infoList: [
+            {
+                title: 'Client',
+                text: '신세계사이먼'
+            },
+            {
+                title: 'Category',
+                text: 'WEB / MOBILE / APP'
+            },
+            {
+                title: 'Date',
+                text: '2024.01 ~ 2024.02'
+            },
+            {
+                title: 'Service',
+                text: 'HTML, CSS, JS, 웹접근성, Figma'
+            }
+        ],
+        content: [
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            },
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            }
+        ]
+    },
+    {
+        category: 'projects',
         tab: '실무',
         id: 2,
         recommend: true,
