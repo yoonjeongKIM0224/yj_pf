@@ -39,7 +39,7 @@
             <ul class="list">
                 <li v-for="(item, idx) in company" :key="idx" class="item">
                     <div class="item_cont">
-                        <img :src="item.image" :alt="item.name" class="img">
+                        <img :src="item.image" :alt="item.name" class="img black">
                         <router-link v-if="item.page" to="/" class="container">
                             <TheIcon size="md" icon="user_pen1" />
                         </router-link>
@@ -150,27 +150,32 @@ export default {
             company: [
                 {
                     name: '신한은행',
-                    image: require('../assets/images/main_banner01.png'),
+                    image: require('../assets/images/ione.svg'),
                     page: true,
                 },
                 {
                     name: '신한은행',
-                    image: require('../assets/images/main_banner01.png'),
+                    image: require('../assets/images/work24.svg'),
                     page: true,
                 },
                 {
                     name: '신한은행',
-                    image: require('../assets/images/main_banner01.png'),
+                    image: require('../assets/images/amorepacific.svg'),
                     page: true,
                 },
                 {
                     name: '신한은행',
-                    image: require('../assets/images/main_banner01.png'),
+                    image: require('../assets/images/hyosung.svg'),
                     page: true,
                 },
                 {
                     name: '신한은행',
-                    image: require('../assets/images/main_banner01.png'),
+                    image: require('../assets/images/shinhan.svg'),
+                    page: true,
+                },
+                {
+                    name: '신한은행',
+                    image: require('../assets/images/yakedu.svg'),
                     page: true,
                 }
             ],
