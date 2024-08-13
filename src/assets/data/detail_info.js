@@ -52,48 +52,31 @@ export default [
         category: 'projects',
         tab: '개인',
         id: 788,
-        recommend: true,
-        title: '영화 20개 추천 사이트',
-        image: require('/src/assets/images/work24.svg'),
+        title: '영화 추천 사이트',
         bannerImage: require('/src/assets/images/work24_img1.png'),
         alt: '알트값',
         color: '#4D65E1',
-        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
-        tags: ['구축 퍼블리싱', '2023년'],
-        infoList: [
-            {
-                title: 'Client',
-                text: '신세계사이먼'
-            },
-            {
-                title: 'Category',
-                text: 'WEB / MOBILE / APP'
-            },
-            {
-                title: 'Date',
-                text: '2024.01 ~ 2024.02'
-            },
-            {
-                title: 'Service',
-                text: 'HTML, CSS, JS, 웹접근성, Figma'
-            }
-        ],
+        text: `React 환경에서 yts.mx의 API를 사용하여 영화 추천을 해 주는 사이트입니다.`,
+        tags: ['React', '2024년'],
         content: [
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project3.png'),
+                    require('/src/assets/images/project1.png'),
                 ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+                title: `로딩바 구현`,
+                text: `yts.mx의 API를 사용하여 영화 정보를 호출했습니다.<br>useState를 이용하여 loading의 값이 true일 때는 로딩바를 보여주고 false일 때는 영화 정보를 보여주게 했습니다.<br>API가 정상적으로 다 불러와지면 loading의 값을 setLoading을 사용하여 false로 변경했습니다.<br>최종적으로 사용자가 로딩 중이라는 것을 알 수 있게 구현하였습니다.`
+            },
+            {
+                title: `0으로 시작하는 숫자 구현`,
+                text: "총 20개의 영화를 추천하는 사이트인 만큼 리스트에 숫자를 매기고 싶었습니다. ex) 01, 02... 20 <br>숫자가 10 이상이 되면 앞에 0이 붙을 필요가 없어지는데 이 경우 아래의 코드로 해결했습니다.<br>{String(idx + 1).length == 1 ? `0${idx + 1}` : idx + 1}<br> 위 코드에서 idx는 영화 정보 배열의 index값을 의미합니다. 숫자의 length가 한자리일 때만 앞에 0을 붙여주면 되는 점을 이용하여 코드를 작성했습니다."
             },
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project2.png'),
                 ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+                title: `상세페이지 구현`,
+                text: `Detail.js로 상세페이지 템플릿을 만들었습니다.<br>props를 사용하여 별점, 영화 개봉년도, 설명 정보를 기입했습니다.<br>"View List" 버튼에는 css hover 이용해 애니메이션 효과를 줬습니다.`
             }
         ]
     },
