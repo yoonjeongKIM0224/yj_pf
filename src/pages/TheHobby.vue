@@ -1,7 +1,7 @@
 <template>
     <TheList type="1" :list="detailList" />
 </template>
-  
+
 <script>
 import TheList from '@/components/TheList.vue';
 

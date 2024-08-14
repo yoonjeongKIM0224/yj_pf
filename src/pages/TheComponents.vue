@@ -22,16 +22,16 @@
             </iframe>
         </template>
         <template v-slot:tabPanel4>
-            <iframe height="600" style="width: 100%;" scrolling="no" title="js" src="https://codepen.io/yoonjeongkim0224/embed/BaPJwrp?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/BaPJwrp">
-                js</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
+            <iframe height="600" style="width: 100%;" scrolling="no" title="find btn" src="https://codepen.io/yoonjeongkim0224/embed/OJOJrmm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/OJOJrmm">
+                find btn</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
                 on <a href="https://codepen.io">CodePen</a>.
             </iframe>
         </template>
         <template v-slot:tabPanel5>
-            <iframe height="600" style="width: 100%;" scrolling="no" title="find btn" src="https://codepen.io/yoonjeongkim0224/embed/OJOJrmm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/OJOJrmm">
-                find btn</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
+            <iframe height="600" style="width: 100%;" scrolling="no" title="Top Btn" src="https://codepen.io/yoonjeongkim0224/embed/yLzgzGZ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/yLzgzGZ">
+                Top Btn</a> by yoonjeong (<a href="https://codepen.io/yoonjeongkim0224">@yoonjeongkim0224</a>)
                 on <a href="https://codepen.io">CodePen</a>.
             </iframe>
         </template>
@@ -48,27 +48,27 @@ export default {
             tabSelected: 0,
             tabs: [
                 {
-                    text: 'checkbox',
+                    text: 'Tab',
                     itemClass: '',
                     disabled: false,
                 },
                 {
-                    text: 'radio',
+                    text: 'Checkbox',
                     itemClass: '',
                     disabled: false,
                 },
                 {
-                    text: 'radio',
+                    text: 'Dark Mode',
                     itemClass: '',
                     disabled: false,
                 },
                 {
-                    text: 'radio',
+                    text: 'Find Button',
                     itemClass: '',
                     disabled: false,
                 },
                 {
-                    text: 'radio',
+                    text: 'Top Button',
                     itemClass: '',
                     disabled: false,
                 },

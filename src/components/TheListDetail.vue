@@ -11,7 +11,7 @@
                     size="sm"
                     icon="star1" />
 
-                <div class="logo" v-if="info.image">
+                <div class="logo" v-if="info.category != 'hobby' && info.image">
                     <img :src="info.image" :alt="info.alt" class="img">
                 </div>
 
@@ -26,7 +26,7 @@
                     </li>
                 </ul>
 
-                <p v-html="info.text" class="text"></p>
+                <!-- <p v-html="info.text" class="text"></p> -->
             </div>
 
             <TheButton @click="scrollDown" size="sm" class="scroll_down_btn">

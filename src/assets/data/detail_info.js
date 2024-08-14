@@ -425,7 +425,7 @@ export default [
         category: 'projects',
         tab: '실무',
         id: 4,
-        recommend: true,
+        recommend: false,
         boxClass: 'black',
         title: 'IBK 온라인 입점 소상공인부 대출',
         image: require('/src/assets/images/ione.svg'),
@@ -515,8 +515,8 @@ export default [
         category: 'projects',
         tab: '실무',
         id: 7,
-        recommend: false,
-        title: '신한은행 SOL(앱)',
+        recommend: true,
+        title: '신한은행 SOL',
         image: require('/src/assets/images/shinhan.svg'),
         alt: '알트값',
         color: '#0046FF',
@@ -525,15 +525,15 @@ export default [
         infoList: [
             {
                 title: 'Client',
-                text: '신세계사이먼'
+                text: '신한은행'
             },
             {
                 title: 'Category',
-                text: 'WEB / MOBILE / APP'
+                text: 'APP'
             },
             {
                 title: 'Date',
-                text: '2024.01 ~ 2024.02'
+                text: '2023.05 ~ 2023.10'
             },
             {
                 title: 'Service',
@@ -726,6 +726,7 @@ export default [
         category: 'hobby',
         id: 14,
         title: 'Rabbit 🐰',
+        image: require('/src/assets/images/rabbit1.png'),
         alt: '알트값',
         color: '#8E1D76',
         tags: ['HTML', 'CSS'],
@@ -743,8 +744,29 @@ export default [
     },
     {
         category: 'hobby',
+        id: 12323,
+        title: 'arrow',
+        image: require('/src/assets/images/arrow_move1.png'),
+        alt: '알트값',
+        color: '#C8CDFF',
+        tags: ['HTML', 'CSS'],
+        content: [
+            {
+                title: '제목',
+                text: '내용'
+            }
+        ],
+        iframe: {
+            title: 'rabbit',
+            src: 'https://codepen.io/yoonjeongkim0224/embed/ZERLKWd?default-tab=html%2Cresult',
+            href: 'https://codepen.io/yoonjeongkim0224/pen/ZERLKWd'
+        }
+    },
+    {
+        category: 'hobby',
         id: 15,
         title: 'Skull',
+        image: require('/src/assets/images/skull1.png'),
         color: '#E4691C',
         tags: ['HTML', 'CSS'],
         content: [
@@ -763,6 +785,7 @@ export default [
         category: 'hobby',
         id: 16,
         title: 'Building',
+        image: require('/src/assets/images/building1.png'),
         color: '#0B2C49',
         tags: ['HTML', 'CSS'],
         content: [
@@ -781,6 +804,7 @@ export default [
         category: 'hobby',
         id: 17,
         title: 'Duck',
+        image: require('/src/assets/images/duck1.png'),
         color: '#1C27B5',
         tags: ['HTML', 'CSS'],
         content: [
@@ -799,6 +823,7 @@ export default [
         category: 'hobby',
         id: 18,
         title: 'Cat Work',
+        image: require('/src/assets/images/cat_work1.png'),
         color: '#4DB6AC',
         tags: ['HTML', 'CSS'],
         content: [
@@ -817,6 +842,7 @@ export default [
         category: 'hobby',
         id: 19,
         title: 'Cat',
+        image: require('/src/assets/images/cat1.png'),
         color: '#FFCFBF',
         tags: ['HTML', 'CSS'],
         content: [
