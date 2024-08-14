@@ -383,16 +383,16 @@ export default [
         image: require('/src/assets/images/amorepacific.svg'),
         alt: '알트값',
         color: '#F3F3F6',
-        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
+        text: ``,
         tags: ['구축 퍼블리싱', '2023년'],
         infoList: [
             {
                 title: 'Client',
-                text: '신세계사이먼'
+                text: '아모레퍼시픽'
             },
             {
                 title: 'Category',
-                text: 'WEB / MOBILE / APP'
+                text: 'WEB'
             },
             {
                 title: 'Date',
@@ -400,27 +400,24 @@ export default [
             },
             {
                 title: 'Service',
-                text: 'HTML, CSS, JS, 웹접근성, Figma'
+                text: 'HTML, CSS, JS, Zeplin'
             }
         ],
         content: [
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project4.png'),
                 ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
             },
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project5.png'),
                 ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            },
+            {
+                image: [
+                    require('/src/assets/images/project6.png'),
+                ],
             }
         ]
     },
@@ -686,7 +683,6 @@ export default [
         category: 'hobby',
         id: 14,
         title: 'Rabbit 🐰',
-        image: require('/src/assets/images/main_banner01.png'),
         alt: '알트값',
         color: '#8E1D76',
         tags: ['HTML', 'CSS'],

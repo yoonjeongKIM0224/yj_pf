@@ -4,7 +4,7 @@ const menu = [
     meta: {
       title: 'About Me',
       text: '저의 기본적인 정보를 소개합니다.',
-      icon: 'clover1',
+      // icon: 'clover1',
     },
     component: () => import('@/pages/TheAboutMe.vue')
   },
@@ -13,7 +13,7 @@ const menu = [
     meta: {
       title: 'Projects',
       text: '제가 작업한 프로젝트를 소개합니다.',
-      icon: 'pencil1',
+      // icon: 'pencil1',
     },
     component: () => import('@/pages/TheProjects.vue')
   },
@@ -22,7 +22,7 @@ const menu = [
     meta: {
       title: 'Components',
       text: '제가 만든 다양한 컴포넌트를 소개합니다.',
-      icon: 'sawtooth1',
+      // icon: 'sawtooth1',
     },
     component: () => import('@/pages/TheComponents.vue')
   },
@@ -31,7 +31,7 @@ const menu = [
     meta: {
       title: 'Hobby',
       text: '프론트 작업 외의 다양한 취미 작업물을 소개합니다.',
-      icon: 'tv1',
+      // icon: 'tv1',
     },
     component: () => import('@/pages/TheHobby.vue')
   },

@@ -1,6 +1,42 @@
 <template>
+<article class="article">
+        <div class="intro_wrap">
+            <div class="img_wrap">
+                <img src="" alt="" class="img" style="width: 500px; height: 500px; background: #ddd;">
+            </div>
+            <div class="text_wrap">
+                <span class="title">ABOUT YOONJEONG</span>
+                <p class="text">
+                    안녕하세요!<br>
+                    웹 퍼블리셔 김나영입니다.<br><br>
+                    좋아하면 더 잘한다는 마음으로 UI 개발 일을 하고 있습니다.<br><br>
+                    웹 퍼블리싱을 빠삭하게 다룹니다.<br>
+                    React/TypeScript 등 프레임워크 환경에서 컴포넌트 단위의 마크업 작업을 능숙하게 할 수 있어요.<br>
+                    어디에서도 잘 보이는 반응형, 웹 접근성과 웹 표준을 고려한 웹 페이지를 그려냅니다.<br><br>
+                    맡은 프로젝트의 목적을 우선적으로 고려하며, 원활한 협업을 중요하게 생각해요.<br>
+                    다양한 직군과 함께 멋지고 즐거운 UX를 만드는 데 관심이 많습니다.
+                </p>
+                <TheButton
+                    type="a"
+                    :to="`https://www.kakaocorp.com/page`"
+                    color="primary"
+                    size="md"
+                    :round="true">
+                    자기소개 더보기
+                    <template v-slot:after>
+                        <TheIcon
+                        size="xs"
+                        icon="arrow2"
+                        rotate="270" />
+                    </template>
+                </TheButton>
+            </div>
+        </div>
+    </article>
+
     <article class="article">
         <h3 class="article_title">연혁</h3>
+        <p class="article_text">카카오가 디딘 첫걸음부터 지금까지의 발걸음을 담았습니다.</p>
         <div class="list_type2">
             <ul class="list">
                 <li v-for="(info, idx) in history" class="item" :key="idx">
@@ -31,27 +67,26 @@
 
     <article class="article">
         <h3 class="article_title">작업 업체</h3>
-        <p class="article_text">
-            <TheIcon size="md" icon="user_pen1" />
-            의 표시가 있는 것들은 프로젝트 소개 페이지로 이동할 수 있습니다.
-        </p>
+        <p class="article_text">카카오가 디딘 첫걸음부터 지금까지의 발걸음을 담았습니다.</p>
         <div class="list_type3">
             <ul class="list">
                 <li v-for="(item, idx) in company" :key="idx" class="item">
                     <div class="item_cont">
                         <img :src="item.image" :alt="item.name" class="img black">
-                        <router-link v-if="item.page" to="/" class="container">
+                        <!-- <router-link v-if="item.page" to="/" class="container">
                             <TheIcon size="md" icon="user_pen1" />
-                        </router-link>
+                        </router-link> -->
                     </div>
                 </li>
             </ul>
         </div>
     </article>
 </template>
-  
+
 <script>
 import TheIcon from '@/components/TheIcon.vue';
+import TheButton from '@/components/TheButton.vue';
+
 
 export default {
     name: 'TheList',
@@ -64,7 +99,7 @@ export default {
                         {
                             date: '06',
                             title: '(주)와일리 입사',
-                            text: '웹퍼블리셔 (2024년 7월 기준 재직 중)',
+                            text: '웹퍼블리셔 (2024년 8월 기준 재직 중)',
                             img: require('../assets/images/wylie.png'),
                             alt: 'wylie',
                             active: false
@@ -132,7 +167,7 @@ export default {
                         {
                             date: '02',
                             title: '신정여자상업고등학교 졸업',
-                            text: '서울특별시 강서구',
+                            text: '서울특별시 강서구 소재의 상업계',
                             alt: '',
                             active: false
                         },
@@ -186,7 +221,8 @@ export default {
         sectionInfo: Object,
     },
     components: {
-        TheIcon
+        TheIcon,
+        TheButton
     }
 }
 </script>
