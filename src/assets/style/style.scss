@@ -557,8 +557,10 @@
             }
             
             .item_cont {
+                height: 100%;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
                 background-color: var(--bg-color);
     
                 .info_container {
@@ -957,6 +959,10 @@
                     margin-top: 40px;
                     border-radius: 20px;
                     overflow: hidden;
+                    
+                    &:not(:last-child) {
+                        margin-right: 40px;
+                    }
     
                     .item_cont {
                         width: 100%;
@@ -967,10 +973,6 @@
                             height: 100%;
                             object-fit: cover;
                         }
-                    }
-    
-                    + .item:nth-child(2n) {
-                        margin-left: 40px;
                     }
                 }
             }

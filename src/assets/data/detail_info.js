@@ -232,6 +232,103 @@ export default [
         tab: '실무',
         id: 2,
         recommend: true,
+        title: '농협카드',
+        image: require('/src/assets/images/work24.svg'),
+        bannerImage: require('/src/assets/images/work24_img1.png'),
+        alt: '알트값',
+        color: '#4D65E1',
+        text: `차세대 디지털 고용 서비스 플랫폼 '고용24' 구축은 고용 관련 민원 서비스를 제공하는 주요 시스템 및 행정 서비스를 통합 구축하는 프로젝트입니다.`,
+        tags: ['구축 퍼블리싱', '2023년'],
+        infoList: [
+            {
+                title: 'Client',
+                text: '고용24'
+            },
+            {
+                title: 'Category',
+                text: 'WEB / MOBILE'
+            },
+            {
+                title: 'Date',
+                text: '2024.07 ~ 2024.11'
+            },
+            {
+                title: 'Service',
+                text: 'HTML, CSS, JS, 웹접근성, Figma'
+            }
+        ],
+        content: [
+            {
+                title: `구축부터 웹접근성 작업을 한 프로젝트`,
+                text: `
+                    구축은 모바일만 작업했으며 투입 당시 일정이 급박하여 진척율을 가장 중요시 여겼습니다.<br>
+                    공통 가이드는 파일이 무거워 진입로딩과 찾는 것이 오래 걸렸기에 시간 절약을 위해 저만의 가이드를 만들었습니다.<br>
+                    yj.html 파일을 생성해(커밋 X) 담당 메뉴에서 자주 사용하는 컴포넌트와 자주 사용하는 클래스, 컨텐츠 등을 취합했습니다.<br>
+                    그 결과, 검색시간 절약으로 작업 속도가 현저히 줄었고 마감기한 내에 일정을 맞출 수 있었습니다.<br>
+                    추후 다른 프로젝트에서 같은 메뉴를 담당하는 팀원들끼리 팀가이드를 만들어 작업해도 좋을 것 같다는 생각이 들었습니다.<br>
+                `
+            },
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `디자인 없이 퍼블리싱 작업을 할 때 😮`,
+                text: `
+                프로젝트마다 여러가지 이슈가 있지만 해당 프로젝트는 모바일 디자인이 따로 없어서 PC 화면을 보고 모바일 퍼블리싱 작업을 해야 했었습니다.<br>
+                광범위한 페이지를 디자인 없이 작업해 본 적이 처음이라 많이 걱정했지만,<br>
+                모바일 컴포넌트가 전부 제작 완료되어있는 점과 대부분의 페이지가 컴포넌트만으로 퍼블리싱 가능하다는 점이 있어 나름 수월하게 작업했습니다.<br>
+                <br>
+                처음에는 어려웠지만 해당 상황을 통하여 디자이너와 소통하는 방법이 늘었습니다.<br>
+                당시에 Figma를 사용했는데 Figma를 다루는 법도 늘었고 간격이나 위치 같은 간단한 디자인은 직접 Figma로 구현하여<br>디자이너에게 "이건 어떨까요?", "이런 식으로 하면 될까요?" 등으로 제안을 하기도 했습니다.<br>
+                위기를 기회로 바꾼다는 말이 생각나는 프로젝트입니다.
+                `
+            },
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `웹접근성 위배 사항을 대폭 줄인 경험(1400p → 500p) 😊`,
+                text: `
+                구축 일정이 완료되고 PC 웹접근성 집중 작업을 시작했습니다.<br>
+                웹접근성 1차 검수를 받은 후 위배 페이지는 대략 1,400p 정도였습니다.<br>
+                구축하면서 웹접근성을 잡았다면 좋았겠지만 저의 투입 시점에서는 PC작업은 이미 다 끝난 상황이었습니다.<br>
+                접근성 감리에서 title이 p태그로 되어있는 점, 인풋에 title이 없는 점, 배치용 테이블인데 th가 있는 점 등 대략 1400페이지의 웹접근성 위배사항을 확인했습니다.<br>
+                이에 수작업보다는 JS를 사용해서 감축하고자 했습니다.<br>
+                <br>
+                <b>1. title이 p로 되어있는 경우</b><br>
+                p태그를 사용했지만 title의 스타일을 표현하기 위해 t2_sb, t1_sb, t3_sb 등 공통 클래스를 사용한 점을 활용했습니다.<br>
+                해당 클래스면서 p태그인 엘레멘트를 모두 잡아 for문으로 돌린 후<br>
+                outerHTML과 replace를 사용하여 &lt;p → &lt;h3, &lt;/p → &lt;/h3 로 변경했습니다.<br>
+                (h2는 페이지 상단에 고정으로 존재함)<br>
+                <br>
+                <b>2. 인풋에 title이 없는 경우</b><br>
+                인풋에 title은 없었지만 placeholder는 대부분 적용되어있는 점을 활용했습니다.<br>
+                document.querySelectAll('input[type="text"][placeholder]:not(:read-only):not(:disabled)')로 placeholder가 있는 text input을 잡아서<br>
+                input의 placeholder 내용을 input의 title에 대입했습니다.<br>
+                placeholder가 없는 input은 별로 없었기에 검색/찾기하여 수작업으로 보완했습니다.<br>
+                <br>
+                <b>3. 배치용 테이블인데 th가 있는 경우</b><br>
+                구축 공통가이드 중 배치용 테이블(input, select 포함 검색 테이블)이 있었습니다.<br>
+                배치용 테이블은 &lt;caption&gt; 요소, summary 속성, &lt;th&gt; 제목 셀을 제공하지 않아야 합니다.<br>
+                문제를 해결하기 위해 해당 테이블은 article.box_form_content 의 부모를 필수로 가지고 있는 점을 활용했습니다.<br>
+                js filter를 사용해 input, select가 있는 테이블만 추출하였습니다.<br>
+                caption, summray는 remove를 사용해 제거하고 th는 outerHTML과 replace를 사용하여 &lt;th → &lt;td, &lt;/th → &lt;/td 로 변경했습니다.<br>
+                td 변경 시 깨지는 스타일은 classList.add('new_th')로 클래스를 부여해 스타일링했습니다.<br>
+                <br>
+                이처럼 JS로 해결한 결과, 위배 페이지는 1400장에서 500장으로 감축했습니다. 해당 성과는 프로젝트에 큰 도움이 되었고 연말 인사평가에서 좋은 결과를 얻었습니다.<br>
+                img의 alt, 숨김텍스트 등은 구축 작업과 동시진행한 경험은 있지만 웹접근성 집중 작업은 처음이라 초반에는 헷갈리는 게 많았습니다.<br>
+                하지만 웹와치와 한국웹접근성인증평가원의 Q&A 게시판을 통하여 많은 조언을 얻었고 질문하는 노하우도 터득했습니다.
+                `
+            }
+        ]
+    },
+    {
+        category: 'projects',
+        tab: '실무',
+        id: 2,
+        recommend: true,
         title: '고용24',
         image: require('/src/assets/images/work24.svg'),
         bannerImage: require('/src/assets/images/work24_img1.png'),
@@ -339,11 +436,11 @@ export default [
         infoList: [
             {
                 title: 'Client',
-                text: '신세계사이먼'
+                text: 'IBK'
             },
             {
                 title: 'Category',
-                text: 'WEB / MOBILE / APP'
+                text: 'MOBILE / APP'
             },
             {
                 title: 'Date',
@@ -351,26 +448,19 @@ export default [
             },
             {
                 title: 'Service',
-                text: 'HTML, CSS, JS, 웹접근성, Figma'
+                text: 'HTML, CSS, JS, Zeplin'
             }
         ],
         content: [
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project10.png'),
+                    require('/src/assets/images/project11.png'),
+                    require('/src/assets/images/project12.png'),
                 ],
                 title: `MD TAP 신설, 차별성 부여`,
                 text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
             },
-            {
-                image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
-            }
         ]
     },
     {
@@ -418,56 +508,6 @@ export default [
                 image: [
                     require('/src/assets/images/project6.png'),
                 ],
-            }
-        ]
-    },
-    {
-        category: 'projects',
-        tab: '실무',
-        id: 6,
-        recommend: false,
-        title: 'HIS STaaS 관리자 페이지',
-        image: require('/src/assets/images/hyosung.svg'),
-        alt: '알트값',
-        color: '#333333',
-        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
-        tags: ['구축 퍼블리싱', '2023년'],
-        infoList: [
-            {
-                title: 'Client',
-                text: '신세계사이먼'
-            },
-            {
-                title: 'Category',
-                text: 'WEB / MOBILE / APP'
-            },
-            {
-                title: 'Date',
-                text: '2024.01 ~ 2024.02'
-            },
-            {
-                title: 'Service',
-                text: 'HTML, CSS, JS, 웹접근성, Figma'
-            }
-        ],
-        content: [
-            {
-                image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
-            },
-            {
-                image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
             }
         ]
     },
@@ -540,7 +580,7 @@ export default [
             },
             {
                 title: 'Category',
-                text: 'WEB / MOBILE / APP'
+                text: 'WEB / MOBILE'
             },
             {
                 title: 'Date',
@@ -548,24 +588,27 @@ export default [
             },
             {
                 title: 'Service',
-                text: 'HTML, CSS, JS, 웹접근성, Figma'
+                text: 'HTML, CSS, JS, Zeplin'
             }
         ],
         content: [
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project7.png'),
                 ],
                 title: `MD TAP 신설, 차별성 부여`,
                 text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
             },
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project8.png'),
+                ],
+                title: `MD TAP 신설, 차별성 부여`,
+                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+            },
+            {
+                image: [
+                    require('/src/assets/images/project9.png'),
                 ],
                 title: `MD TAP 신설, 차별성 부여`,
                 text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`

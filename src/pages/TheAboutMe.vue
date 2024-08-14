@@ -5,7 +5,7 @@
                 <img src="" alt="" class="img" style="width: 500px; height: 500px; background: #ddd;">
             </div>
             <div class="text_wrap">
-                <span class="title">ABOUT YOONJEONG</span>
+                <span class="title">KIM YOONJEONG</span>
                 <p class="text">
                     안녕하세요!<br>
                     웹 퍼블리셔 김나영입니다.<br><br>

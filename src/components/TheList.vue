@@ -28,7 +28,7 @@
                             icon="star1" />
                         </div>
                         <span class="title">{{ info.title }}</span>
-                        <p class="text" v-if="info.text">{{ info.text }}</p>
+                        <!-- <p class="text" v-if="info.text">{{ info.text }}</p> -->
                         <span class="tag_list2">
                             <span class="item" v-for="(item, idx) in info.tags" :key="idx"># {{ item }}</span>
                         </span>
