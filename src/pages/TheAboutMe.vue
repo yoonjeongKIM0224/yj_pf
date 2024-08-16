@@ -2,7 +2,7 @@
     <article class="article">
         <div class="intro_wrap">
             <div class="img_wrap">
-                <img src="" alt="" class="img" style="width: 500px; height: 500px; background: #ddd;">
+                <img src="/assets/images/kyj1.png" alt="" class="img" style="width: 500px; height: 500px; background: #ddd;">
             </div>
             <div class="text_wrap">
                 <span class="title">KIM YOONJEONG</span>

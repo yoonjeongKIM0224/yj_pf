@@ -53,6 +53,7 @@ export default [
         tab: '개인',
         id: 788,
         title: '영화 추천 사이트',
+        image: require('/src/assets/images/work24.svg'),
         bannerImage: require('/src/assets/images/work24_img1.png'),
         alt: '알트값',
         color: '#4D65E1',
@@ -69,7 +70,7 @@ export default [
             },
             {
                 title: `0으로 시작하는 숫자 구현`,
-                text: "총 20개의 영화를 추천하는 사이트인 만큼 리스트에 숫자를 매기고 싶었습니다. ex) 01, 02... 20 <br>숫자가 10 이상이 되면 앞에 0이 붙을 필요가 없어지는데 이 경우 아래의 코드로 해결했습니다.<br>{String(idx + 1).length == 1 ? `0${idx + 1}` : idx + 1}<br> 위 코드에서 idx는 영화 정보 배열의 index값을 의미합니다. 숫자의 length가 한자리일 때만 앞에 0을 붙여주면 되는 점을 이용하여 코드를 작성했습니다."
+                text: "총 20개의 영화를 추천하는 사이트인 만큼 리스트에 숫자를 매기고 싶었습니다. ex) 01, 02... 20 <br>숫자가 10 이상이 되면 앞에 0이 붙을 필요가 없어지는데 이 경우 아래의 코드로 해결했습니다.<br><b>{String(idx + 1).length == 1 ? `0${idx + 1}` : idx + 1}</b><br> 위 코드에서 idx는 영화 정보 배열의 index값을 의미합니다. 숫자의 length가 한자리일 때만 앞에 0을 붙여주면 되는 점을 이용하여 코드를 작성했습니다."
             },
             {
                 image: [

@@ -69,6 +69,7 @@
     padding-top: 40px;
     margin: 80px 0 20px 0;
     border-top: 1px solid #ddd;
+    margin-bottom: 40px;
 }
 
 .section_title {
@@ -1425,18 +1426,6 @@
         margin-top: 60px;
     }
 
-    .recommend_title {
-        font-size: 32px;
-    }
-    
-    .section_title {
-        font-size: 30px;
-    }
-    
-    .section_text {
-        font-size: 22px;
-    }
-
     .list_type2 {
         > .list {
             > .item {
@@ -1542,6 +1531,40 @@
                     position: relative;
                 }
             }
+        }
+    }
+
+    .list_type4 {
+        > .list {
+            flex-direction: column;
+    
+            > .item {
+                width: 100%;
+                background-color: gray;
+                border-radius: 20px;
+                height: 500px;
+    
+                &:not(:nth-last-child(-n+2)){
+                    margin-bottom: 0;
+                }
+    
+                &:not(:nth-child(2n)) {
+                    margin-right: 0;
+                }
+
+                + .item {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    .intro_wrap {
+        flex-direction: column;
+    
+        .text_wrap {
+            margin-left: 0;
+            margin-top: 40px;
         }
     }
 }
