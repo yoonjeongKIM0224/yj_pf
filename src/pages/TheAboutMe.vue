@@ -1,5 +1,5 @@
 <template>
-<article class="article">
+    <article class="article">
         <div class="intro_wrap">
             <div class="img_wrap">
                 <img src="" alt="" class="img" style="width: 500px; height: 500px; background: #ddd;">

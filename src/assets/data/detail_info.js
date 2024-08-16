@@ -853,8 +853,8 @@ export default [
         ],
         iframe: {
             title: 'Cat',
-            src: 'https://codepen.io/yoonjeongkim0224/embed/vYJqxVx?default-tab=html%2Cresult',
-            href: 'https://codepen.io/yoonjeongkim0224/pen/vYJqxVx'
+            src: 'https://codepen.io/yoonjeongkim0224/embed/gOJNZWr?default-tab=html%2Cresult',
+            href: 'https://codepen.io/yoonjeongkim0224/pen/gOJNZWr'
         }
     }
 ];

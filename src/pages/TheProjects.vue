@@ -11,7 +11,7 @@
         </template>
     </TheTab>
 </template>
-  
+
 <script>
 import TheTab from '@/components/TheTab.vue';
 import TheList from '@/components/TheList.vue';

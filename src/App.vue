@@ -25,14 +25,18 @@
       class="main_swiper"
       >
       <swiper-slide v-for="(info, idx) in mainSwiper" :key="idx">
-        <div class="container">
-          <div class="tag_list1">
-            <span class="item" v-for="(item, idx) in info.tags" :key="idx">{{ item }}</span>
+        <div class="container" :style="`background-color: ${info.color}`">
+          <div class="category round_cont">
+            <span class="category_text cont" v-html="info.category" :style="`background-color: ${info.color}`"></span>
           </div>
           <span class="title" v-html="info.title"></span>
           <p class="desc" v-html="info.desc"></p>
           <img :src="info.img" alt="" class="img">
-          <router-link :to="info.link" class="container_cont" aria-label="보러가기" />
+          <div class="link_btn_wrap round_cont">
+            <router-link :to="info.link" class="link_btn cont" aria-label="보러가기" :style="`background-color: ${info.color}`">
+              <TheIcon size="lg" icon="arrow4" rotate="270" />
+            </router-link>
+          </div>
         </div>
       </swiper-slide>
 
@@ -93,21 +97,24 @@ export default {
       modules: [Autoplay, Pagination, Navigation],
       mainSwiper: [
         {
-          tags: ['Projects'],
+          color: '#05274D',
+          category: 'Projects',
           title: '포트폴리오 사이트<br>Review 보러가기 🏃‍♀️',
           desc: '주니어의 삽질... 한 번 보실라유?!',
           img: require('./assets/images/main_banner01.png'),
           link: '/detail/1'
         },
         {
-          tags: ['Component'],
+          color: '#05274D',
+          category: 'Hobby',
           title: '컴포넌트',
           desc: '이것은 텍스트입니다.',
           img: require('./assets/images/main_banner01.png'),
           link: '/projects'
         },
         {
-          tags: ['Component'],
+          color: '#05274D',
+          category: 'Projects',
           title: '이것은<br />타이틀입니다.3',
           desc: '이것은 텍스트입니다.',
           img: require('./assets/images/main_banner01.png'),
