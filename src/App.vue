@@ -2,10 +2,6 @@
   <div class="wrapper" :class="[]">
     <!-- (detailPage && scroll == 0) || scroll !== 0 ? 'scroll_down' : '' -->
     <TheHeader :list="menu" :sectionInfo="sectionInfo" :width="width" />
-    <!-- :autoplay="{
-        delay: 1000,
-        disableOnInteraction: true,
-      }" -->
     <div :class="['wrap', detailPage ? 'detail_page' : '']">
       <swiper
       v-if="$route.fullPath == '/'"
@@ -13,42 +9,29 @@
       :spaceBetween="width <= 600 ? 10 : 20"
       :loop="true"
       :speed="800"
-      :pagination="{ 
-        el: '.swiper-pagination', 
-        type: 'fraction'
-      }"
-      :navigation="{ 
-        nextEl: '.swiper-button-next', 
-        prevEl: '.swiper-button-prev'
-      }"
+      :pagination="true"
       :modules="modules"
+      :autoplay="{
+        delay: 3000,
+        disableOnInteraction: true,
+      }"
       class="main_swiper"
       >
-      <swiper-slide v-for="(info, idx) in mainSwiper" :key="idx">
-        <div class="container" :style="`background-color: ${info.color}`">
-          <div class="category round_cont">
-            <span class="category_text cont" v-html="info.category" :style="`background-color: ${info.color}`"></span>
+        <swiper-slide v-for="(info, idx) in mainSwiper" :key="idx">
+          <div class="container" :style="`background-color: ${info.color}`">
+            <div class="category round_cont">
+              <span class="category_text cont" v-html="info.category" :style="`background-color: ${info.color}`"></span>
+            </div>
+            <span class="title" v-html="info.title"></span>
+            <p class="desc" v-html="info.desc"></p>
+            <img :src="info.img" alt="" class="img">
+            <div class="link_btn_wrap round_cont">
+              <router-link :to="info.link" class="link_btn cont" aria-label="보러가기" :style="`background-color: ${info.color}`">
+                <TheIcon size="lg" icon="arrow4" rotate="270" />
+              </router-link>
+            </div>
           </div>
-          <span class="title" v-html="info.title"></span>
-          <p class="desc" v-html="info.desc"></p>
-          <img :src="info.img" alt="" class="img">
-          <div class="link_btn_wrap round_cont">
-            <router-link :to="info.link" class="link_btn cont" aria-label="보러가기" :style="`background-color: ${info.color}`">
-              <TheIcon size="lg" icon="arrow4" rotate="270" />
-            </router-link>
-          </div>
-        </div>
-      </swiper-slide>
-
-      <div class="swiper_info_wrap">
-        <div class="swiper-button-prev" solt="button-prev">
-          <TheIcon size="xs" icon="arrow2" rotate="90" />
-        </div>
-        <div class="swiper-pagination" solt="pagination"></div>
-        <div class="swiper-button-next" solt="button-next">
-          <TheIcon size="xs" icon="arrow2" rotate="270" />
-        </div>
-      </div>
+        </swiper-slide>
       </swiper>
       <section class="section">
         <h2 class="section_title" v-if="sectionInfo.meta.title && !detailPage">
@@ -59,8 +42,24 @@
         <router-view :key="$route.fullPath" :list="detailInfo" :sectionInfo="sectionInfo"></router-view>
       </section>
     </div>
+
     <TheButton
-    v-if="false"
+        type="a"
+        :to="`https://www.kakaocorp.com/page`"
+        class="button_goview"
+        color="primary"
+        size="md"
+        :round="true">
+        사이트 보러가기
+        <template v-slot:after>
+            <TheIcon
+            size="xs"
+            icon="arrow2"
+            rotate="270" />
+        </template>
+    </TheButton>
+
+    <TheButton
     type="a"
     :to="`https://www.kakaocorp.com/page`"
     class="button_chat"
@@ -68,12 +67,13 @@
     size="md"
     :round="true">
     카카오톡
-    <template v-slot:after>
-      <TheIcon
-      size="sm"
-      icon="msg1" />
-    </template>
+      <template v-slot:after>
+        <TheIcon
+        size="sm"
+        icon="msg1" />
+      </template>
     </TheButton>
+
     <TheFooter />
   </div>
 </template>
@@ -133,6 +133,9 @@ export default {
     SwiperSlide,
     TheButton,
     TheIcon
+  },
+  props: {
+    itemId: String,
   },
   computed: {
     sectionInfo: function(){

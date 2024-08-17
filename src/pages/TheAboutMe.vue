@@ -1,8 +1,13 @@
 <template>
     <article class="article">
         <div class="intro_wrap">
-            <div class="img_wrap">
-                <img src="/assets/images/kyj1.png" alt="" class="img" style="width: 500px; height: 500px; background: #ddd;">
+            <div class="container1">
+                <div class="img_wrap">
+                    <img src="../../public/kyj1.png" alt="" class="img">
+                </div>
+                <div class="img_wrap">
+                    <img src="../../public/kyj2.png" alt="" class="img">
+                </div>
             </div>
             <div class="text_wrap">
                 <span class="title">KIM YOONJEONG</span>
@@ -36,7 +41,7 @@
 
     <article class="article">
         <h3 class="article_title">연혁</h3>
-        <p class="article_text">카카오가 디딘 첫걸음부터 지금까지의 발걸음을 담았습니다.</p>
+        <p class="article_text">사회에서 디딘 첫걸음부터 지금까지의 발걸음을 담았습니다.</p>
         <div class="list_type2">
             <ul class="list">
                 <li v-for="(info, idx) in history" class="item" :key="idx">
@@ -67,7 +72,7 @@
 
     <article class="article">
         <h3 class="article_title">작업 업체</h3>
-        <p class="article_text">카카오가 디딘 첫걸음부터 지금까지의 발걸음을 담았습니다.</p>
+        <p class="article_text">프로젝트 협업을 했던 업체들을 소개합니다.</p>
         <div class="list_type3">
             <ul class="list">
                 <li v-for="(item, idx) in company" :key="idx" class="item">

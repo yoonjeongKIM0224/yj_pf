@@ -205,6 +205,9 @@
 }
 
 .main_swiper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 40px;
 
     .swiper-wrapper {
@@ -345,32 +348,21 @@
         }
     }
 
-    .swiper_info_wrap {
-        width: max-content;
+    .swiper-pagination {
         display: flex;
         align-items: center;
-        position: absolute;
-        bottom: 34px;
-        left: calc(100% - 100px - 34px);
-        transform: translateX(-100%);
-        z-index: 1;
-        padding: 8px 12px;
-        border-radius: 100px;
-        background-color: var(--main-color);
-    }
+        margin-top: 40px;
 
-    .swiper-pagination {
-        color: var(--bg-color);
-        margin: 0 4px;
-        
-        * {
-            color: inherit;
+        .swiper-pagination-bullet {
+            width: 100px;
+            height: 3px;
+            background-color: var(--gray1);
+            display: block;
+
+            &.swiper-pagination-bullet-active {
+                background-color: var(--main-color);
+            }
         }
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        cursor: pointer;
     }
 }
 
@@ -1136,11 +1128,15 @@
     }
 }
 
-.button_chat {
+.button_chat, .button_goview {
     position: fixed;
     right: calc(var(--layout-padding) * 2);
     bottom: calc(var(--layout-padding) * 2);
     z-index: 10;
+}
+
+.button_goview {
+    bottom: calc((var(--layout-padding) * 2) + 68px);
 }
 
 .button {
@@ -1204,12 +1200,19 @@
 }
 
 .intro_wrap {
-    display: flex;
+    .container1 {
+        display: flex;
+    }
 
     .img_wrap {
         border-radius: 20px;
         overflow: hidden;
         flex-shrink: 0;
+        width: calc((100% - 40px) / 2);
+
+        + .img_wrap {
+            margin-left: 40px;
+        }
 
         .img {
 
@@ -1217,7 +1220,8 @@
     }
 
     .text_wrap {
-        margin-left: 40px;
+        margin-top: 40px;
+        position: relative;
 
         .title {
             font-size: 22px;
@@ -1227,12 +1231,28 @@
 
         .text {
             font-size: 22px;
+            position: relative;
+            z-index: 1;
         }
 
         > * {
             + * {
                 margin-top: 20px;
             }
+        }
+
+        &::after {
+            content: 'KIM\AYOONJEONG';
+            color: #dddddd40;
+            font-size: 160px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            white-space: pre;
+            line-height: 1;
+            text-align: right;
         }
     }
 }
@@ -1583,12 +1603,6 @@
                     padding: var(--layout-padding);
                 }
             }
-        }
-
-        .swiper_info_wrap {
-            position: static;
-            transform: none;
-            margin-top: var(--layout-padding);
         }
     }
 }
