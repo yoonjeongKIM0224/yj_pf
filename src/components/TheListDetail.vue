@@ -4,18 +4,19 @@
             <img :src="info.bannerImage" alt="배경" class="bg_img">
 
             <div class="container">
-                <TheIcon
-                    v-if="info.recommend"
-                    aria-label="추천"
-                    class="recommend"
-                    size="sm"
-                    icon="star1" />
-
                 <div class="logo" v-if="info.category != 'hobby' && info.image">
                     <img :src="info.image" :alt="info.alt" class="img">
                 </div>
 
-                <h3 class="visual_title">{{ info.title }}</h3>
+                <h3 class="visual_title">
+                    {{ info.title }}
+                    <TheIcon
+                    v-if="info.recommend"
+                    aria-label="추천"
+                    class="recommend"
+                    size="md"
+                    icon="star1" />
+                </h3>
 
                 <ul class="info_list" v-if="info.infoList">
                     <li v-for="(item, idx) in info.infoList" :key="idx" class="item">
@@ -57,13 +58,32 @@
                     </article>
                 </section>
     
-                <TheButton
-                    :to="`/${info.category}`"
-                    color="primary"
-                    size="md"
-                    :round="true">
-                    목록 보기
-                </TheButton>
+                <div class="button_wrap">
+                    <TheButton
+                        :to="`/${info.category}`"
+                        :line="info.link ? 'primary' : ''"
+                        :color="info.link ? '' : 'primary'"
+                        size="lg"
+                        :round="true">
+                        목록 보기
+                    </TheButton>
+                    
+                    <TheButton
+                        v-if="info.link"
+                        type="a"
+                        :to="`${info.link}`"
+                        color="primary"
+                        size="lg"
+                        :round="true">
+                        사이트 보러가기
+                        <template v-slot:after>
+                            <TheIcon
+                            size="xs"
+                            icon="arrow2"
+                            rotate="270" />
+                        </template>
+                    </TheButton>
+                </div>
     
                 <div class="recommend_wrap" v-if="recommend.length">
                     <h1 class="recommend_title">추천 콘텐츠</h1>

@@ -121,7 +121,7 @@ export default {
                             date: '04',
                             title: 'React.js 프론트엔드개발 과정 수료',
                             text: '이젠아카데미(2개월)',
-                            img: require('../assets/images/react.png'),
+                            img: require('../assets/images/react1.png'),
                             alt: 'react',
                             active: false
                         },
@@ -189,22 +189,27 @@ export default {
             ],
             company: [
                 {
-                    name: '신한은행',
+                    name: '농협카드',
+                    image: require('../assets/images/nhcard1.png'),
+                    page: true,
+                },
+                {
+                    name: 'i-one 소상공인',
                     image: require('../assets/images/ione.svg'),
                     page: true,
                 },
                 {
-                    name: '신한은행',
+                    name: '고용24',
                     image: require('../assets/images/work24.svg'),
                     page: true,
                 },
                 {
-                    name: '신한은행',
+                    name: 'amorepacific',
                     image: require('../assets/images/amorepacific.svg'),
                     page: true,
                 },
                 {
-                    name: '신한은행',
+                    name: '효성인포메이션시스템',
                     image: require('../assets/images/hyosung.svg'),
                     page: true,
                 },
@@ -214,10 +219,15 @@ export default {
                     page: true,
                 },
                 {
-                    name: '신한은행',
+                    name: '한국과학우주청소년단',
                     image: require('../assets/images/yakedu.svg'),
                     page: true,
-                }
+                },
+                {
+                    name: '한국과학우주청소년단',
+                    image: require('../assets/images/protolab.svg'),
+                    page: true,
+                },
             ],
         }
     },

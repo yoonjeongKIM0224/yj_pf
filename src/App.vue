@@ -12,7 +12,7 @@
       :pagination="true"
       :modules="modules"
       :autoplay="{
-        delay: 3000,
+        delay: 6000,
         disableOnInteraction: true,
       }"
       class="main_swiper"
@@ -42,22 +42,6 @@
         <router-view :key="$route.fullPath" :list="detailInfo" :sectionInfo="sectionInfo"></router-view>
       </section>
     </div>
-
-    <TheButton
-        type="a"
-        :to="`https://www.kakaocorp.com/page`"
-        class="button_goview"
-        color="primary"
-        size="md"
-        :round="true">
-        사이트 보러가기
-        <template v-slot:after>
-            <TheIcon
-            size="xs"
-            icon="arrow2"
-            rotate="270" />
-        </template>
-    </TheButton>
 
     <TheButton
     type="a"
@@ -97,7 +81,7 @@ export default {
       modules: [Autoplay, Pagination, Navigation],
       mainSwiper: [
         {
-          color: '#05274D',
+          color: '#FF8E8B',
           category: 'Projects',
           title: '포트폴리오 사이트<br>Review 보러가기 🏃‍♀️',
           desc: '주니어의 삽질... 한 번 보실라유?!',

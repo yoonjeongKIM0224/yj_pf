@@ -2,13 +2,206 @@ export default [
     {
         category: 'projects',
         tab: '개인',
+        id: 20,
+        recommend: true,
+        title: '김윤정',
+        image: require('/src/assets/images/nhcard1.png'),
+        bannerImage: require('/src/assets/images/shinhan_img1.png'),
+        alt: '알트값',
+        color: '#FF8E8B',
+        text: `차세대 디지털 고용 서비스 플랫폼 '고용24' 구축은 고용 관련 민원 서비스를 제공하는 주요 시스템 및 행정 서비스를 통합 구축하는 프로젝트입니다.`,
+        tags: ['Vue.js', '2024년', '현재 사이트'],
+        infoList: [
+            {
+                title: 'Client',
+                text: '김윤정😎'
+            },
+            {
+                title: 'Category',
+                text: 'WEB / MOBILE / 반응형'
+            },
+            {
+                title: 'Service',
+                text: 'Vue.js, HTML, CSS, JS, Figma'
+            }
+        ],
+        content: [
+            {
+                title: `현재의 사이트를 만들 때의 마음가짐 🙃`,
+                text: `
+                가장 중요하게 생각했던 거는 '지속성'이었습니다.<br>
+                3년 전, 웹퍼블리셔로 취업하기 위해 만들었던 사이트는 신입인 만큼 코드도 전만큼 맘에 들지 않았고 보완사항이 많다고 생각했습니다.<br>
+                실무에서 사용하는 여러 component guide를 보고 아이디어를 얻었고 이것을 저의 NEW! 포트폴리오에 녹여보고자 했습니다.<br>
+                제가 만든 여러가지 작업물들을 계속 업로드 할 수 있고 김윤정 자체가 기업...🙄 이라는 컨셉을 잡고 여러 기업 사이트를 벤치마킹했습니다.<br>
+                (kakaocorp을 제일 많이 참고했습니다.)<br>
+                <br>
+                <b>제작하며 겪은 여러가지 이슈들과 설명이 길어질 예정이니 읽기 전 참고 부탁드립니다!</b>
+                `
+            },
+            {
+                image: [
+                    require('/src/assets/images/project33.png'),
+                    require('/src/assets/images/project34.png'),
+                ],
+                title: `개인프로젝트니까~ 디알못(디자인을 알지 못함 🤣)이지만 레이어를 잡아봤어요!`,
+                text: `
+                3년 전 첫 포트폴리오 사이트를 만들 때 겪은 문제가 있었습니다.<br>
+                그 당시 핀터레스트를 제일 많이 참고하였는데 아무리 예쁜 디자인을 갖고 와서 코딩한다 해도 내용물이 없으니 말짱도루묵이었습니다.<br>
+                이후 기획의 중요성을 알게 되었고 이번에는 기획을 탄탄히 하고 그에 맞는 디자인을 만들고자 노력했습니다!<br>
+                그때 겪은 문제는 지금까지도 기획, 디자인, 퍼블, 개발 순서과 견고함이 얼마나 중요한지 깨닫게 해주었습니다.<br>
+                <br>
+                초기에는 타사이트와의 차별성도 두고 빠른 메뉴 이동을 위하여 aside 형식으로 메뉴를 배치했습니다.<br>
+                이때는 aside의 width + 간격 = 220px을 제외한 나머지 <b>1200px</b>만 레이어를 잡았습니다.<br>
+                이후 주변인들의 애매한 반응으로 현재의 사이트처럼 구조를 변경했습니다.<br>
+                `
+            },
+            {
+                image: [
+                    require('/src/assets/images/nhcard1.png'),
+                    require('/src/assets/images/nhcard1.png'),
+                ],
+                title: `웹접근성 위배 사항을 대폭 줄인 경험(1400p → 500p) 😊`,
+                text: `
+                구축 일정이 완료되고 PC 웹접근성 집중 작업을 시작했습니다.<br>
+                웹접근성 1차 검수를 받은 후 위배 페이지는 대략 1,400p 정도였습니다.<br>
+                구축하면서 웹접근성을 잡았다면 좋았겠지만 저의 투입 시점에서는 PC작업은 이미 다 끝난 상황이었습니다.<br>
+                접근성 감리에서 title이 p태그로 되어있는 점, 인풋에 title이 없는 점, 배치용 테이블인데 th가 있는 점 등 대략 1400페이지의 웹접근성 위배사항을 확인했습니다.<br>
+                이에 수작업보다는 JS를 사용해서 감축하고자 했습니다.<br>
+                <br>
+                <b>1. title이 p로 되어있는 경우</b><br>
+                p태그를 사용했지만 title의 스타일을 표현하기 위해 t2_sb, t1_sb, t3_sb 등 공통 클래스를 사용한 점을 활용했습니다.<br>
+                해당 클래스면서 p태그인 엘레멘트를 모두 잡아 for문으로 돌린 후<br>
+                outerHTML과 replace를 사용하여 &lt;p → &lt;h3, &lt;/p → &lt;/h3 로 변경했습니다.<br>
+                (h2는 페이지 상단에 고정으로 존재함)<br>
+                <br>
+                <b>2. 인풋에 title이 없는 경우</b><br>
+                인풋에 title은 없었지만 placeholder는 대부분 적용되어있는 점을 활용했습니다.<br>
+                document.querySelectAll('input[type="text"][placeholder]:not(:read-only):not(:disabled)')로 placeholder가 있는 text input을 잡아서<br>
+                input의 placeholder 내용을 input의 title에 대입했습니다.<br>
+                placeholder가 없는 input은 별로 없었기에 검색/찾기하여 수작업으로 보완했습니다.<br>
+                <br>
+                <b>3. 배치용 테이블인데 th가 있는 경우</b><br>
+                구축 공통가이드 중 배치용 테이블(input, select 포함 검색 테이블)이 있었습니다.<br>
+                배치용 테이블은 &lt;caption&gt; 요소, summary 속성, &lt;th&gt; 제목 셀을 제공하지 않아야 합니다.<br>
+                문제를 해결하기 위해 해당 테이블은 article.box_form_content 의 부모를 필수로 가지고 있는 점을 활용했습니다.<br>
+                js filter를 사용해 input, select가 있는 테이블만 추출하였습니다.<br>
+                caption, summray는 remove를 사용해 제거하고 th는 outerHTML과 replace를 사용하여 &lt;th → &lt;td, &lt;/th → &lt;/td 로 변경했습니다.<br>
+                td 변경 시 깨지는 스타일은 classList.add('new_th')로 클래스를 부여해 스타일링했습니다.<br>
+                <br>
+                이처럼 JS로 해결한 결과, 위배 페이지는 1400장에서 500장으로 감축했습니다. 해당 성과는 프로젝트에 큰 도움이 되었고 연말 인사평가에서 좋은 결과를 얻었습니다.<br>
+                img의 alt, 숨김텍스트 등은 구축 작업과 동시진행한 경험은 있지만 웹접근성 집중 작업은 처음이라 초반에는 헷갈리는 게 많았습니다.<br>
+                하지만 웹와치와 한국웹접근성인증평가원의 Q&A 게시판을 통하여 많은 조언을 얻었고 질문하는 노하우도 터득했습니다.
+                `
+            }
+        ]
+    },
+    {
+        category: 'projects',
+        tab: '실무',
         id: 1,
         recommend: true,
-        title: '캔디 도매 사이트',
-        image: require('/src/assets/images/work24.svg'),
-        bannerImage: require('/src/assets/images/work24_img1.png'),
+        title: '농협카드',
+        image: require('/src/assets/images/nhcard1.png'),
+        bannerImage: require('/src/assets/images/shinhan_img1.png'),
         alt: '알트값',
-        color: '#4D65E1',
+        color: '#8AC8FF',
+        text: `차세대 디지털 고용 서비스 플랫폼 '고용24' 구축은 고용 관련 민원 서비스를 제공하는 주요 시스템 및 행정 서비스를 통합 구축하는 프로젝트입니다.`,
+        tags: ['Vue.js', '2024년'],
+        infoList: [
+            {
+                title: 'Client',
+                text: '농협카드'
+            },
+            {
+                title: 'Category',
+                text: 'APP'
+            },
+            {
+                title: 'Date',
+                text: '2024.07 ~ 2024.11'
+            },
+            {
+                title: 'Service',
+                text: 'Vue.js, HTML, CSS, JS, 웹접근성, Figma'
+            }
+        ],
+        content: [
+            {
+                title: `첫 Vue 프로젝트 😆`,
+                text: `
+                    구축은 모바일만 작업했으며 투입 당시 일정이 급박하여 진척율을 가장 중요시 여겼습니다.<br>
+                    공통 가이드는 파일이 무거워 진입로딩과 찾는 것이 오래 걸렸기에 시간 절약을 위해 저만의 가이드를 만들었습니다.<br>
+                    yj.html 파일을 생성해(커밋 X) 담당 메뉴에서 자주 사용하는 컴포넌트와 자주 사용하는 클래스, 컨텐츠 등을 취합했습니다.<br>
+                    그 결과, 검색시간 절약으로 작업 속도가 현저히 줄었고 마감기한 내에 일정을 맞출 수 있었습니다.<br>
+                    추후 다른 프로젝트에서 같은 메뉴를 담당하는 팀원들끼리 팀가이드를 만들어 작업해도 좋을 것 같다는 생각이 들었습니다.<br>
+                `
+            },
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `디자인 없이 퍼블리싱 작업을 할 때 😮`,
+                text: `
+                프로젝트마다 여러가지 이슈가 있지만 해당 프로젝트는 모바일 디자인이 따로 없어서 PC 화면을 보고 모바일 퍼블리싱 작업을 해야 했었습니다.<br>
+                광범위한 페이지를 디자인 없이 작업해 본 적이 처음이라 많이 걱정했지만,<br>
+                모바일 컴포넌트가 전부 제작 완료되어있는 점과 대부분의 페이지가 컴포넌트만으로 퍼블리싱 가능하다는 점이 있어 나름 수월하게 작업했습니다.<br>
+                <br>
+                처음에는 어려웠지만 해당 상황을 통하여 디자이너와 소통하는 방법이 늘었습니다.<br>
+                당시에 Figma를 사용했는데 Figma를 다루는 법도 늘었고 간격이나 위치 같은 간단한 디자인은 직접 Figma로 구현하여<br>디자이너에게 "이건 어떨까요?", "이런 식으로 하면 될까요?" 등으로 제안을 하기도 했습니다.<br>
+                위기를 기회로 바꾼다는 말이 생각나는 프로젝트입니다.
+                `
+            },
+            {
+                image: [
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                    'https://codingapple1.github.io/vue/room0.jpg',
+                ],
+                title: `웹접근성 위배 사항을 대폭 줄인 경험(1400p → 500p) 😊`,
+                text: `
+                구축 일정이 완료되고 PC 웹접근성 집중 작업을 시작했습니다.<br>
+                웹접근성 1차 검수를 받은 후 위배 페이지는 대략 1,400p 정도였습니다.<br>
+                구축하면서 웹접근성을 잡았다면 좋았겠지만 저의 투입 시점에서는 PC작업은 이미 다 끝난 상황이었습니다.<br>
+                접근성 감리에서 title이 p태그로 되어있는 점, 인풋에 title이 없는 점, 배치용 테이블인데 th가 있는 점 등 대략 1400페이지의 웹접근성 위배사항을 확인했습니다.<br>
+                이에 수작업보다는 JS를 사용해서 감축하고자 했습니다.<br>
+                <br>
+                <b>1. title이 p로 되어있는 경우</b><br>
+                p태그를 사용했지만 title의 스타일을 표현하기 위해 t2_sb, t1_sb, t3_sb 등 공통 클래스를 사용한 점을 활용했습니다.<br>
+                해당 클래스면서 p태그인 엘레멘트를 모두 잡아 for문으로 돌린 후<br>
+                outerHTML과 replace를 사용하여 &lt;p → &lt;h3, &lt;/p → &lt;/h3 로 변경했습니다.<br>
+                (h2는 페이지 상단에 고정으로 존재함)<br>
+                <br>
+                <b>2. 인풋에 title이 없는 경우</b><br>
+                인풋에 title은 없었지만 placeholder는 대부분 적용되어있는 점을 활용했습니다.<br>
+                document.querySelectAll('input[type="text"][placeholder]:not(:read-only):not(:disabled)')로 placeholder가 있는 text input을 잡아서<br>
+                input의 placeholder 내용을 input의 title에 대입했습니다.<br>
+                placeholder가 없는 input은 별로 없었기에 검색/찾기하여 수작업으로 보완했습니다.<br>
+                <br>
+                <b>3. 배치용 테이블인데 th가 있는 경우</b><br>
+                구축 공통가이드 중 배치용 테이블(input, select 포함 검색 테이블)이 있었습니다.<br>
+                배치용 테이블은 &lt;caption&gt; 요소, summary 속성, &lt;th&gt; 제목 셀을 제공하지 않아야 합니다.<br>
+                문제를 해결하기 위해 해당 테이블은 article.box_form_content 의 부모를 필수로 가지고 있는 점을 활용했습니다.<br>
+                js filter를 사용해 input, select가 있는 테이블만 추출하였습니다.<br>
+                caption, summray는 remove를 사용해 제거하고 th는 outerHTML과 replace를 사용하여 &lt;th → &lt;td, &lt;/th → &lt;/td 로 변경했습니다.<br>
+                td 변경 시 깨지는 스타일은 classList.add('new_th')로 클래스를 부여해 스타일링했습니다.<br>
+                <br>
+                이처럼 JS로 해결한 결과, 위배 페이지는 1400장에서 500장으로 감축했습니다. 해당 성과는 프로젝트에 큰 도움이 되었고 연말 인사평가에서 좋은 결과를 얻었습니다.<br>
+                img의 alt, 숨김텍스트 등은 구축 작업과 동시진행한 경험은 있지만 웹접근성 집중 작업은 처음이라 초반에는 헷갈리는 게 많았습니다.<br>
+                하지만 웹와치와 한국웹접근성인증평가원의 Q&A 게시판을 통하여 많은 조언을 얻었고 질문하는 노하우도 터득했습니다.
+                `
+            }
+        ]
+    },
+    {
+        category: 'projects',
+        tab: '개인',
+        id: 2,
+        recommend: false,
+        title: '캔디 도매 사이트',
+        image: require('/src/assets/images/vue1.png'),
+        bannerImage: require('/src/assets/images/vue1.png'),
+        alt: '알트값',
+        color: '#D3E9DE',
         text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
         tags: ['구축 퍼블리싱', '2023년'],
         infoList: [
@@ -51,14 +244,15 @@ export default [
     {
         category: 'projects',
         tab: '개인',
-        id: 788,
+        id: 3,
         title: '영화 추천 사이트',
-        image: require('/src/assets/images/work24.svg'),
-        bannerImage: require('/src/assets/images/work24_img1.png'),
+        image: require('/src/assets/images/react2.svg'),
+        bannerImage: require('/src/assets/images/movie_img1.png'),
         alt: '알트값',
-        color: '#4D65E1',
+        color: '#222',
         text: `React 환경에서 yts.mx의 API를 사용하여 영화 추천을 해 주는 사이트입니다.`,
         tags: ['React', '2024년'],
+        link: 'https://yoonjeongkim0224.github.io/react_movie/',
         content: [
             {
                 image: [
@@ -84,13 +278,13 @@ export default [
     {
         category: 'projects',
         tab: '개인',
-        id: 888,
-        recommend: true,
+        id: 4,
+        recommend: false,
         title: '블로그',
-        image: require('/src/assets/images/work24.svg'),
+        image: require('/src/assets/images/vue1.png'),
         bannerImage: require('/src/assets/images/work24_img1.png'),
         alt: '알트값',
-        color: '#4D65E1',
+        color: '#D3E9DE',
         text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
         tags: ['구축 퍼블리싱', '2023년'],
         infoList: [
@@ -133,62 +327,13 @@ export default [
     {
         category: 'projects',
         tab: '개인',
-        id: 111,
-        recommend: true,
+        id: 5,
+        recommend: false,
         title: '영단어 스터디 사이트',
-        image: require('/src/assets/images/work24.svg'),
+        image: require('/src/assets/images/react2.svg'),
         bannerImage: require('/src/assets/images/work24_img1.png'),
         alt: '알트값',
-        color: '#4D65E1',
-        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
-        tags: ['구축 퍼블리싱', '2023년'],
-        infoList: [
-            {
-                title: 'Client',
-                text: '신세계사이먼'
-            },
-            {
-                title: 'Category',
-                text: 'WEB / MOBILE / APP'
-            },
-            {
-                title: 'Date',
-                text: '2024.01 ~ 2024.02'
-            },
-            {
-                title: 'Service',
-                text: 'HTML, CSS, JS, 웹접근성, Figma'
-            }
-        ],
-        content: [
-            {
-                image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
-            },
-            {
-                image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
-            }
-        ]
-    },
-    {
-        category: 'projects',
-        tab: '개인',
-        id: 123123,
-        recommend: true,
-        title: '모멘텀',
-        image: require('/src/assets/images/work24.svg'),
-        bannerImage: require('/src/assets/images/work24_img1.png'),
-        alt: '알트값',
-        color: '#4D65E1',
+        color: '#222',
         text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
         tags: ['구축 퍼블리싱', '2023년'],
         infoList: [
@@ -231,104 +376,7 @@ export default [
     {
         category: 'projects',
         tab: '실무',
-        id: 2,
-        recommend: true,
-        title: '농협카드',
-        image: require('/src/assets/images/work24.svg'),
-        bannerImage: require('/src/assets/images/work24_img1.png'),
-        alt: '알트값',
-        color: '#4D65E1',
-        text: `차세대 디지털 고용 서비스 플랫폼 '고용24' 구축은 고용 관련 민원 서비스를 제공하는 주요 시스템 및 행정 서비스를 통합 구축하는 프로젝트입니다.`,
-        tags: ['구축 퍼블리싱', '2023년'],
-        infoList: [
-            {
-                title: 'Client',
-                text: '고용24'
-            },
-            {
-                title: 'Category',
-                text: 'WEB / MOBILE'
-            },
-            {
-                title: 'Date',
-                text: '2024.07 ~ 2024.11'
-            },
-            {
-                title: 'Service',
-                text: 'HTML, CSS, JS, 웹접근성, Figma'
-            }
-        ],
-        content: [
-            {
-                title: `구축부터 웹접근성 작업을 한 프로젝트`,
-                text: `
-                    구축은 모바일만 작업했으며 투입 당시 일정이 급박하여 진척율을 가장 중요시 여겼습니다.<br>
-                    공통 가이드는 파일이 무거워 진입로딩과 찾는 것이 오래 걸렸기에 시간 절약을 위해 저만의 가이드를 만들었습니다.<br>
-                    yj.html 파일을 생성해(커밋 X) 담당 메뉴에서 자주 사용하는 컴포넌트와 자주 사용하는 클래스, 컨텐츠 등을 취합했습니다.<br>
-                    그 결과, 검색시간 절약으로 작업 속도가 현저히 줄었고 마감기한 내에 일정을 맞출 수 있었습니다.<br>
-                    추후 다른 프로젝트에서 같은 메뉴를 담당하는 팀원들끼리 팀가이드를 만들어 작업해도 좋을 것 같다는 생각이 들었습니다.<br>
-                `
-            },
-            {
-                image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                ],
-                title: `디자인 없이 퍼블리싱 작업을 할 때 😮`,
-                text: `
-                프로젝트마다 여러가지 이슈가 있지만 해당 프로젝트는 모바일 디자인이 따로 없어서 PC 화면을 보고 모바일 퍼블리싱 작업을 해야 했었습니다.<br>
-                광범위한 페이지를 디자인 없이 작업해 본 적이 처음이라 많이 걱정했지만,<br>
-                모바일 컴포넌트가 전부 제작 완료되어있는 점과 대부분의 페이지가 컴포넌트만으로 퍼블리싱 가능하다는 점이 있어 나름 수월하게 작업했습니다.<br>
-                <br>
-                처음에는 어려웠지만 해당 상황을 통하여 디자이너와 소통하는 방법이 늘었습니다.<br>
-                당시에 Figma를 사용했는데 Figma를 다루는 법도 늘었고 간격이나 위치 같은 간단한 디자인은 직접 Figma로 구현하여<br>디자이너에게 "이건 어떨까요?", "이런 식으로 하면 될까요?" 등으로 제안을 하기도 했습니다.<br>
-                위기를 기회로 바꾼다는 말이 생각나는 프로젝트입니다.
-                `
-            },
-            {
-                image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                ],
-                title: `웹접근성 위배 사항을 대폭 줄인 경험(1400p → 500p) 😊`,
-                text: `
-                구축 일정이 완료되고 PC 웹접근성 집중 작업을 시작했습니다.<br>
-                웹접근성 1차 검수를 받은 후 위배 페이지는 대략 1,400p 정도였습니다.<br>
-                구축하면서 웹접근성을 잡았다면 좋았겠지만 저의 투입 시점에서는 PC작업은 이미 다 끝난 상황이었습니다.<br>
-                접근성 감리에서 title이 p태그로 되어있는 점, 인풋에 title이 없는 점, 배치용 테이블인데 th가 있는 점 등 대략 1400페이지의 웹접근성 위배사항을 확인했습니다.<br>
-                이에 수작업보다는 JS를 사용해서 감축하고자 했습니다.<br>
-                <br>
-                <b>1. title이 p로 되어있는 경우</b><br>
-                p태그를 사용했지만 title의 스타일을 표현하기 위해 t2_sb, t1_sb, t3_sb 등 공통 클래스를 사용한 점을 활용했습니다.<br>
-                해당 클래스면서 p태그인 엘레멘트를 모두 잡아 for문으로 돌린 후<br>
-                outerHTML과 replace를 사용하여 &lt;p → &lt;h3, &lt;/p → &lt;/h3 로 변경했습니다.<br>
-                (h2는 페이지 상단에 고정으로 존재함)<br>
-                <br>
-                <b>2. 인풋에 title이 없는 경우</b><br>
-                인풋에 title은 없었지만 placeholder는 대부분 적용되어있는 점을 활용했습니다.<br>
-                document.querySelectAll('input[type="text"][placeholder]:not(:read-only):not(:disabled)')로 placeholder가 있는 text input을 잡아서<br>
-                input의 placeholder 내용을 input의 title에 대입했습니다.<br>
-                placeholder가 없는 input은 별로 없었기에 검색/찾기하여 수작업으로 보완했습니다.<br>
-                <br>
-                <b>3. 배치용 테이블인데 th가 있는 경우</b><br>
-                구축 공통가이드 중 배치용 테이블(input, select 포함 검색 테이블)이 있었습니다.<br>
-                배치용 테이블은 &lt;caption&gt; 요소, summary 속성, &lt;th&gt; 제목 셀을 제공하지 않아야 합니다.<br>
-                문제를 해결하기 위해 해당 테이블은 article.box_form_content 의 부모를 필수로 가지고 있는 점을 활용했습니다.<br>
-                js filter를 사용해 input, select가 있는 테이블만 추출하였습니다.<br>
-                caption, summray는 remove를 사용해 제거하고 th는 outerHTML과 replace를 사용하여 &lt;th → &lt;td, &lt;/th → &lt;/td 로 변경했습니다.<br>
-                td 변경 시 깨지는 스타일은 classList.add('new_th')로 클래스를 부여해 스타일링했습니다.<br>
-                <br>
-                이처럼 JS로 해결한 결과, 위배 페이지는 1400장에서 500장으로 감축했습니다. 해당 성과는 프로젝트에 큰 도움이 되었고 연말 인사평가에서 좋은 결과를 얻었습니다.<br>
-                img의 alt, 숨김텍스트 등은 구축 작업과 동시진행한 경험은 있지만 웹접근성 집중 작업은 처음이라 초반에는 헷갈리는 게 많았습니다.<br>
-                하지만 웹와치와 한국웹접근성인증평가원의 Q&A 게시판을 통하여 많은 조언을 얻었고 질문하는 노하우도 터득했습니다.
-                `
-            }
-        ]
-    },
-    {
-        category: 'projects',
-        tab: '실무',
-        id: 2,
+        id: 6,
         recommend: true,
         title: '고용24',
         image: require('/src/assets/images/work24.svg'),
@@ -337,6 +385,7 @@ export default [
         color: '#4D65E1',
         text: `차세대 디지털 고용 서비스 플랫폼 '고용24' 구축은 고용 관련 민원 서비스를 제공하는 주요 시스템 및 행정 서비스를 통합 구축하는 프로젝트입니다.`,
         tags: ['구축 퍼블리싱', '2023년'],
+        link: 'https://www.work24.go.kr/cm/main.do',
         infoList: [
             {
                 title: 'Client',
@@ -368,8 +417,8 @@ export default [
             },
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project14.png'),
+                    require('/src/assets/images/project15.png'),
                 ],
                 title: `디자인 없이 퍼블리싱 작업을 할 때 😮`,
                 text: `
@@ -384,8 +433,9 @@ export default [
             },
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project16.jpg'),
+                    require('/src/assets/images/project17.jpg'),
+                    require('/src/assets/images/project18.jpg'),
                 ],
                 title: `웹접근성 위배 사항을 대폭 줄인 경험(1400p → 500p) 😊`,
                 text: `
@@ -425,11 +475,12 @@ export default [
     {
         category: 'projects',
         tab: '실무',
-        id: 4,
+        id: 7,
         recommend: false,
-        boxClass: 'black',
+        boxClass: '',
         title: 'IBK 온라인 입점 소상공인부 대출',
         image: require('/src/assets/images/ione.svg'),
+        bannerImage: require('/src/assets/images/ibk_img1.png'),
         alt: '알트값',
         color: '#DBF4FF',
         text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
@@ -459,17 +510,15 @@ export default [
                     require('/src/assets/images/project11.png'),
                     require('/src/assets/images/project12.png'),
                 ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
             },
         ]
     },
     {
         category: 'projects',
         tab: '실무',
-        id: 5,
+        id: 8,
         recommend: false,
-        boxClass: 'black',
+        boxClass: '',
         title: '아모레퍼시픽 SCM방문등록시스템',
         image: require('/src/assets/images/amorepacific.svg'),
         alt: '알트값',
@@ -515,10 +564,11 @@ export default [
     {
         category: 'projects',
         tab: '실무',
-        id: 7,
+        id: 9,
         recommend: true,
         title: '신한은행 SOL',
         image: require('/src/assets/images/shinhan.svg'),
+        bannerImage: require('/src/assets/images/shinhan_img1.png'),
         alt: '알트값',
         color: '#0046FF',
         text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
@@ -544,18 +594,18 @@ export default [
         content: [
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project22.jpg'),
+                    require('/src/assets/images/project23.jpg'),
+                    require('/src/assets/images/project24.jpg'),
                 ],
                 title: `MD TAP 신설, 차별성 부여`,
                 text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
             },
             {
                 image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
+                    require('/src/assets/images/project25.jpg'),
+                    require('/src/assets/images/project26.jpg'),
+                    require('/src/assets/images/project27.jpg'),
                 ],
                 title: `MD TAP 신설, 차별성 부여`,
                 text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
@@ -565,15 +615,16 @@ export default [
     {
         category: 'projects',
         tab: '실무',
-        id: 8,
+        id: 10,
         recommend: false,
         title: '프로토랩',
         image: require('/src/assets/images/protolab.svg'),
         bannerImage: require('/src/assets/images/protolab_img1.png'),
         alt: '알트값',
         color: '#00479E',
-        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
+        text: ``,
         tags: ['구축 퍼블리싱', '2023년'],
+        link: 'https://www.protolab.co.kr/',
         infoList: [
             {
                 title: 'Client',
@@ -596,31 +647,23 @@ export default [
             {
                 image: [
                     require('/src/assets/images/project7.png'),
-                ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
-            },
-            {
-                image: [
                     require('/src/assets/images/project8.png'),
                 ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
             },
             {
                 image: [
-                    require('/src/assets/images/project9.png'),
+                    require('/src/assets/images/project19.jpg'),
+                    require('/src/assets/images/project20.jpg'),
+                    require('/src/assets/images/project21.jpg'),
                 ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
-            }
+            },
         ]
     },
     {
         category: 'projects',
         tab: '실무',
-        id: 9,
-        recommend: true,
+        id: 11,
+        recommend: false,
         title: '한국과학우주청소년단',
         image: require('/src/assets/images/yakedu.svg'),
         bannerImage: require('/src/assets/images/yakedu_img1.png'),
@@ -628,6 +671,7 @@ export default [
         color: '#232D64',
         text: `한국과학우주청소년단 홍보 및 행사를 안내하는 오피셜사이트 개편프로젝트`,
         tags: ['구축 퍼블리싱', '2023년'],
+        link: 'https://www.yakedu.or.kr/index.asp',
         infoList: [
             {
                 title: 'Client',
@@ -652,31 +696,23 @@ export default [
         ],
         content: [
             {
-                'title': '나의 첫 구축 프로젝트 😎',
-                'text': '처음인 만큼 모든 게 어려웠고 실수를 하게 될까 봐 무서웠지만, 함께 작업한 사원들끼리 서로 도와주며 협업했습니다.<br>상사에게 질문하는 것조차 조마조마했던 기억도 있습니다. (질문 전 구글 검색 OK, 예의 준비 OK)'
+                image: [
+                    require('/src/assets/images/project28.png'),
+                    require('/src/assets/images/project29.png'),
+                ],
             },
             {
-                'image': [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg'
+                image: [
+                    require('/src/assets/images/project30.jpg'),
+                    require('/src/assets/images/project31.jpg'),
+                    require('/src/assets/images/project32.jpg'),
                 ],
-                'title': '시뮬레이션 가동은 필수 🔎',
-                'text': '처음으로 작업하게 된 페이지는 [공지사항 상세] 입니다.<br><br>첨부파일 영역에는 100개 이상의 첨부파일명이 들어갈 수도 있는 상황을 생각해야 합니다.<br>CSS의 + 선택자를 사용하지 않고 파일명마다 <b>margin-right</b>로 간격을 줘서 첨부파일 영역이 2줄 이상이 되어도 어색하지 않도록 스타일링 했습니다.<br><br>이전글, 다음글 영역 또한 제목이 두 줄 이상이 되지 않도록 <b>overflow: hidden, white-space: nowrap, text-overflow: ellipsis</b>을 사용하여 1줄 말줄임으로 작업했습니다.<br><br>지금은 당연한 거지만 초초초 신입이었던 당시에는 여러가지 방법을 탐색하다 발견했습니다.<br>해당 작업들을 통해 항상 아이템이 수백개일 때를 고려해야 하는 것을 깨달았습니다.'
-            },
-            {
-                'image': [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg'
-                ],
-                'title': '가상요소 활용 👌',
-                'text': '이미지나 아이콘의 경우 img 태그를 사용할 수 있지만 굳이 읽혀야 하는 이미지가 아'
             }
         ]
     },
     {
         category: 'components',
-        id: 13,
+        id: 12,
         recommend: false,
         title: 'components',
         image: require('/src/assets/images/main_banner01.png'),
@@ -725,7 +761,7 @@ export default [
     },
     {
         category: 'hobby',
-        id: 14,
+        id: 13,
         title: 'Rabbit 🐰',
         image: require('/src/assets/images/rabbit1.png'),
         alt: '알트값',
@@ -733,8 +769,8 @@ export default [
         tags: ['HTML', 'CSS'],
         content: [
             {
-                title: '제목',
-                text: '내용'
+                title: 'Rabbit',
+                text: 'HTML, CSS만으로 제작한 애니메이션입니다.'
             }
         ],
         iframe: {
@@ -745,7 +781,7 @@ export default [
     },
     {
         category: 'hobby',
-        id: 12323,
+        id: 14,
         title: 'arrow',
         image: require('/src/assets/images/arrow_move1.png'),
         alt: '알트값',
@@ -753,8 +789,8 @@ export default [
         tags: ['HTML', 'CSS'],
         content: [
             {
-                title: '제목',
-                text: '내용'
+                title: 'arrow',
+                text: 'HTML, CSS만으로 제작한 애니메이션입니다. 신한은행 프로젝트에서 사용했습니다.'
             }
         ],
         iframe: {
@@ -772,8 +808,8 @@ export default [
         tags: ['HTML', 'CSS'],
         content: [
             {
-                title: '제목',
-                text: '내용'
+                title: 'Skull',
+                text: 'HTML, CSS만으로 제작한 애니메이션입니다.'
             }
         ],
         iframe: {
@@ -791,8 +827,8 @@ export default [
         tags: ['HTML', 'CSS'],
         content: [
             {
-                title: '제목',
-                text: '내용'
+                title: 'Building',
+                text: 'HTML, CSS만으로 제작한 애니메이션입니다.'
             }
         ],
         iframe: {
@@ -810,8 +846,8 @@ export default [
         tags: ['HTML', 'CSS'],
         content: [
             {
-                title: '제목',
-                text: '내용'
+                title: 'Duck',
+                text: 'HTML, CSS만으로 제작한 애니메이션입니다.'
             }
         ],
         iframe: {
@@ -829,8 +865,8 @@ export default [
         tags: ['HTML', 'CSS'],
         content: [
             {
-                title: '제목',
-                text: '내용'
+                title: 'Cat Work',
+                text: 'HTML, CSS만으로 제작한 애니메이션입니다.'
             }
         ],
         iframe: {
@@ -848,8 +884,8 @@ export default [
         tags: ['HTML', 'CSS'],
         content: [
             {
-                title: '제목',
-                text: '내용'
+                title: 'Cat',
+                text: 'HTML, CSS, js만으로 제작한 애니메이션입니다.<br><b>토글 버튼을 눌러 보세요!</b>'
             }
         ],
         iframe: {
