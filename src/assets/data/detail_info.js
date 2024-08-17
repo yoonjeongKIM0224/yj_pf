@@ -29,13 +29,13 @@ export default [
             {
                 title: `현재의 사이트를 만들 때의 마음가짐 🙃`,
                 text: `
-                가장 중요하게 생각했던 거는 '지속성'이었습니다.<br>
+                가장 중요하게 생각했던 것은 '지속성'이었습니다.<br>
                 3년 전, 웹퍼블리셔로 취업하기 위해 만들었던 사이트는 신입인 만큼 코드도 전만큼 맘에 들지 않았고 보완사항이 많다고 생각했습니다.<br>
                 실무에서 사용하는 여러 component guide를 보고 아이디어를 얻었고 이것을 저의 NEW! 포트폴리오에 녹여보고자 했습니다.<br>
                 제가 만든 여러가지 작업물들을 계속 업로드 할 수 있고 김윤정 자체가 기업...🙄 이라는 컨셉을 잡고 여러 기업 사이트를 벤치마킹했습니다.<br>
                 (kakaocorp을 제일 많이 참고했습니다.)<br>
                 <br>
-                <b>제작하며 겪은 여러가지 이슈들과 설명이 길어질 예정이니 읽기 전 참고 부탁드립니다!</b>
+                <b>설명이 길어질 예정이니 읽기 전 참고 부탁드립니다!</b>
                 `
             },
             {
@@ -52,47 +52,27 @@ export default [
                 <br>
                 초기에는 타사이트와의 차별성도 두고 빠른 메뉴 이동을 위하여 aside 형식으로 메뉴를 배치했습니다.<br>
                 이때는 aside의 width + 간격 = 220px을 제외한 나머지 <b>1200px</b>만 레이어를 잡았습니다.<br>
-                이후 주변인들의 애매한 반응으로 현재의 사이트처럼 구조를 변경했습니다.<br>
+                이후 주변인들의 애매한 반응으로... 현재의 사이트처럼 구조를 변경했습니다.<br>
                 `
             },
             {
                 image: [
-                    require('/src/assets/images/nhcard1.png'),
-                    require('/src/assets/images/nhcard1.png'),
+                    require('/src/assets/images/project35.png'),
+                    require('/src/assets/images/project36.png'),
                 ],
-                title: `웹접근성 위배 사항을 대폭 줄인 경험(1400p → 500p) 😊`,
+                title: `파일 구조는 대체 어떻게 짜나요? 😅`,
                 text: `
-                구축 일정이 완료되고 PC 웹접근성 집중 작업을 시작했습니다.<br>
-                웹접근성 1차 검수를 받은 후 위배 페이지는 대략 1,400p 정도였습니다.<br>
-                구축하면서 웹접근성을 잡았다면 좋았겠지만 저의 투입 시점에서는 PC작업은 이미 다 끝난 상황이었습니다.<br>
-                접근성 감리에서 title이 p태그로 되어있는 점, 인풋에 title이 없는 점, 배치용 테이블인데 th가 있는 점 등 대략 1400페이지의 웹접근성 위배사항을 확인했습니다.<br>
-                이에 수작업보다는 JS를 사용해서 감축하고자 했습니다.<br>
+                PROJECTS, HOBBY 메뉴는 리스트와 디테일 페이지가 동일합니다. 즉, 동일한 루트입니다.<br>
+                이 경우 디테일 페이지에 접속했을 때의 url에 대한 고민을 많이 했습니다.<br>
                 <br>
-                <b>1. title이 p로 되어있는 경우</b><br>
-                p태그를 사용했지만 title의 스타일을 표현하기 위해 t2_sb, t1_sb, t3_sb 등 공통 클래스를 사용한 점을 활용했습니다.<br>
-                해당 클래스면서 p태그인 엘레멘트를 모두 잡아 for문으로 돌린 후<br>
-                outerHTML과 replace를 사용하여 &lt;p → &lt;h3, &lt;/p → &lt;/h3 로 변경했습니다.<br>
-                (h2는 페이지 상단에 고정으로 존재함)<br>
+                1. /project/1, /hobby/1 등으로 나타낼지<br>
+                2. 메뉴와 상관 없이 /detail/1, /detail/2 등으로 나타낼지<br>
                 <br>
-                <b>2. 인풋에 title이 없는 경우</b><br>
-                인풋에 title은 없었지만 placeholder는 대부분 적용되어있는 점을 활용했습니다.<br>
-                document.querySelectAll('input[type="text"][placeholder]:not(:read-only):not(:disabled)')로 placeholder가 있는 text input을 잡아서<br>
-                input의 placeholder 내용을 input의 title에 대입했습니다.<br>
-                placeholder가 없는 input은 별로 없었기에 검색/찾기하여 수작업으로 보완했습니다.<br>
-                <br>
-                <b>3. 배치용 테이블인데 th가 있는 경우</b><br>
-                구축 공통가이드 중 배치용 테이블(input, select 포함 검색 테이블)이 있었습니다.<br>
-                배치용 테이블은 &lt;caption&gt; 요소, summary 속성, &lt;th&gt; 제목 셀을 제공하지 않아야 합니다.<br>
-                문제를 해결하기 위해 해당 테이블은 article.box_form_content 의 부모를 필수로 가지고 있는 점을 활용했습니다.<br>
-                js filter를 사용해 input, select가 있는 테이블만 추출하였습니다.<br>
-                caption, summray는 remove를 사용해 제거하고 th는 outerHTML과 replace를 사용하여 &lt;th → &lt;td, &lt;/th → &lt;/td 로 변경했습니다.<br>
-                td 변경 시 깨지는 스타일은 classList.add('new_th')로 클래스를 부여해 스타일링했습니다.<br>
-                <br>
-                이처럼 JS로 해결한 결과, 위배 페이지는 1400장에서 500장으로 감축했습니다. 해당 성과는 프로젝트에 큰 도움이 되었고 연말 인사평가에서 좋은 결과를 얻었습니다.<br>
-                img의 alt, 숨김텍스트 등은 구축 작업과 동시진행한 경험은 있지만 웹접근성 집중 작업은 처음이라 초반에는 헷갈리는 게 많았습니다.<br>
-                하지만 웹와치와 한국웹접근성인증평가원의 Q&A 게시판을 통하여 많은 조언을 얻었고 질문하는 노하우도 터득했습니다.
+                <b>고민 끝에 2번을 결정했습니다.</b><br>
+                kakaocorp는 'www.kakaocorp.com/page/detail/11162' 식으로 2번과 같은 방법을 사용하는 것 같았습니다.<br>
+                따라서 저도 PROJECTS, HOBBY에 들어갈 아이템들을 객체화해서 detail_info.js에 통합했습니다.
                 `
-            }
+            },
         ]
     },
     {
@@ -711,57 +691,8 @@ export default [
         ]
     },
     {
-        category: 'components',
-        id: 12,
-        recommend: false,
-        title: 'components',
-        image: require('/src/assets/images/main_banner01.png'),
-        alt: '알트값',
-        color: '#EF3B24',
-        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
-        tags: ['구축 퍼블리싱', '2023년'],
-        infoList: [
-            {
-                title: 'Client',
-                text: '신세계사이먼'
-            },
-            {
-                title: 'Category',
-                text: 'WEB / MOBILE / APP'
-            },
-            {
-                title: 'Date',
-                text: '2024.01 ~ 2024.02'
-            },
-            {
-                title: 'Service',
-                text: 'HTML, CSS, JS, 웹접근성, Figma'
-            }
-        ],
-        content: [
-            {
-                image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
-            },
-            {
-                image: [
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                    'https://codingapple1.github.io/vue/room0.jpg',
-                ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
-            }
-        ]
-    },
-    {
         category: 'hobby',
-        id: 13,
+        id: 12,
         title: 'Rabbit 🐰',
         image: require('/src/assets/images/rabbit1.png'),
         alt: '알트값',
