@@ -1356,24 +1356,6 @@
         }
     }
 
-    .detail_wrap {
-        & .info_wrap {
-            & .text_wrap {
-                & .info_article {
-                    & .img_list {
-                        > .item {
-                            width: 100%!important;
-
-                            + .item:not(:nth-child(3n) + .item) {
-                                margin-left: 0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     .header_menu_container-enter-active,
     .header_menu_container-leave-active {
         transition: 0.5s;
@@ -1548,6 +1530,10 @@
     
             > .item {
                 width: calc((100% - 20px) / 2);
+
+                &:not(:nth-child(5n)) {
+                    margin-right: 0;
+                }
                 
                 &:not(:nth-child(4n)) {
                     margin-right: 0px;
@@ -1598,11 +1584,61 @@
     }
 
     .intro_wrap {
-        flex-direction: column;
+        .container1 {
+            flex-direction: column;
+        }
+    
+        .img_wrap {
+            width: 100%;
+    
+            + .img_wrap {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
     
         .text_wrap {
-            margin-left: 0;
-            margin-top: 40px;
+            overflow: hidden;
+
+            &::after {
+                content: 'KIM\AYOON\AJEONG';
+                font-size: 90px;
+            }
+        }
+    }
+
+    .detail_wrap {
+        .visual_wrap {
+            align-items: flex-start;
+
+            > .container {
+                margin-top: 120px;
+            }
+
+            .bg_img {
+                position: absolute;
+                top: auto;
+                bottom: 20px;
+                right: 20px;
+                height: auto;
+                width: calc(100% - 40px);
+                transform: none;
+            }
+        }
+    
+        .info_wrap {
+            .text_wrap {
+                .img_list {
+                    > .item {
+                        flex: auto;
+                        
+                        &:not(:last-child) {
+                            margin-right: 0;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -36,7 +36,7 @@
       <section class="section">
         <h2 class="section_title" v-if="sectionInfo.meta.title && !detailPage">
           {{ sectionInfo.meta.title }}
-          <TheIcon size="xxl" :icon="sectionInfo.meta.icon" margin="left" />
+          <!-- <TheIcon size="xxl" :icon="sectionInfo.meta.icon" margin="left" /> -->
         </h2>
         <p class="section_text" v-if="!detailPage">{{ sectionInfo.meta.text }}</p>
         <router-view :key="$route.fullPath" :list="detailInfo" :sectionInfo="sectionInfo"></router-view>
@@ -48,7 +48,7 @@
     :to="`https://www.kakaocorp.com/page`"
     class="button_chat"
     color="primary"
-    size="md"
+    size="sm"
     :round="true">
     카카오톡
       <template v-slot:after>

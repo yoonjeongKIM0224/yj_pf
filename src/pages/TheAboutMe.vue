@@ -27,7 +27,7 @@
                     type="a"
                     to="https://chain-caribou-27f.notion.site/c0dd8c6fc3fd41039fe41a0c02072251"
                     color="primary"
-                    size="md"
+                    size="sm"
                     :round="true">
                     자기소개 더보기
                     <template v-slot:after>
@@ -51,7 +51,7 @@
                         <span class="title" v-html="info.year + '년'"></span>
                         <div class="list_container">
                             <ul class="list">
-                                <li v-for="(month, idx) in info.months" :key="idx" :class="['item', month.active ? 'active' : '']" @click="month.active = !month.active">
+                                <li v-for="(month, idx) in info.months" :key="idx" :class="['item', month.active ? 'active' : '']" @click="monthsClose(), month.active = !month.active">
                                     <div class="item_cont">
                                         <span class="info1" v-html="month.date + '월'"></span>
                                         <div class="container">
@@ -240,6 +240,15 @@ export default {
     components: {
         TheIcon,
         TheButton
+    },
+    methods: {
+        monthsClose(){
+            this.history.forEach(function(item){
+                item.months.forEach(function(item){
+                    item.active = false;
+                });
+            })
+        }
     }
 }
 </script>
