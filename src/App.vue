@@ -1,4 +1,9 @@
 <template>
+  
+  <!-- :autoplay="{
+        delay: 6000,
+        disableOnInteraction: true,
+      }" -->
   <div class="wrapper" :class="[]">
     <!-- (detailPage && scroll == 0) || scroll !== 0 ? 'scroll_down' : '' -->
     <TheHeader :list="menu" :sectionInfo="sectionInfo" :width="width" />
@@ -11,10 +16,6 @@
       :speed="800"
       :pagination="true"
       :modules="modules"
-      :autoplay="{
-        delay: 6000,
-        disableOnInteraction: true,
-      }"
       class="main_swiper"
       >
         <swiper-slide v-for="(info, idx) in mainSwiper" :key="idx">
@@ -22,9 +23,7 @@
             <div class="category round_cont">
               <span class="category_text cont" v-html="info.category" :style="`background-color: ${info.color}`"></span>
             </div>
-            <span class="title" v-html="info.title"></span>
-            <p class="desc" v-html="info.desc"></p>
-            <img :src="info.img" alt="" class="img">
+            <img :src="info.img" :alt="info.alt" class="img">
             <div class="link_btn_wrap round_cont">
               <div class="link_btn cont" aria-label="보러가기" :style="`background-color: ${info.color}`">
                 <TheIcon size="lg" icon="arrow4" rotate="270" />
@@ -34,12 +33,9 @@
         </swiper-slide>
       </swiper>
       <section class="section">
-        <h2 class="section_title" v-if="sectionInfo.meta.title && !detailPage">
-          {{ sectionInfo.meta.title }}
-          <!-- <TheIcon size="xxl" :icon="sectionInfo.meta.icon" margin="left" /> -->
-        </h2>
-        <p class="section_text" v-if="!detailPage">{{ sectionInfo.meta.text }}</p>
-        <router-view :key="$route.fullPath" :list="detailInfo" :sectionInfo="sectionInfo"></router-view>
+        <h2 class="section_title" v-if="sectionInfo.meta.title && !detailPage" v-html="sectionInfo.meta.title"></h2>
+        <p class="section_text" v-if="!detailPage" v-html="sectionInfo.meta.text"></p>
+        <router-view :key="$route.fullPath" :list="detailInfo" :sectionInfo="sectionInfo" :width="width"></router-view>
       </section>
     </div>
 
@@ -86,7 +82,8 @@ export default {
           title: '',
           desc: '',
           img: require('./assets/images/main_banner1.png'),
-          link: '/detail/1'
+          link: '/detail/1',
+          alt: 'hello! let me introduce my portfolio.'
         },
         {
           color: '#0C0C0C',
@@ -94,7 +91,8 @@ export default {
           title: '',
           desc: '',
           img: require('./assets/images/main_banner2.png'),
-          link: '/projects'
+          link: '/projects',
+          alt: '프론트 작업 외의 저의 취미를 구경해 보실래요? 귀여운 토끼가 움직여요. 토글버튼을 눌러 보세요. 입 그만 움직이라 할까요? Go hobby menu'
         },
       ],
       menu,

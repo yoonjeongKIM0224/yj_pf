@@ -1,5 +1,5 @@
 <template>
-    <TheTab type="2" :tabs="tabs" :handler="true" @tabSelected="tabSelected = $event">
+    <TheTab type="2" :tabs="tabs" :handler="width < 600" @tabSelected="tabSelected = $event">
         <template v-slot:tabPanel1>
             <iframe height="600" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/yoonjeongkim0224/embed/poXewEQ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
             See the Pen <a href="https://codepen.io/yoonjeongkim0224/pen/poXewEQ">
@@ -76,7 +76,8 @@ export default {
         }
     },
     props: {
-        list: Object
+        list: Object,
+        width: String
     },
     components: {
         TheTab
