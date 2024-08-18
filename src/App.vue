@@ -1,9 +1,4 @@
 <template>
-  
-  <!-- :autoplay="{
-        delay: 6000,
-        disableOnInteraction: true,
-      }" -->
   <div class="wrapper" :class="[]">
     <!-- (detailPage && scroll == 0) || scroll !== 0 ? 'scroll_down' : '' -->
     <TheHeader :list="menu" :sectionInfo="sectionInfo" :width="width" />
@@ -17,6 +12,10 @@
       :pagination="true"
       :modules="modules"
       class="main_swiper"
+      :autoplay="{
+        delay: 6000,
+        disableOnInteraction: true,
+      }"
       >
         <swiper-slide v-for="(info, idx) in mainSwiper" :key="idx">
           <router-link class="container" :to="info.link" :style="`background-color: ${info.color}`">

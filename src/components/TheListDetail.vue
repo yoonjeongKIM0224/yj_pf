@@ -1,7 +1,7 @@
 <template>
     <div :class="['detail_wrap', info.boxClass]">
         <section class="visual_wrap" :style="{ backgroundColor: `${info.color}` }">
-            <img :src="info.bannerImage" alt="배경" class="bg_img">
+            <img :src="info.bannerImage" alt="배경" class="bg_img" v-if="info.bannerImage">
 
             <div class="container">
                 <div class="logo" v-if="info.category != 'hobby' && info.image">

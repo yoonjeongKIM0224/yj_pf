@@ -996,15 +996,12 @@
         }
 
         .recommend {
-            position: absolute;
-            right: -40px;
-            top: 0;
         }
 
         .visual_title {
             font-size: 80px;
             position: relative;
-            display: inline-block;
+            display: flex;
         }
 
         .info_list {
@@ -1618,14 +1615,6 @@
                 height: auto;
                 width: calc(100% - 40px);
                 transform: none;
-            }
-
-            .visual_title {
-                display: flex;
-            }
-
-            .recommend {
-                position: static;
             }
         }
     

@@ -7,7 +7,7 @@ export default [
         title: '김윤정',
         image: require('/src/assets/images/vue1.png'),
         bannerImage: '',
-        alt: '알트값',
+        alt: 'vue.js',
         color: '#FF8E8B',
         text: `차세대 디지털 고용 서비스 플랫폼 '고용24' 구축은 고용 관련 민원 서비스를 제공하는 주요 시스템 및 행정 서비스를 통합 구축하는 프로젝트입니다.`,
         tags: ['Vue.js', '2024년', '현재사이트', '반응형'],
@@ -119,7 +119,7 @@ export default [
         title: '농협카드',
         image: require('/src/assets/images/nhcard1.png'),
         bannerImage: require('/src/assets/images/nhcard_img1.png'),
-        alt: '알트값',
+        alt: '농협카드',
         color: '#8AC8FF',
         text: `차세대 디지털 고용 서비스 플랫폼 '고용24' 구축은 고용 관련 민원 서비스를 제공하는 주요 시스템 및 행정 서비스를 통합 구축하는 프로젝트입니다.`,
         tags: ['Vue.js', '2024년'],
@@ -249,7 +249,7 @@ export default [
         title: '영화 추천 사이트',
         image: require('/src/assets/images/react2.svg'),
         bannerImage: require('/src/assets/images/movie_img1.png'),
-        alt: '알트값',
+        alt: 'react',
         color: '#222',
         text: `React 환경에서 yts.mx의 API를 사용하여 영화 추천을 해 주는 사이트입니다.`,
         tags: ['React', '2024년'],
@@ -382,7 +382,7 @@ export default [
         title: '고용24',
         image: require('/src/assets/images/work24.svg'),
         bannerImage: require('/src/assets/images/work24_img1.png'),
-        alt: '알트값',
+        alt: '고용24',
         color: '#4D65E1',
         text: `차세대 디지털 고용 서비스 플랫폼 '고용24' 구축은 고용 관련 민원 서비스를 제공하는 주요 시스템 및 행정 서비스를 통합 구축하는 프로젝트입니다.`,
         tags: ['구축 퍼블리싱', '2023년'],
@@ -482,7 +482,7 @@ export default [
         title: 'IBK 온라인 입점 소상공인부 대출',
         image: require('/src/assets/images/ione.svg'),
         bannerImage: require('/src/assets/images/ibk_img1.png'),
-        alt: '알트값',
+        alt: 'i-one 소상공인',
         color: '#DBF4FF',
         text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
         tags: ['구축 퍼블리싱', '2023년'],
@@ -522,7 +522,7 @@ export default [
         boxClass: '',
         title: '아모레퍼시픽 SCM방문등록시스템',
         image: require('/src/assets/images/amorepacific.svg'),
-        alt: '알트값',
+        alt: 'amorepacific',
         color: '#F3F3F6',
         text: ``,
         tags: ['구축 퍼블리싱', '2023년'],
@@ -566,13 +566,13 @@ export default [
         category: 'projects',
         tab: '실무',
         id: 9,
-        recommend: true,
+        recommend: false,
         title: '신한은행 SOL',
         image: require('/src/assets/images/shinhan.svg'),
         bannerImage: require('/src/assets/images/shinhan_img1.png'),
-        alt: '알트값',
+        alt: '신한은행',
         color: '#0046FF',
-        text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.<br>이 프로젝트는 'Simple & Easy' 컨셉을 중심으로 구현되었으며, 이를 통해 프리미엄 아울렛의 독특한 차별성을 강조하였습니다.`,
+        text: ``,
         tags: ['구축 퍼블리싱', '2023년'],
         infoList: [
             {
@@ -593,14 +593,23 @@ export default [
             }
         ],
         content: [
+            // {
+            //     title: `첫 파견&금융권 프로젝트 💥`,
+            //     text: `첫 파견 프로젝트입니다.<br>
+            //             가장 바쁜 시기에 투입되었습니다.<br>
+            //             상사분들은 농담진담반으로 긴급지원팀이라고 할 정도로 바쁜 시기에 투입되었습니다.<br>
+            //             퍼블리싱 경력 5개월 때 이렇게 바쁘고 큰 프로젝트에 투입되어 솔직히 좀 무서웠지만<br>
+            //             같이 투입된 직원들과 서로 모르는 것은 도와주고 헷갈리는 게 있으면 기존에 있던 퍼블리셔분들께 물어보면서 어려운 일들을 해나갔습니다.<br>
+            //             `
+            // },
             {
                 image: [
                     require('/src/assets/images/project22.jpg'),
                     require('/src/assets/images/project23.jpg'),
                     require('/src/assets/images/project24.jpg'),
                 ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+                title: ``,
+                text: ``
             },
             {
                 image: [
@@ -608,8 +617,8 @@ export default [
                     require('/src/assets/images/project26.jpg'),
                     require('/src/assets/images/project27.jpg'),
                 ],
-                title: `MD TAP 신설, 차별성 부여`,
-                text: `신세계사이먼 샵프리미엄 3차 고도화 프로젝트를 통해 혁신적인 쇼핑 경험을 사용자들에게 제공하고, 더욱 편리하고 개인화된 서비스를 제공할 수 있도록 노력하였습니다.`
+                title: ``,
+                text: ``
             }
         ]
     },
@@ -621,7 +630,7 @@ export default [
         title: '프로토랩',
         image: require('/src/assets/images/protolab.svg'),
         bannerImage: require('/src/assets/images/protolab_img1.png'),
-        alt: '알트값',
+        alt: 'protolab',
         color: '#00479E',
         text: ``,
         tags: ['구축 퍼블리싱', '2023년'],
@@ -668,7 +677,7 @@ export default [
         title: '한국과학우주청소년단',
         image: require('/src/assets/images/yakedu.svg'),
         bannerImage: require('/src/assets/images/yakedu_img1.png'),
-        alt: '알트값',
+        alt: '한국과학우주청소년단',
         color: '#232D64',
         text: `한국과학우주청소년단 홍보 및 행사를 안내하는 오피셜사이트 개편프로젝트`,
         tags: ['구축 퍼블리싱', '2023년'],
@@ -716,7 +725,7 @@ export default [
         id: 12,
         title: 'Rabbit 🐰',
         image: require('/src/assets/images/rabbit1.png'),
-        alt: '알트값',
+        alt: '',
         color: '#8E1D76',
         tags: ['HTML', 'CSS'],
         content: [
@@ -736,7 +745,7 @@ export default [
         id: 14,
         title: 'arrow',
         image: require('/src/assets/images/arrow_move1.png'),
-        alt: '알트값',
+        alt: '',
         color: '#C8CDFF',
         tags: ['HTML', 'CSS'],
         content: [
