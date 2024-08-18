@@ -18,7 +18,7 @@
       class="main_swiper"
       >
         <swiper-slide v-for="(info, idx) in mainSwiper" :key="idx">
-          <div class="container" :style="`background-color: ${info.color}`">
+          <router-link class="container" :to="info.link" :style="`background-color: ${info.color}`">
             <div class="category round_cont">
               <span class="category_text cont" v-html="info.category" :style="`background-color: ${info.color}`"></span>
             </div>
@@ -26,11 +26,11 @@
             <p class="desc" v-html="info.desc"></p>
             <img :src="info.img" alt="" class="img">
             <div class="link_btn_wrap round_cont">
-              <router-link :to="info.link" class="link_btn cont" aria-label="보러가기" :style="`background-color: ${info.color}`">
+              <div class="link_btn cont" aria-label="보러가기" :style="`background-color: ${info.color}`">
                 <TheIcon size="lg" icon="arrow4" rotate="270" />
-              </router-link>
+              </div>
             </div>
-          </div>
+          </router-link>
         </swiper-slide>
       </swiper>
       <section class="section">
@@ -83,25 +83,17 @@ export default {
         {
           color: '#FF8E8B',
           category: 'Projects',
-          title: '포트폴리오 사이트<br>Review 보러가기 🏃‍♀️',
-          desc: '주니어의 삽질... 한 번 보실라유?!',
-          img: require('./assets/images/main_banner01.png'),
+          title: '',
+          desc: '',
+          img: require('./assets/images/main_banner1.png'),
           link: '/detail/1'
         },
         {
-          color: '#05274D',
+          color: '#0C0C0C',
           category: 'Hobby',
-          title: '컴포넌트',
-          desc: '이것은 텍스트입니다.',
-          img: require('./assets/images/main_banner01.png'),
-          link: '/projects'
-        },
-        {
-          color: '#05274D',
-          category: 'Projects',
-          title: '이것은<br />타이틀입니다.3',
-          desc: '이것은 텍스트입니다.',
-          img: require('./assets/images/main_banner01.png'),
+          title: '',
+          desc: '',
+          img: require('./assets/images/main_banner2.png'),
           link: '/projects'
         },
       ],

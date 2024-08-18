@@ -1,40 +1,31 @@
 <template>
     <article class="article">
-        <h3 class="article_title">연혁</h3>
-        <p class="article_text">카카오가 디딘 첫걸음부터 지금까지의 발걸음을 담았습니다.</p>
+        <h3 class="article_title">ABOUT ME & COMPONENTS</h3>
         <div class="list_type4">
             <ul class="list">
                 <li class="item item1">
-                    <div class="container">
-                        <span class="title">카카오의 다양한 소식을 구독하세요!</span>
-                        <p class="desc">공식 소셜 미디어 바로가기</p>
-                        <span class="circle_list">
-                            <span class="item">🥰</span>
-                            <span class="item">🥰</span>
-                            <span class="item">🥰</span>
-                            <span class="item">🥰</span>
-                        </span>
-                    </div>
+                    <router-link to="/aboutMe" class="container">
+                        <span class="title">안녕하세요! 김윤정입니다. 🥰<br>제 소개를 한 번 보시겠어요?</span>
+                        <p class="desc">ABOUT ME 바로가기</p>
+                    </router-link>
                 </li>
                 <li class="item item2">
-                    <div class="container">
-                        <span class="title">세상만사에 관심이 많다면,<br>당신은 이미 카카오 크루</span>
-                        <span class="desc">영입소식</span>
-                    </div>
+                    <router-link to="/components" class="container">
+                        <span class="title">CodePen으로 보여주는!<br>다양한 컴포넌트가<br>궁금하지 않으신가요?</span>
+                        <span class="desc">COMPONENTS 바로가기</span>
+                    </router-link>
                 </li>
             </ul>
         </div>
     </article>
 
     <article class="article">
-        <h3 class="article_title">연혁</h3>
-        <p class="article_text">카카오가 디딘 첫걸음부터 지금까지의 발걸음을 담았습니다.</p>
+        <h3 class="article_title">PROJECT</h3>
         <TheList type="1" :list="projectList" />
     </article>
 
     <article class="article">
-        <h3 class="article_title">연혁</h3>
-        <p class="article_text">카카오가 디딘 첫걸음부터 지금까지의 발걸음을 담았습니다.</p>
+        <h3 class="article_title">HOBBY</h3>
         <TheList type="1" :list="hobbyList" />
     </article>
 </template>

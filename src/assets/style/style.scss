@@ -338,12 +338,12 @@
 
             .img {
                 position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                object-fit: cover;
+                width: auto;
+                height: auto;
+                top: 50%;
+                left: 50%;
+                z-index: 1;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -832,7 +832,11 @@
             width: calc((100% - 40px) / 2);
             background-color: gray;
             border-radius: 20px;
-            height: 500px;
+            height: 400px;
+
+            * {
+                color: #fff;
+            }
 
             &:not(:nth-last-child(-n+2)){
                 margin-bottom: 40px;
@@ -852,6 +856,7 @@
                     font-size: 26px;
                     margin-bottom: 20px;
                     font-weight: 600;
+                    text-align: center;
                 }
 
                 .desc {
@@ -885,10 +890,6 @@
 
             &.item2 {
                 background-color: #0073ff;
-
-                * {
-                    color: #fff;
-                }
             }
         }
     }

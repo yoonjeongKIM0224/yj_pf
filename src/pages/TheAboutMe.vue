@@ -13,17 +13,19 @@
                 <span class="title">KIM YOONJEONG</span>
                 <p class="text">
                     안녕하세요!<br>
-                    웹 퍼블리셔 김나영입니다.<br><br>
-                    좋아하면 더 잘한다는 마음으로 UI 개발 일을 하고 있습니다.<br><br>
+                    프론트엔드 공부 중인 웹퍼블리셔 김윤정입니다.<br>
+                    <br>
+                    웹퍼블리셔로 실제 프로젝트를 경험하면서 프론트엔드에 대한 흥미가 생겨 공부를 시작하게 되었습니다.<br>
                     웹 퍼블리싱을 빠삭하게 다룹니다.<br>
-                    React/TypeScript 등 프레임워크 환경에서 컴포넌트 단위의 마크업 작업을 능숙하게 할 수 있어요.<br>
-                    어디에서도 잘 보이는 반응형, 웹 접근성과 웹 표준을 고려한 웹 페이지를 그려냅니다.<br><br>
+                    React/Vue 등 프레임워크 환경에서 컴포넌트 단위의 마크업 작업을 능숙하게 할 수 있어요.<br>
+                    어디에서도 잘 보이는 반응형, 웹 접근성과 웹 표준을 고려한 웹 페이지를 그려냅니다.<br>
+                    <br>
                     맡은 프로젝트의 목적을 우선적으로 고려하며, 원활한 협업을 중요하게 생각해요.<br>
                     다양한 직군과 함께 멋지고 즐거운 UX를 만드는 데 관심이 많습니다.
                 </p>
                 <TheButton
                     type="a"
-                    :to="`https://www.kakaocorp.com/page`"
+                    to="https://chain-caribou-27f.notion.site/c0dd8c6fc3fd41039fe41a0c02072251"
                     color="primary"
                     size="md"
                     :round="true">
