@@ -124,7 +124,7 @@ export default {
             window.scrollTo(
                 {
                     left: 0,
-                    top: window.innerHeight,
+                    top: window.innerHeight - 100,
                     behavior: 'smooth'
                 }
             )

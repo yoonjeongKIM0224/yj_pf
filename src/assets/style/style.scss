@@ -1601,6 +1601,7 @@
 
     .detail_wrap {
         .visual_wrap {
+            height: calc(100vh - 100px);
             align-items: flex-start;
 
             > .container {
@@ -1619,6 +1620,8 @@
         }
     
         .info_wrap {
+            margin-top: calc(100vh - 100px);
+            
             .text_wrap {
                 .img_list {
                     > .item {
