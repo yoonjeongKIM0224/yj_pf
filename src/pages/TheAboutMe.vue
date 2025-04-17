@@ -13,10 +13,8 @@
                 <span class="title">KIM YOONJEONG</span>
                 <p class="text">
                     안녕하세요!<br>
-                    프론트엔드 공부 중인 웹퍼블리셔 김윤정입니다.<br>
-                    <br>
-                    웹퍼블리셔로 활동하면서 프론트엔드에 대한 흥미가 생겨 공부를 시작하게 되었습니다.<br>
-                    Vue 금융권 프로젝트 경험이 있으며 React는 독학 중입니다.<br>
+                    4년차 웹퍼블리셔 김윤정입니다.<br>
+                    웹에이전시에서 정규직으로 근무하며 신한은행, 농협카드, 고용24, 삼성 등 여러 프로젝트에서 실무한 경험이 있습니다.
                     유지보수를 고려하여 중복되는 코드 없이 깔끔하고 용이한 코드 작성을 추구합니다.<br>
                     Figma, PS 등 디자인 툴을 사용해 보는 것을 좋아합니다.<br>
                     <br>
@@ -102,12 +100,38 @@ export default {
         return {
             history: [
                 {
+                    year: '2025',
+                    months: [
+                        {
+                            date: '02',
+                            title: '(주)하이브랩 퇴사',
+                            text: '웹퍼블리셔 (6개월)',
+                            img: require('../assets/images/hivelab.png'),
+                            alt: 'hivelab',
+                            active: false
+                        },
+                    ]
+                },
+                {
+                    year: '2024',
+                    months: [
+                        {
+                            date: '09',
+                            title: '(주)하이브랩 입사',
+                            text: '웹퍼블리셔',
+                            img: require('../assets/images/hivelab.png'),
+                            alt: 'hivelab',
+                            active: false
+                        },
+                    ]
+                },
+                {
                     year: '2023',
                     months: [
                         {
                             date: '06',
                             title: '(주)와일리 입사',
-                            text: '웹퍼블리셔 (2024년 8월 기준 재직 중)',
+                            text: '웹퍼블리셔',
                             img: require('../assets/images/wylie.png'),
                             alt: 'wylie',
                             active: false
@@ -191,6 +215,11 @@ export default {
                 },
             ],
             company: [
+                {
+                    name: '삼성',
+                    image: require('../assets/images/samsung1.png'),
+                    page: true,
+                },
                 {
                     name: '농협카드',
                     image: require('../assets/images/nhcard1.png'),

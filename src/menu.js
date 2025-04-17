@@ -21,7 +21,7 @@ const menu = [
     path: '/components',
     meta: {
       title: 'Components',
-      text: '제가 만든 다양한 컴포넌트를 소개합니다.<br>2024년 8월부터 천천히 업로드 중입니다. 조금만 기다려주세요! 😭',
+      text: '제가 만든 다양한 컴포넌트를 소개합니다.<br>2025년 4월부터 천천히 업로드 중입니다. 조금만 기다려주세요! 😭',
       // icon: 'sawtooth1',
     },
     component: () => import('@/pages/TheComponents.vue')
