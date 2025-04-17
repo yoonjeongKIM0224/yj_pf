@@ -40,7 +40,7 @@
 
     <TheButton
     type="a"
-    :to="`https://open.kakao.com/o/sbS6PJwd`"
+    :to="`https://open.kakao.com/o/sO0SwFrh`"
     class="button_chat"
     color="primary"
     size="sm"
